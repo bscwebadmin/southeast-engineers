@@ -1,0 +1,344 @@
+/* mobile layout:320px*/
+@media only screen and (max-width:576px){
+   /* nav bar area  */
+   .hs-has-header-right-text {   
+    display: none;
+}
+.navbar-brand-logo {
+    margin: 0px;
+    margin-top: 30px;
+}
+.navbar-light .navbar-toggler {
+    border: none;
+    color: black;
+}
+.navbar-light .navbar-nav .nav-link {
+    margin-top: 5px;    
+}
+.px-5 {
+    padding-right: 0rem !important; 
+    padding-left: 0rem !important; 
+}
+
+.mx-5 {
+    margin-right: 0rem !important; 
+    margin-left: 0rem !important; 
+}
+.swiperslide-hover-info {    
+    top: 100px;
+}
+.js-swiper-shop-classic-hero .section-hero-hover-text-r {
+    position: absolute;
+    bottom: -500px;
+    right: 30%;
+}
+
+/* hero area style start here  */
+
+.section-hero-section {    
+    height: 630px;
+}
+.swiper-slide-hover-extra::after {    
+    height: 100%;
+    
+}
+.section-hero-text {
+    font-size: 29px;
+    line-height: 36px;
+    width: 100%;
+}
+.section-hero-hover-text {
+    padding: 100px 20px;
+}
+.section-hero-btn {    
+    text-align: center;
+}
+
+.hs-has-hero-rt::after {    
+    width: 140px;    
+}
+
+/* project section style start here  */
+.section-project-heading {    
+    font-size: 40px;
+    line-height: 43px;
+    
+}
+.section-single-project{
+    padding: 20px;
+}
+
+/* about section style here  */
+.section-about-info h2 {
+    font-size: 40px;    
+    line-height: 43px;
+}
+.section-about-section {
+    margin: 60px 10px;
+}
+
+.about-info-btn {    
+    display: flex;
+    justify-content: center;
+}
+.section-about-info {
+    margin-bottom: 0px; 
+}
+.section-about-linfo {
+    margin: 20px 20px 0px 20px;
+}
+.accordion-btn {
+    margin-top: 20px;
+}
+.accordion-lg .accordion-body {    
+    display: block;
+    text-align: center;
+}
+.accordion-body p {    
+    text-align: left;
+}
+.section-about-left-img img {
+    margin: 0px;
+    width: 100%;
+    height: 162px;  
+}
+.section-about-right-img img {
+    width: 100%;
+    max-width: 100%;
+    height: 162px;
+}
+
+.about-btn-area {
+    margin: 60px 0px;
+}
+.section-coustomer-about-left h4 {
+    font-size: 40px;    
+    line-height: 43px;    
+}
+.section-coustomer-about-right p {
+    font-size: 18px;    
+    line-height: 30px;
+}
+
+/* our contact area style  */
+.contact-top-list {
+    display: block;   
+}
+.contact-extra{
+    display: none;
+}
+.contact-top-list li a {    
+    margin: 10px 0;
+    display: block;
+}
+.section-contact-info {
+    margin: 0px;
+}
+.section-contact-info img {    
+    height: 300px;
+}
+.contact-btm-list {
+    display: flex;    
+    width: 100%;
+    justify-content: center;
+}
+
+
+/* fotter area start here  */
+.footer-contact-list {
+    display: block;
+    justify-content: space-between;    
+    text-align: center;
+}
+.list-inline {
+    list-style: none;
+    padding: 0px 20px;
+}
+.top-footter{
+    margin: 10px 0;
+    display: block;
+}
+.footter-logo{
+    padding: 20px;
+}
+.navbar-brand {
+    display: block;
+    text-align: center;
+}
+.list-inline-social {    
+    justify-content: initial;   
+    justify-content: center;
+}
+
+
+/* about page style start here  */
+
+.see-about-hero-area {    
+    height: 287px;   
+}
+.seabout-help-section {
+    height: auto;    
+}
+.help-area-info h2 {
+    font-size: 40px;
+    line-height: 50px;    
+}
+.help-area-list {
+    display: block;    
+    margin: 10px 10px 40px 10px;
+}
+
+.section-help-list {    
+    margin: 10px 0;
+    display: block;
+}
+.help-area-img-area img {
+    height: 293.09px;    
+}
+.about-team-area {
+    padding: 40px 0 40px 0;
+}
+.teamarea-header-title {
+    font-size: 40px;
+    line-height: 43px;    
+}
+.single-team{
+    text-align: center;
+}
+.team-title {
+    margin: 10px;    
+}
+
+/* services page style start here  */
+
+.services-hero-area {    
+    height: 503px;    
+}
+.services-proses-section { 
+    height: auto;   
+    padding-top: 40px;   
+}
+.sproses-top-heading {
+    font-size: 40px;    
+    line-height: 43px;    
+}
+.proses-bottom-area-info h2 {
+    font-size: 40px;    
+    line-height: 43px;   
+}
+.proses-btn-area{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.bottom-img-area img {
+    width: 100%;
+    height: 293.09px;
+}
+.residential-header h2 {
+    font-size: 40px;    
+    line-height: 43px;
+   
+}
+.single-res-heading {    
+    font-size: 26px;
+    line-height: 30px;
+  
+}
+.commercial-header h2 {
+    font-size: 40px;    
+    line-height: 43px;  
+    margin-top: 20px;
+}
+ /* our Residential Services page area start here  */
+ .about-hero-title {
+    font-size: 40px;
+    line-height: 43px;    
+    margin-bottom: 20px;
+}
+.residential-slider-section {
+    padding: 40px 0 40px 0;   
+}
+.about-hero-area {
+    margin: auto;
+    right: inherit;
+    bottom: 8%;
+    text-align: center;
+    width: 100%;
+}
+.about-hero-title {
+    font-size: 40px;
+    line-height: 43px;   
+    text-align: left;
+    width: 171px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.res-single-img {
+    width: 100%;
+    height: 174.69px;
+}
+.residential-heder h2 {
+    font-size: 40px;
+    line-height: 43px;   
+}
+.contact-btm-list li a {    
+    margin: 20px 20px 20px 0px; 
+    
+}
+.section-contact-area {  
+    padding: 40px 0px;   
+}
+.accordion-lg .accordion-button {
+    font-size: 22px;    
+}
+/* feature page style start here  */
+.featcured-tab h4 {   
+    display: none;
+}
+.featcured-tab {    
+    width: 100%;
+}
+.featured-items-heading::after {    
+    bottom: -18%;
+}
+.featured-items img {
+    width: 100%;
+    height: 150.77px;
+}
+.featured-hero-info h2 {
+    right: inherit;
+    font-size: 40px;
+    line-height: 43px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.featured-hero-btn {    
+    z-index: 1;   
+    right: 24%;    
+    
+}
+.featured-hero-info {
+    text-align: center;
+    margin: 0 auto;
+}
+.conttact-hero-info {
+    right: 23%;
+    bottom: 22%;
+    z-index: 1;
+}
+.contact-hero-title {
+    font-size: 40px;
+    line-height: 43px;
+    font-weight: 400;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #FFFFFF;
+}
+.contact-hero-area {   
+    height: 287px;    
+}
+.section-contact-info img {
+    height: 191.61px;
+}
+
+}

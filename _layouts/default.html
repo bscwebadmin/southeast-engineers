@@ -1,0 +1,75 @@
+{% include head.html %}
+ <!-- ========== HEADER ========== -->
+ <header id="header" class="navbar navbar-expand-lg navbar-end navbar-absolute-top navbar-light navbar-show-hide"
+ data-hs-header-options='{
+   "fixMoment": 1000,
+   "fixEffect": "slide"
+ }'>
+<div class="container-fluid">
+<nav class="js-mega-menu navbar-nav-wrap mx-lg-5 px-lg-5">
+<!-- Default Logo -->
+<a class="navbar-brand" href="./index.html" aria-label="Front">
+ <img class="navbar-brand-logo" src="/assets/images/logo.png" alt="Logo">
+</a>
+<!-- End Default Logo -->
+
+<!-- Toggler -->
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+ <span class="navbar-toggler-default">
+   <i class="bi-list"></i>
+ </span>
+ <span class="navbar-toggler-toggled">
+   <i class="bi-x"></i>
+ </span>
+</button>
+<!-- End Toggler -->
+
+<!-- Collapse -->
+<div class="collapse navbar-collapse" id="navbarNavDropdown">
+ <div class="navbar-absolute-top-scroller">
+   <ul class="navbar-nav">
+     <!-- Home -->
+     <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+     <!-- End Home -->
+
+     <!-- ABOUT -->
+     <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+     <!-- End ABOUT -->
+     <li class="hs-has-sub-menu nav-item">
+      <a id="pagesDropdown" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICES</a>
+      <div class="hs-sub-menu dropdown-menu hs-sub-menu-desktop-lg animated" aria-labelledby="listingsDropdown" style="min-width: 14rem; display: none; animation-duration: 300ms;">
+        <a class="dropdown-item " href="services.html">SERVICES</a>
+        <a class="dropdown-item " href="service-interior.html">SERVICES-Interior</a>
+        <a class="dropdown-item " href="../demo-jobs/employee.html">Employee (Applicant)</a>
+        <a class="dropdown-item " href="../demo-jobs/employer.html">Employer (Company)</a>
+      </div>
+    </li>
+     <!-- End SERVICES -->
+     <!-- Pages -->
+     <li class="nav-item"><a class="nav-link" href="featured.html">FEATURED PROJECTS</a></li>
+     <!-- End Pages --> 
+     <li class="nav-item"><a class="nav-link" href="index.html">NEWS</a></li>
+     <!-- Portfolio -->   
+     <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li> 
+     <!-- End Portfolio -->     
+   </ul>
+ </div>
+</div>
+<!-- End Collapse -->
+<div class="hs-has-header-right-text mx-5 px-5 d-lg-block d-none">
+  <ul>
+    <li><a class="hs-has-header-rtt" href="#">BATON ROUGE<span class="header-number"> 225-295-1880</span></a></li>
+    <li><a href="#">LAFAYETTE<span class="header-number"> 337-988-7768</span></a></li>
+  </ul>
+</div> 
+</nav>
+</div>
+</header>
+<!-- ========== END HEADER ========== -->
+  <!-- ========== MAIN CONTENT ========== -->
+<main id="content" role="main">    
+  {{ content }}
+  {% include contact.html %}
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+{% include footer.html %}

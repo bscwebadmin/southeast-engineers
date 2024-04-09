@@ -1,0 +1,41 @@
+<!-- About Section -->
+<div class="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="about-text">
+          <h2>About Southeast Engineers</h2>
+          <p>{{ include.about_text }}</p>
+          <a href="{{ include.about_button_url }}" class="btn">{{ include.about_button_text }}</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="services">
+          <h2>Professional Services</h2>
+          <div class="accordion" id="servicesAccordion">
+            {% for service in include.services %}
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading{{ forloop.index }}">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.index }}" aria-expanded="true" aria-controls="collapse{{ forloop.index }}">
+                  {{ service.title }}
+                </button>
+              </h2>
+              <div id="collapse{{ forloop.index }}" class="accordion-collapse collapse {{ forloop.first | yesno: 'show,' }}" aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#servicesAccordion">
+                <div class="accordion-body">
+                  <p>{{ service.description }}</p>
+                  <a href="{{ service.button_url }}" class="btn">{{ service.button_text }}</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="about-images">
+          {% for image in include.about_images %}
+            <img src="{{ image }}" alt="">
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<!-- Hero Section -->
+<div class="hero" style="background-image: url({{ include.hero_image }});">
+  <div class="container">
+    <div class="hero-content">
+      <h2>{{ include.hero_text }}</h2>
+      <a href="{{ include.hero_button_url }}" class="btn">{{ include.hero_button_text }}</a>
+      <ul>
+        {% for link in include.hero_links %}
+          <li><a href="{{ link.url }}">{{ link.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

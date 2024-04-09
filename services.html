@@ -1,0 +1,219 @@
+---
+layout: page
+page_title: "Services"
+meta_title: "Services - Southeast Engineers"
+meta_description: >
+  With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services.
+pages_header_image: "/assets/images/service_hero.jpg"
+what_we_do_section:
+  title: "What We Do"
+  services:
+    - name: "Foundation Engineering"
+      link: "#"
+    - name: "Structural Engineering"
+      link: "#"
+    - name: "Residential Civil Engineering"
+      link: "#"
+    - name: "Floodplain Analysis"
+      link: "#"
+    - name: "Civil Engineering"
+      link: "#"
+    - name: "Aquatics Engineering"
+      link: "#"
+    - name: "Delegated Systems Design"
+      link: "#"
+    - name: "Drainage Modeling"
+      link: "#"
+    - name: "Subdivision Development"
+      link: "#"
+    - name: "Municipal Infrastructure"
+      link: "#"
+our_progress_section:
+  title: "Our Process"
+  description: "Our goal here at Southeast Engineers is to save you time and money by delivering timely, efficient response to your needs. Our residential clients enjoy the cost-effective, sound designs that we provide. Our commercial clients enjoy the quick delivery time to move their projects forward."
+  contact_link: "#"
+  image: "/assets/images/services/service_02.jpg"
+
+residential_section:
+  title: "Residential"
+  items:
+    - title: "Foundation Engineering"
+      description: "Cost-Effective | Structurally Sound Designs"
+      learn_more_link: "#"
+      image: "/assets/images/Services/Residential/01.jpg"
+    - title: "Structural Engineering"
+      description: "Code Compliant | Efficient"
+      learn_more_link: "#"
+      image: "/assets/images/Services/Residential/02.jpg"
+    - title: "Residential Civil Engineering"
+      description: "Code Compliant Storm Water Management"
+      learn_more_link: "#"
+      image: "/assets/images/Services/Residential/03.jpg"
+    - title: "Floodplain Analysis"
+      description: "Mauris et bibendum ipsum, sed elementum leo"
+      learn_more_link: "#"
+      image: "/assets/images/Services/Residential/04.jpg"
+    - title: "Subdivision Development"
+      description: "Mauris et bibendum ipsum, sed elementum leo"
+      learn_more_link: "#"
+      image: "/assets/images/Services/Residential/05.jpg"
+
+commercial_section:
+  title: "Commercial"
+  items:
+    - title: "Structural Engineering"
+      description: "Cost-Effective | Structurally Sound Designs"
+      learn_more_link: "#"
+      image: "/assets/Images/Services/Commercial/01.jpg"
+    - title: "Civil Engineering"
+      description: "Mauris et bibendum ipsum, sed elementum leo"
+      learn_more_link: "#"
+      image: "/assets/Images/Services/Commercial/02.jpg"
+    - title: "Aquatics Engineering"
+      description: "Mauris et bibendum ipsum, sed elementum leo"
+      learn_more_link: "#"
+      image: "/assets/Images/Services/Commercial/03.jpg"
+    - title: "Delegated Systems Design"
+      description: "Contractor Support for Delegated System Design"
+      learn_more_link: "#"
+      image: "/assets/Images/Services/Commercial/04.jpg"
+    - title: "Drainage Modeling"
+      description: "Mauris et bibendum ipsum, sed elementum leo"
+      learn_more_link: "#"
+      image: "/assets/Images/Services/Commercial/05.jpg"
+    - title: "Municipal Infrastructure"
+      description: "Mauris et bibendum ipsum, sed elementum leo"
+      learn_more_link: "#"
+      image: "/assets/Images/Services/Commercial/06.jpg"
+---
+
+
+<!-- services proses area start here  -->
+<div class="services-proses-section">
+  {% assign section_one = page.what_we_do_section %}
+  <div class="container">
+    <div class="services-proses-top">
+      <div class="row">
+        <div class="col-lg-4">
+          {% if section_one.title %}
+           <h2 class="tags-top-heading"> {{ section_one.title }}</h2>
+          {% endif %}
+        </div>
+        <div class="col-lg-8">
+          <div class="tags-top-list">
+            <ul class="tags-top-menu-list">
+              {% for list in section_one.services %}
+               <li><a href="{{ list.link }}" class="tags-top-nav-link">{{ list.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- services proses top  area end here  -->
+
+    <!-- services proses bottom  area start here  -->
+    <div class="services-proses-bottom-area">
+      {% assign section_two = page.our_progress_section %}
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="proses-bottom-area-info">
+            {% if section_two.title %}
+             <h2>{{ section_two.title }}</h2>
+            {% endif %}
+            {% if section_two.description %}
+             <p> {{ section_two.description }} </p>
+            {% endif %}
+           <div class="proses-btn-area">
+            <a class="about-hero-btn" href="{{ section_two.contact_link }}">CONTACT US</a>
+           </div>
+          </div>
+        </div>
+        {% if section_two.image %}
+        <div class="col-lg-5">
+          <div class="bottom-img-area">
+            <img src="{{ section_two.image }}" alt="contact" />
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>    
+  </div>
+</div>
+<!-- services proses area end here  -->
+<section class="residential-section">  
+  {% assign section_three = page.residential_section %}
+  <div class="residentel-area">
+    <div class="container">
+      <div class="residential-header py-3">
+        {% if section_three.title %}
+         <h2>{{ section_three.title }}</h2>
+        {% endif %}
+      </div>
+      <div class="row">
+        {% for list in section_three.items %}
+        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+          <div class="single-residential mb-5 pb-3">
+            {% if list.image %}
+            <div class="single-res-img mb-3">
+              <img src="{{ list.image }}" alt="{{ list.title }}">
+            </div>
+            {% endif %}
+            <div class="single-res-info">
+              {% if list.title %}
+               <h2 class="single-res-heading"> {{ list.title }} </h2>
+              {% endif %}
+              {% if list.description %}
+               <p>{{ list.description }}</p> 
+              {% endif %}
+              {% if list.learn_more_link %}
+              <a class="about-info-btn single-res-btn" href="{{ list.learn_more_link }}">LEARN MORE</a>  
+              {% endif %}           
+            </div>
+          </div>         
+        </div>
+        {% endfor %}
+      </div>
+      <div class="residential-extra"></div>
+    </div>
+  </div>
+</section>
+<!-- our  Residential section end here  -->
+<section class="commercial-section">  
+  <!-- Commercial Section Start Here -->
+  {% assign commercial_section = page.commercial_section %}
+<!-- Commercial Section End Here -->
+  <div class="residentel-area">
+    <div class="container">
+      <div class="commercial-header">
+        {% if commercial_section.title %}
+         <h2 class="py-3">{{ commercial_section.title }}</h2>
+        {% endif %}
+      </div>
+      <div class="row">
+        {% for item in commercial_section.items %}
+        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+          <div class="single-residential mb-5 pb-3">
+            {% if item.image %}
+            <div class="single-res-img mb-3">
+              <img src="{{ item.image }}" alt="{{ item.title }}">
+            </div>
+            {% endif %}
+            <div class="single-res-info">
+              {% if item.title %}
+               <h2 class="single-res-heading"> {{ item.title }} </h2>
+              {% endif %}
+              {% if item.description %}
+               <p>{{ item.description }}</p> 
+              {% endif %}
+              {% if item.learn_more_link %}
+              <a class="about-info-btn single-com-btn" href="{{ item.learn_more_link }}">LEARN MORE</a>  
+              {% endif %}          
+            </div>
+          </div>         
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

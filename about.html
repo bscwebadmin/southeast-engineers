@@ -1,0 +1,121 @@
+---
+layout: page
+page_title: "About Us"
+meta_title: "About - Southeast Engineers"
+meta_description: "With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services."
+pages_header_image: "/assets/images/about.webp"
+who_we_help:
+  title: "Who We Help"
+  description: "Southeast Engineers is proud to serve the commercial and residential communities in delivery of engineered plans and specifications to feasibly accomplish client objectives. With our knowledge of industry standards and codes, Southeast Engineers produces efficient, cost effective designs for construction. Additionally, Southeast Engineers assists clients in diagnosing building related defects and provides recommendations to remediate problem conditions."
+  image: "/assets/images/about_02.webp"
+  links:
+    - text: "Aquatics Engineering"
+      url: "#"
+    - text: "Civil Engineering"
+      url: "#"
+    - text: "Structural Engineering"
+      url: "#"
+our_team:
+  title: "Our Team"
+  our_team:
+  title: "Our Team"
+  members:
+    - name: "James J. “Jimmy” Ricks, P.E."
+      position: "Principal Civil Engineering Division"
+      image: "/assets/images/team/Jimmy-Ricks.png"
+    - name: "John “Tommy” Watson, P.E."
+      position: "Principal Civil Engineering Division"
+      image: "/assets/images/team/Headshots-0013.png"
+    - name: "Austin Toney, P.E."
+      position: "Principal Structural Engineering Division"
+      image: "/assets/images/team/Headshots-0022.png"
+    - name: "RYAN DUNLEVY, P.E."
+      position: "Principal Structural & Aquatics Engineering Division"
+      image: "/assets/images/team/Headshots-0007.png"
+    - name: "Stephanie Stanford, P.E."
+      position: "Civil Engineering Division"
+      image: "/assets/images/team/Headshots-0018.png"
+    - name: "Christine Dunlevy"
+      position: "Business Manager"
+      image: "/assets/images/team/Headshots-0014.png"
+    - name: "THOMAS MYERS, P.E."
+      position: "Structural Engineering Division"
+      image: "/assets/images/team/Headshots-0001.png"
+    - name: "Lena Peltier, P.E."
+      position: "Civil Engineering Division"
+      image: "/assets/images/team/Lena-Peltier.png"
+    - name: "Brandon Bergeron, E.I."
+      position: "Civil Engineering Division"
+      image: "/assets/images/team/Brandon-Bergeron.png"
+    - name: "Terral Davis, E.I."
+      position: "Civil Engineering Division"
+      image: "/assets/images/team/Terral-Davis.png"
+    - name: "Cameron Lunsford, E.I."
+      position: "Civil Engineering Division"
+      image: "/assets/images/team/Cameron-Lunsford.png"
+    - name: "Darlene Shingleur"
+      position: "Administrator"
+      image: "/assets/images/team/Ellipse1.png"
+    - name: "Blake Watson, E.I."
+      position: "Aquatics Engineering Division"
+      image: "/assets/images/team/Ellipse1.png"
+    - name: "Alaina Thompson"
+      position: "Civil Student Intern"
+      image: "/assets/images/team/Ellipse1.png"
+    - name: "Keith Dupuy"
+      position: "Civil Engineering Division"
+      image: "/assets/images/team/Ellipse1.png"
+    - name: "ROBERT LEE, P.E."
+      position: "Emeritus Principal"
+      image: "/assets/images/team/Headshots-0009.png"
+
+---
+
+
+<!-- About Help Area -->
+<div class="seabout-help-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-md-7 col-sm-12 mb-5 mt-4">
+        <div class="help-area-info">
+          <h2>{{ page.who_we_help.title }}</h2>
+          <p>{{ page.who_we_help.description }}</p>
+          <ul class="help-area-list">
+            {% for link in page.who_we_help.links %}
+              <li><a class="section-help-list" href="{{ link.url }}">{{ link.text }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-12">
+        <div class="help-area-img-area mt-5">
+          <img src="{{ page.who_we_help.image }}" alt="about">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Our Team Area -->
+<div class="about-team-area">
+  <div class="container">
+    <div class="team-area-header mb-5">
+      <h2 class="teamarea-header-title pb-2">{{ page.our_team.title }}</h2>
+    </div>
+    <div class="row">
+      {% for member in page.our_team.members %}
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 p-3">
+          <div class="single-team">
+            <div class="team-person">
+              <img src="{{ member.image }}" alt="{{ member.name }}">
+            </div>
+            <div class="team-person-info">
+              <h4 class="team-title">{{ member.name }}</h4>
+              <p class="about-team-para">{{ member.position }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

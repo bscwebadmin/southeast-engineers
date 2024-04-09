@@ -1,0 +1,40 @@
+// Transparent background and border properties included for button version.
+// iOS requires the button element instead of an anchor tag.
+// If you want the anchor version, it requires `href="#"`.
+// See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+
+.btn-close {
+  box-sizing: content-box;
+  width: $btn-closection-width;
+  height: $btn-closection-height;
+  padding: $btn-closection-padding-y $btn-closection-padding-x;
+  color: $btn-closection-color;
+  background: transparent escape-svg($btn-closection-bg) center / $btn-closection-width auto no-repeat; // include transparent for button elements
+  border: 0; // for button elements
+  @include border-radius();
+  opacity: $btn-closection-opacity;
+
+  // Override <a>'s hover style
+  &:hover {
+    color: $btn-closection-color;
+    text-decoration: none;
+    opacity: $btn-closection-hover-opacity;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: $btn-closection-focus-shadow;
+    opacity: $btn-closection-focus-opacity;
+  }
+
+  &:disabled,
+  &.disabled {
+    pointer-events: none;
+    user-select: none;
+    opacity: $btn-closection-disabled-opacity;
+  }
+}
+
+.btn-closection-white {
+  filter: $btn-closection-white-filter;
+}

@@ -1,0 +1,213 @@
+---
+layout: default
+meta_title: "SEEngineers - Southeast Engineers"
+meta_description: "With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services."
+hero_section:
+  hero_image: "/assets/images/hero.webp"
+  hero_text: "Structural Engineering Civil Engineering Aquatics Engineering"
+  hero_button_text: "CONTACT US"
+  hero_button_url: "#"
+  hero_links:
+    - text: "Wildwood"
+      url: "#"
+    - text: "Aquatics Engineering"
+      url: "#"
+featured_projects:
+  - title: "Wildwood"
+    location: "Lubbock, TX"
+    image: "/assets/images/feature_01.webp"
+    url: "#"
+  - title: "The Chimes"
+    location: "Lafayette, LA"
+    image: "/assets/images/feature_02.webp"
+    url: "#"
+  - title: "Tangi Pines"
+    location: "Tangipahoa, LA"
+    image: "/assets/images/feature_03.webp"
+    url: "#"
+---
+
+
+<!-- Hero -->
+<div class="position-relative">
+    <!-- Swiper Main Slider -->
+    {% assign hero = page.hero_section %}
+    <div class="js-swiper-shop-classic-hero section-hero-section" style="background-image:url({{hero.hero_image}})">
+      <div class="swiper-wrapper">     
+        <!-- Slide -->
+        <div class="swiper-slide">
+          <!-- Container -->
+          <div class="container-fluid">
+            <div class="row">
+              <!-- Swiper Thumbs Slider -->
+              <div class="swiper-slide-hover swiper-slide-hover-extra">
+                <div class="js-swiper-shop-hero-thumbs ">
+                  <div class="swiper-wrapper">
+                  <!-- Slide -->
+                    <div class="swiperslide-hover-info">
+                      <div class="js-swiper-thumb-hover">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12 p-0">
+                              <div class="section-hero-hover-text">
+                                <h3 class="section-hero-text">{{ hero.hero_text }}</h3>
+                                <a class="section-hero-btn mt-2" href="{{ hero.hero_button_url }}">{{ hero.hero_button_text }}</a>
+                              </div>                                
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 p-0">
+                              <div class="section-hero-hover-text-r"> 
+                                <ul>
+                                  {% for hero_list in hero.hero_links %}
+                                  <li><a class="hs-has-hero-rt" href="{{ hero_list.url }}">{{ hero_list.text }}</a></li>
+                                  {% endfor %}
+                                </ul>                    
+                              </div>                                      
+                            </div>
+                          </div>
+                        </div>                      
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+              </div>                       
+            </div>          
+          </div>
+          <!-- End Container -->
+        </div>
+        <!-- End Slide --> 
+      </div>
+  
+      <!-- Arrows -->
+      <div class="js-swiper-shop-classic-hero-button-next swiper-button-next"></div>
+      <div class="js-swiper-shop-classic-hero-button-prev swiper-button-prev"></div>
+    </div>
+    <!-- End Swiper Main Slider -->  
+  </div>
+
+  <!-- Featured Projects Section -->
+<div class="section-project-section py-5">
+  <div class="container">
+    <h2 class="section-project-heading text-start">Featured Projects</h2>
+    <div class="row">
+      {% for project in page.featured_projects %}
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="section-single-project">
+            <div class="section-single-project-img">
+              <img src="{{ project.image }}" alt="{{ project.title }}">
+            </div>
+            <div class="section-single-project-info">
+              <h3 class="section-singlep-info-heading">{{ project.title }}</h3>
+              <h4>{{ project.location }}</h4>
+              <a href="{{ project.url }}">VIEW PROJECTS</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+  <!-- our about section start here  -->
+  <div class="section-about-section">
+    <div class="seabout-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="section-about-left-info">
+              <div class="section-about-info">
+                <h2>About Southeast Engineers</h2>
+                <p>Southeast Engineers is a distinguished engineering firm specializing in Civil, Structural, and Aquatics Engineering. With licenses covering the Southeast United States region, the company stands as a reputable authority in delivering comprehensive engineering solutions. The team at Southeast Engineers combines expertise and innovation to address the unique challenges of each project, ensuring the highest standards of quality and safety. From civil infrastructure projects to intricate structural designs and aquatic engineering solutions, Southeast Engineers is committed to excellence, serving clients with professionalism and a commitment to sustainable and resilient engineering practices.</p>
+                <a class="about-info-btn" href="#">LEARN MORE</a>              
+              </div>            
+            </div>
+          </div>
+          <!-- abour left info end here  -->
+          <!-- se about right info  -->
+          <div class=" col-lg-6 col-md-12 col-sm-12">
+            <div class="seabout-left-info">
+              <div class="section-about-linfo">
+                <h2>Professional Services</h2>
+                <div class="accordion accordion-flush accordion-lg" id="accordionFAQ">
+                  <!-- Accordion Item -->
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="headingBasicsOne">
+                      <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Residential
+                      </a>
+                    </div>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
+                      <div class="accordion-body">
+                        <p>Structural Engineering
+                          Civil Engineering
+                          Aquatics Engineering
+                          Delegated Systems Design
+                          Municipal Infrastructure</p>
+                          <a class="about-info-btn accordion-btn" href="#">LEARN MORE</a>    
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accordion Item -->
+        
+                  <!-- Accordion Item -->
+                  <div class="accordion-item">
+                    <div class="accordion-header" id="headingBasicsTwo">
+                      <a class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        Commercial
+                      </a>
+                    </div>
+                    <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ" >
+                      <div class="accordion-body">
+                        <p>Structural Engineering
+                          Civil Engineering
+                          Aquatics Engineering
+                          Delegated Systems Design
+                          Municipal Infrastructure</p>
+                          <a class="about-info-btn accordion-btn" href="#">LEARN MORE</a> 
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accordion Item --> 
+                </div>
+              </div>
+            </div>
+          </div>       
+        </div>
+      </div>
+      <div class="section-about-image-area">
+        <div class="container-fluid">
+          <div class="row">
+            <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
+              <div class="section-about-left-img">
+                <img src="/assets/images/service_01.webp" alt="5-Home-PXL_20220623_142634290">
+              </div>
+            </div>
+            <div class="col-xl-6  col-lg-6 col-md-6 col-sm-12 ">
+              <div class="section-about-right-img">
+                <img src="/assets/images/service_02.webp" alt="6-Home-aae0d181-0281-4086-a098-d32c503099e1">
+              </div>          
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-btn-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-5 col-sm-12">
+              <div class="section-coustomer-about-left">
+                <h4>What Our
+                  Customers
+                  Say</h4>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-7 col-sm-12">
+              <div class="section-coustomer-about-right">
+                <p>RCI has worked with Southeast Engineers on multiple projects over the past 4 years. In every instance Southeast Engineers has turned over practical, well thought out designs in a very acceptable time frame within cost effective price points. They have a professional and timely staff that understands the aquatic design world extremely well.</p>  
+                <a href="#">Rotolo Consultants, Inc.</a>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <!-- our about section end here  -->
