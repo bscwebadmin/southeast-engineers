@@ -1,4 +1,8 @@
 source: /assets
+pages:
+  path: ''
+  output: true
+  filter: strict
 paths:
   uploads: uploads
   dam_uploads: ''
