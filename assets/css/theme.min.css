@@ -23950,7 +23950,8 @@ label.form-control {
 }
 
 .navbar .navbar-nav .nav-link {
-   padding: 1rem .75rem
+   /* padding: 1rem .75rem */
+   padding: 0 .75rem
 }
 
 .navbar .nav-item:hover>.nav-link {
@@ -24798,7 +24799,7 @@ label.form-control {
    }
 
    .navbar-expand-lg:not(.navbar-vertical) .navbar-nav {
-      align-items: center
+      align-items: self-end
    }
 
    .navbar-expand-lg .nav-item:not(:last-child) {

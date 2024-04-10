@@ -85,9 +85,8 @@ commercial_section:
       description: "Mauris et bibendum ipsum, sed elementum leo"
       learn_more_link: "#"
       image: "/assets/Images/Services/Commercial/06.jpg"
+permalink: /services
 ---
-
-
 <!-- services proses area start here  -->
 <div class="services-proses-section">
   {% assign section_one = page.what_we_do_section %}
@@ -137,11 +136,11 @@ commercial_section:
         </div>
         {% endif %}
       </div>
-    </div>    
+    </div>
   </div>
 </div>
 <!-- services proses area end here  -->
-<section class="residential-section">  
+<section class="residential-section">
   {% assign section_three = page.residential_section %}
   <div class="residentel-area">
     <div class="container">
@@ -164,13 +163,13 @@ commercial_section:
                <h2 class="single-res-heading"> {{ list.title }} </h2>
               {% endif %}
               {% if list.description %}
-               <p>{{ list.description }}</p> 
+               <p>{{ list.description }}</p>
               {% endif %}
               {% if list.learn_more_link %}
-              <a class="about-info-btn single-res-btn" href="{{ list.learn_more_link }}">LEARN MORE</a>  
-              {% endif %}           
+              <a class="about-info-btn single-res-btn" href="{{ list.learn_more_link }}">LEARN MORE</a>
+              {% endif %}
             </div>
-          </div>         
+          </div>
         </div>
         {% endfor %}
       </div>
@@ -179,7 +178,7 @@ commercial_section:
   </div>
 </section>
 <!-- our  Residential section end here  -->
-<section class="commercial-section">  
+<section class="commercial-section">
   <!-- Commercial Section Start Here -->
   {% assign commercial_section = page.commercial_section %}
 <!-- Commercial Section End Here -->
@@ -204,13 +203,13 @@ commercial_section:
                <h2 class="single-res-heading"> {{ item.title }} </h2>
               {% endif %}
               {% if item.description %}
-               <p>{{ item.description }}</p> 
+               <p>{{ item.description }}</p>
               {% endif %}
               {% if item.learn_more_link %}
-              <a class="about-info-btn single-com-btn" href="{{ item.learn_more_link }}">LEARN MORE</a>  
-              {% endif %}          
+              <a class="about-info-btn single-com-btn" href="{{ item.learn_more_link }}">LEARN MORE</a>
+              {% endif %}
             </div>
-          </div>         
+          </div>
         </div>
         {% endfor %}
       </div>
