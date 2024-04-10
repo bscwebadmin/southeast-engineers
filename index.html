@@ -1,7 +1,7 @@
 ---
 layout: default
-meta_title: "SEEngineers - Southeast Engineers"
-meta_description: "With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services."
+title: "SEEngineers - Southeast Engineers"
+description: "With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services."
 hero_section:
   hero_image: "/assets/images/hero.webp"
   hero_text: "Structural Engineering Civil Engineering Aquatics Engineering"
@@ -26,14 +26,12 @@ featured_projects:
     image: "/assets/images/feature_03.webp"
     url: "#"
 ---
-
-
 <!-- Hero -->
 <div class="position-relative">
     <!-- Swiper Main Slider -->
     {% assign hero = page.hero_section %}
     <div class="js-swiper-shop-classic-hero section-hero-section" style="background-image:url({{hero.hero_image}})">
-      <div class="swiper-wrapper">     
+      <div class="swiper-wrapper">
         <!-- Slide -->
         <div class="swiper-slide">
           <!-- Container -->
@@ -51,37 +49,36 @@ featured_projects:
                             <div class="col-lg-6 col-md-12 col-sm-12 p-0">
                               <div class="section-hero-hover-text">
                                 <h3 class="section-hero-text">{{ hero.hero_text }}</h3>
-                                <a class="section-hero-btn mt-2" href="{{ hero.hero_button_url }}">{{ hero.hero_button_text }}</a>
-                              </div>                                
+                                <a class="btn btn-wide btn-white rounded-pill mt-2 px-4" href="{{ hero.hero_button_url }}">{{ hero.hero_button_text }}</a>
+                              </div>
                             </div>
-                            <div class="col-lg-6 col-md-12 col-sm-12 p-0">
-                              <div class="section-hero-hover-text-r"> 
-                                <ul>
+                            <div class="col-lg-6 col-md-12 col-sm-12 p-0 d-md-none d-lg-none d-xl-block">
+                              <div class="d-flex align-items-end h-100">
+                                <ul class="w-75">
                                   {% for hero_list in hero.hero_links %}
-                                  <li><a class="hs-has-hero-rt" href="{{ hero_list.url }}">{{ hero_list.text }}</a></li>
+                                  <li class="{% if forloop.first %}border-bottom border-white{% endif %} py-1 "><a class="text-white fw-semibold" href="{{ hero_list.url }}">{{ hero_list.text }}</a></li>
                                   {% endfor %}
-                                </ul>                    
-                              </div>                                      
+                                </ul>
+                              </div>
                             </div>
                           </div>
-                        </div>                      
+                        </div>
                       </div>
-                    </div> 
+                    </div>
                   </div>
                 </div>
-              </div>                       
-            </div>          
+              </div>
+            </div>
           </div>
           <!-- End Container -->
         </div>
-        <!-- End Slide --> 
+        <!-- End Slide -->
       </div>
-  
       <!-- Arrows -->
       <div class="js-swiper-shop-classic-hero-button-next swiper-button-next"></div>
       <div class="js-swiper-shop-classic-hero-button-prev swiper-button-prev"></div>
     </div>
-    <!-- End Swiper Main Slider -->  
+    <!-- End Swiper Main Slider -->
   </div>
 
   <!-- Featured Projects Section -->
@@ -117,8 +114,8 @@ featured_projects:
               <div class="section-about-info">
                 <h2>About Southeast Engineers</h2>
                 <p>Southeast Engineers is a distinguished engineering firm specializing in Civil, Structural, and Aquatics Engineering. With licenses covering the Southeast United States region, the company stands as a reputable authority in delivering comprehensive engineering solutions. The team at Southeast Engineers combines expertise and innovation to address the unique challenges of each project, ensuring the highest standards of quality and safety. From civil infrastructure projects to intricate structural designs and aquatic engineering solutions, Southeast Engineers is committed to excellence, serving clients with professionalism and a commitment to sustainable and resilient engineering practices.</p>
-                <a class="about-info-btn" href="#">LEARN MORE</a>              
-              </div>            
+                <a class="about-info-btn" href="#">LEARN MORE</a>
+              </div>
             </div>
           </div>
           <!-- abour left info end here  -->
@@ -142,12 +139,12 @@ featured_projects:
                           Aquatics Engineering
                           Delegated Systems Design
                           Municipal Infrastructure</p>
-                          <a class="about-info-btn accordion-btn" href="#">LEARN MORE</a>    
+                          <a class="about-info-btn accordion-btn" href="#">LEARN MORE</a>
                       </div>
                     </div>
                   </div>
                   <!-- End Accordion Item -->
-        
+
                   <!-- Accordion Item -->
                   <div class="accordion-item">
                     <div class="accordion-header" id="headingBasicsTwo">
@@ -162,15 +159,15 @@ featured_projects:
                           Aquatics Engineering
                           Delegated Systems Design
                           Municipal Infrastructure</p>
-                          <a class="about-info-btn accordion-btn" href="#">LEARN MORE</a> 
+                          <a class="about-info-btn accordion-btn" href="#">LEARN MORE</a>
                       </div>
                     </div>
                   </div>
-                  <!-- End Accordion Item --> 
+                  <!-- End Accordion Item -->
                 </div>
               </div>
             </div>
-          </div>       
+          </div>
         </div>
       </div>
       <div class="section-about-image-area">
@@ -184,7 +181,7 @@ featured_projects:
             <div class="col-xl-6  col-lg-6 col-md-6 col-sm-12 ">
               <div class="section-about-right-img">
                 <img src="/assets/images/service_02.webp" alt="6-Home-aae0d181-0281-4086-a098-d32c503099e1">
-              </div>          
+              </div>
             </div>
           </div>
         </div>
@@ -201,13 +198,13 @@ featured_projects:
             </div>
             <div class="col-lg-9 col-md-7 col-sm-12">
               <div class="section-coustomer-about-right">
-                <p>RCI has worked with Southeast Engineers on multiple projects over the past 4 years. In every instance Southeast Engineers has turned over practical, well thought out designs in a very acceptable time frame within cost effective price points. They have a professional and timely staff that understands the aquatic design world extremely well.</p>  
-                <a href="#">Rotolo Consultants, Inc.</a>          
+                <p>RCI has worked with Southeast Engineers on multiple projects over the past 4 years. In every instance Southeast Engineers has turned over practical, well thought out designs in a very acceptable time frame within cost effective price points. They have a professional and timely staff that understands the aquatic design world extremely well.</p>
+                <a href="#">Rotolo Consultants, Inc.</a>
               </div>
             </div>
           </div>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
   <!-- our about section end here  -->

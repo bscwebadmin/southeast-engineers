@@ -17,7 +17,7 @@ body{
 
 }
 .navbar-absolute-top {
-    position: inherit; 
+    position: inherit;
     top: 0;
     left: 0;
     right: 0;
@@ -29,13 +29,8 @@ body{
 }
 /* nav logo end  */
 .navbar-light .navbar-nav .nav-link {
-    color: #666666;
     font-size: 1.125rem;
     font-family: "Roboto Condensed", sans-serif;
-    font-weight: 400;  
-    margin-top: 1.875rem;
-    line-height: 1.125rem;
-
 }
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
     color: #5C8F87;
@@ -47,7 +42,7 @@ body{
     text-align: left;
     display: block;
     order: 3;
-    right: 0;    
+    right: 0;
     margin-top: 10px;
 }
 .hs-has-header-right-text ul li{
@@ -82,7 +77,7 @@ body{
     background-image: url("/assets/images/hero.webp");
     background-size: cover;
     background-position: center center;
-    height: 820px;    
+    height: 820px;
 }
 .hero-contact{
     position: absolute;
@@ -92,20 +87,20 @@ body{
     font-size: 1.5rem;
     font-weight: 800;
 }
-.hero-contact:hover{    
+.hero-contact:hover{
     color: #5c8f87;
-    
+
 }
-.swiper-slide-hover-extra::after{ 
-    position: absolute; 
+.swiper-slide-hover-extra::after{
+    position: absolute;
     content: "";
-    background-color: #003C4B; 
+    background-color: #003C4B;
     height: 350px;
-    width: 100%;    
-    opacity: .8;    
-    bottom: 0px;  
+    width: 100%;
+    opacity: .8;
+    bottom: 0px;
     left: 0;
-    right: 0;   
+    right: 0;
 }
 .swiperslide-hover-info{
     position: absolute;
@@ -128,14 +123,14 @@ body{
     list-style: none;
 }
 .section-hero-hover-text-r ul li a {
-    font-size: 1.875rem;    
+    font-size: 1.875rem;
     font-family: "Roboto Condensed", sans-serif;
     color: #ffffff;
     line-height: 32px;
     font-weight: 400;
 }
 .hs-has-hero-rt {
-    position: relative; 
+    position: relative;
     font-weight: 600 !important;
     margin: 16px 0;
     display: block;
@@ -151,7 +146,6 @@ body{
 
 .swiper-button-prev{
     display: none;
-
 }
 .js-swiper-shop-classic-hero .swiper-button-next:after {
     background-image: url("/assets/images/arrow-right.png");
@@ -161,9 +155,8 @@ body{
 }
 
 .section-hero-btn {
-    position: absolute;
     width: 10.063rem;
-    height: 2.75rem;    
+    height: 2.75rem;
     color: #4B717B;
     background-color: #ffffff;
     padding: 10px 25px;
@@ -239,15 +232,15 @@ body{
     line-height: 32px;
     font-family: "Roboto Condensed", sans-serif;
     margin-top: 10px;
-    color: #FFFFFF;    
+    color: #FFFFFF;
 }
 .section-single-project-info a{
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 32px;
-    font-family: "Roboto Condensed", sans-serif;    
+    font-family: "Roboto Condensed", sans-serif;
     color: #FFFFFF;
-    text-decoration: underline;  
+    text-decoration: underline;
 }
 /* se about section style start here  */
 .section-about-section{
@@ -295,10 +288,10 @@ body{
 }
 .section-about-info p {
     font-size: 1.125rem;
-    font-weight: 400;   
-    font-family: "Roboto Condensed", sans-serif;  
+    font-weight: 400;
+    font-family: "Roboto Condensed", sans-serif;
     color: #003C4B;
-    line-height: 1.875rem;    
+    line-height: 1.875rem;
 }
 .about-info-btn {
     font-size: 1.125rem;
@@ -318,7 +311,7 @@ body{
     color: #003C4B;
 }
 .accordion-button:not(.collapsed) {
-    color: #003C4B;    
+    color: #003C4B;
 }
 .accordion-lg .accordion-button {
     font-size: 1.875rem;
@@ -403,7 +396,7 @@ body{
 }
 .contact-btm-list li a {
     font-size: 1.125rem;
-    font-weight: 400;    
+    font-weight: 400;
     text-decoration: underline;
     color: #5C8F87;
     font-family: "Roboto Condensed", sans-serif;
@@ -411,14 +404,14 @@ body{
     display: block;
     line-height: 1.125rem;
 }
-.form-req {    
+.form-req {
     justify-content: end;
     display: flex;
 }
-.form-select-lg {    
-    font-size: 0.775rem;    
+.form-select-lg {
+    font-size: 0.775rem;
 }
-.form-control-lg {    
+.form-control-lg {
     font-size: 0.775rem;
 }
 .section-contact-btn{
@@ -427,24 +420,24 @@ body{
     padding: 10px 1.875rem;
     background-color: #5C8F87;
     border: none;
-    border-radius: 1.875rem;  
-    justify-content: right; 
-    color: #FFFFFF; 
+    border-radius: 1.875rem;
+    justify-content: right;
+    color: #FFFFFF;
 }
 /* footer area style start here  */
 .footer-wraper{
     max-width: 1320px;
     margin: 0 auto;
 }
-.our-footter-area {
-    background-color: #5c8f87;    
+.our-footer-area {
+    background-color: #5c8f87;
     padding: 1.875rem 0;
 }
 .list-inline-social {
     display: flex;
     justify-content: space-between;
     margin: 0;
-    padding: 0;    
+    padding: 0;
 }
 .section-footer-list i {
     background-color: #FFFFFF;
@@ -468,18 +461,18 @@ body{
     color: #f7faff;
     background-color: inherit;
     border-color: transparent;
-    
+
 }
 .btn-soft-light i {
     font-size: 1.125rem;
-    
+
 }
 
 /* about page style start here  */
 
 .see-about-hero-area {
     position: relative;
-    height: 471px;   
+    height: 471px;
     background-position: center;
     background-size: cover;
 }
@@ -530,7 +523,7 @@ body{
 .bi-chevron-up::before {
     color: #444444;
 }
-/* about help area  */ 
+/* about help area  */
 .seabout-help-section{
     height: 493.17px;
     background-image: linear-gradient(#001115, #003948);
@@ -545,15 +538,15 @@ body{
     font-weight: bold;
 }
 .about-team-area{
-    padding: 3.75rem 0 3.75rem 0; 
+    padding: 3.75rem 0 3.75rem 0;
 }
 .teamarea-header-title{
-    font-size: 3.75rem;    
+    font-size: 3.75rem;
     line-height: 70px;
     color: #5C8F87;
     font-weight: 400;
     font-family: "Roboto Condensed", sans-serif;
-    border-bottom: 1px solid #5C8F87;   
+    border-bottom: 1px solid #5C8F87;
 }
 .team-person img {
     width: 250px;
@@ -612,11 +605,11 @@ body{
     position: absolute;
     content: "";
     background-color: #003C4B;
-    opacity: .7;    
+    opacity: .7;
     height: 200px;
     width: 100%;
-    bottom: 0px;   
-    
+    bottom: 0px;
+
 }
 .about-hero-area {
     z-index: 1;
@@ -635,7 +628,7 @@ body{
     font-weight: 400;
     line-height: 70px;
     color: #5C8F87;
-    font-family: "Roboto Condensed", sans-serif;    
+    font-family: "Roboto Condensed", sans-serif;
 }
 .tags-top-menu-list {
     display: flex;
@@ -649,7 +642,7 @@ body{
     font-size: 1.125rem;
     line-height: 28px;
     font-weight: 500;
-    font-family: "Roboto Condensed", sans-serif;    
+    font-family: "Roboto Condensed", sans-serif;
 }
 .bottom-img-area img{
     width: 660px;
@@ -673,7 +666,7 @@ body{
     font-weight: 400;
     line-height: 70px;
     color: #5C8F87;
-    font-family: "Roboto Condensed", sans-serif;  
+    font-family: "Roboto Condensed", sans-serif;
 }
 .proses-bottom-area-info p{
     font-size: 1.125rem;
@@ -687,7 +680,7 @@ body{
     font-weight: 400;
     line-height: 70px;
     color: #5A7DA9;
-    font-family: "Roboto Condensed", sans-serif; 
+    font-family: "Roboto Condensed", sans-serif;
 }
 .single-res-heading{
     position: relative;
@@ -695,7 +688,7 @@ body{
     line-height: 32px;
     font-weight: bold;
     color: #5C8F87;
-    font-family: "Roboto Condensed", sans-serif; 
+    font-family: "Roboto Condensed", sans-serif;
     margin: 10px 0;
 }
 .single-res-heading::after {
@@ -726,7 +719,7 @@ body{
     font-weight: 400;
     line-height: 70px;
     color: #5A7DA9;
-    font-family: "Roboto Condensed", sans-serif; 
+    font-family: "Roboto Condensed", sans-serif;
     margin-top: 1.25rem;
 
 }
@@ -739,7 +732,7 @@ body{
 .residential-hero-area{
     background-image: url(assets/Images/Residential/1-Residential-Hero-IMG_1800.jpg);
 }
-.residential-slider-section{    
+.residential-slider-section{
     padding: 3.75rem 0 3.75rem 0;
     background-image: linear-gradient(#001115, #003948);
 }
@@ -748,7 +741,7 @@ body{
     line-height: 50px;
     font-weight: 400;
     color: #5C8F87;
-    font-family: "Roboto Condensed", sans-serif; 
+    font-family: "Roboto Condensed", sans-serif;
 }
 .residential-slider-img img{
     height: 300px;
@@ -763,7 +756,7 @@ body{
 /* rs slider style start here  */
 .res-slider .swiper-button-next {
     top: 50%;
-    right: 1.25rem;    
+    right: 1.25rem;
     background-color: inherit;
     box-shadow: none;
 }
@@ -771,14 +764,14 @@ body{
     top: 50%;
     left: 1.25rem;
     display: block;
-    
+
     box-shadow: none;
     background-color: inherit;
 }
-.res-slider .swiper-button-prev:after {   
+.res-slider .swiper-button-prev:after {
     background-position: center;
     position: absolute;
-    top: 42%;    
+    top: 42%;
     left: 30%;
 }
 .res-slider .swiper-pagination-bullet-active, .swiper-pagination-bullet-active:hover {
@@ -797,7 +790,7 @@ body{
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link{
     font-weight: bold;
     font-size: 1.25rem;
-    font-family: "Roboto Condensed", sans-serif; 
+    font-family: "Roboto Condensed", sans-serif;
     line-height: 22px;
     margin: 0;
     padding: 0;
@@ -807,17 +800,17 @@ body{
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     font-weight: bold;
     font-size: 1.25rem;
-    font-family: "Roboto Condensed", sans-serif; 
+    font-family: "Roboto Condensed", sans-serif;
     color: #5c8f87;
-    
+
 }
 .nav-tabs:not(.nav-vertical) .nav-link {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 1.25rem;
 }
-.nav-tabs .nav-link {    
-    border: none;    
+.nav-tabs .nav-link {
+    border: none;
 }
 .tab-content{
     margin: 40px 0;
@@ -831,7 +824,7 @@ body{
     font-size: 3.75rem;
     line-height: 70px;
     font-weight: 400;
-    font-family: "Roboto Condensed", sans-serif; 
+    font-family: "Roboto Condensed", sans-serif;
 }
 .single-tab-info p{
     font-size: 1.125rem;
@@ -843,10 +836,10 @@ body{
 /* our featured hero area style start here  */
 .featured-hero-area{
     position: relative;
-    background-image: url(assets/Images/Featured/1-Featured-Hero-036A5103.jpg);   
+    background-image: url(assets/Images/Featured/1-Featured-Hero-036A5103.jpg);
     height: 471px;
     background-size: cover;
-    background-position: center;   
+    background-position: center;
 }
 .featured-main-hero::after{
     position: absolute;
@@ -857,16 +850,16 @@ body{
     opacity: .6;
 }
 .featured-hero-info h2{
-    z-index: 1; 
-    bottom: 80px;   
+    z-index: 1;
+    bottom: 80px;
     right: 20%;
-    position: absolute;    
-    color: #FFFFFF; 
+    position: absolute;
+    color: #FFFFFF;
     font-size: 3.75rem;
     line-height: 70px;
     font-weight: 400;
     font-family: "Roboto Condensed", sans-serif;
-   
+
 }
 .featured-hero-btn{
     z-index: 1;
@@ -877,14 +870,14 @@ body{
     color: #FFFFFF;
     text-align: center;
     padding: 10px 1.875rem;
-    border-radius: 1.875rem; 
+    border-radius: 1.875rem;
 }
 .featured-hero-btn:hover{
     color: #001115;
 }
 .featured-service-section{
     padding: 3.75rem 0 3.75rem 0;
-    background-image: linear-gradient(#001115, #003948);    
+    background-image: linear-gradient(#001115, #003948);
 }
 
 .ul-featured-list{
@@ -924,10 +917,10 @@ body{
     border: none;
 }
 .dropdown-toggle::after {
-    content: "";    
+    content: "";
     font-size: 1.125rem;
     color: #FFFFFF !important;
-    
+
 }
 .featured-items img{
     width: 100%;
@@ -952,12 +945,12 @@ body{
     width: 80%;
     top: 42px;
 }
-.featured-items-info h4{   
+.featured-items-info h4{
     color: #FFFFFF;
     font-size: 1.875rem;
     line-height: 32px;
     font-weight: 400;
-    font-family: "Roboto Condensed", sans-serif;  
+    font-family: "Roboto Condensed", sans-serif;
 }
 .featured-items-info p{
     color: #FFFFFF;
@@ -981,7 +974,7 @@ body{
     font-size: 3.75rem;
     line-height: 70px;
     font-weight: 400;
-    font-family: "Roboto Condensed", sans-serif;  
+    font-family: "Roboto Condensed", sans-serif;
     color: #FFFFFF;
 }
 .conttact-hero-info {
@@ -1005,14 +998,14 @@ body{
     top: 65%;
     z-index: 1;
 }
-.contact-hero-btn{ 
-    position: absolute;   
+.contact-hero-btn{
+    position: absolute;
     background-color: #5C8F87;
     color: #FFFFFF;
     text-align: center;
     padding: 10px 1.875rem;
-    border-radius: 1.875rem; 
-    right: 0;   
+    border-radius: 1.875rem;
+    right: 0;
 }
 /* mobile layout:320px*/
 @media only screen and (max-width:576px){
@@ -1026,10 +1019,10 @@ body{
         color: black;
     }
     .navbar-light .navbar-nav .nav-link {
-        margin-top: 5px;    
+        margin-top: 5px;
     }
-    
-    .swiperslide-hover-info {    
+
+    .swiperslide-hover-info {
         top: 100px;
     }
     .js-swiper-shop-classic-hero .section-hero-hover-text-r {
@@ -1037,15 +1030,15 @@ body{
         bottom: -500px;
         right: 30%;
     }
-    
+
     /* hero area style start here  */
-    
-    .section-hero-section {    
+
+    .section-hero-section {
         height: 630px;
     }
-    .swiper-slide-hover-extra::after {    
+    .swiper-slide-hover-extra::after {
         height: 100%;
-        
+
     }
     .section-hero-text {
         font-size: 29px;
@@ -1055,39 +1048,39 @@ body{
     .section-hero-hover-text {
         padding: 100px 20px;
     }
-    .section-hero-btn {    
+    .section-hero-btn {
         text-align: center;
     }
-    
-    .hs-has-hero-rt::after {    
-        width: 140px;    
+
+    .hs-has-hero-rt::after {
+        width: 140px;
     }
-    
+
     /* project section style start here  */
-    .section-project-heading {    
+    .section-project-heading {
         font-size: 40px;
         line-height: 43px;
-        
+
     }
     .section-single-project{
         padding: 20px;
     }
-    
+
     /* about section style here  */
     .section-about-info h2 {
-        font-size: 40px;    
+        font-size: 40px;
         line-height: 43px;
     }
     .section-about-section {
         margin: 60px 10px;
     }
-    
-    .about-info-btn {    
+
+    .about-info-btn {
         display: flex;
         justify-content: center;
     }
     .section-about-info {
-        margin-bottom: 0px; 
+        margin-bottom: 0px;
     }
     .section-about-linfo {
         margin: 20px 20px 0px 20px;
@@ -1095,141 +1088,141 @@ body{
     .accordion-btn {
         margin-top: 20px;
     }
-    .accordion-lg .accordion-body {    
+    .accordion-lg .accordion-body {
         display: block;
         text-align: center;
     }
-    .accordion-body p {    
+    .accordion-body p {
         text-align: left;
     }
     .section-about-left-img img {
         margin: 0px;
         width: 100%;
-        height: 162px;  
+        height: 162px;
     }
     .section-about-right-img img {
         width: 100%;
         max-width: 100%;
         height: 162px;
     }
-    
+
     .about-btn-area {
         margin: 60px 0px;
     }
     .section-coustomer-about-left h4 {
-        font-size: 40px;    
-        line-height: 43px;    
+        font-size: 40px;
+        line-height: 43px;
     }
     .section-coustomer-about-right p {
-        font-size: 18px;    
+        font-size: 18px;
         line-height: 30px;
     }
-    
+
     /* our contact area style  */
     .contact-top-list {
-        display: block;   
+        display: block;
     }
     .contact-extra{
         display: none;
     }
-    .contact-top-list li a {    
+    .contact-top-list li a {
         margin: 10px 0;
         display: block;
     }
     .section-contact-info {
         margin: 0px;
     }
-    .section-contact-info img {    
+    .section-contact-info img {
         height: 300px;
     }
     .contact-btm-list {
-        display: flex;    
+        display: flex;
         width: 100%;
         justify-content: center;
     }
-    
-    
+
+
     /* fotter area start here  */
     .footer-contact-list {
         display: block;
-        justify-content: space-between;    
+        justify-content: space-between;
         text-align: center;
     }
     .list-inline {
         list-style: none;
         padding: 0px 20px;
     }
-    .top-footter{
+    .top-footer{
         margin: 10px 0;
         display: block;
     }
-    .footter-logo{
+    .footer-logo{
         padding: 20px;
     }
     .navbar-brand {
         display: block;
         text-align: center;
     }
-    .list-inline-social {    
-        justify-content: initial;   
+    .list-inline-social {
+        justify-content: initial;
         justify-content: center;
     }
-    
-    
+
+
     /* about page style start here  */
-    
-    .see-about-hero-area {    
-        height: 287px;   
+
+    .see-about-hero-area {
+        height: 287px;
     }
     .seabout-help-section {
-        height: auto;    
+        height: auto;
     }
     .help-area-info h2 {
         font-size: 40px;
-        line-height: 50px;    
+        line-height: 50px;
     }
     .help-area-list {
-        display: block;    
+        display: block;
         margin: 10px 10px 40px 10px;
     }
-    
-    .section-help-list {    
+
+    .section-help-list {
         margin: 10px 0;
         display: block;
     }
     .help-area-img-area img {
-        height: 293.09px;    
+        height: 293.09px;
     }
     .about-team-area {
         padding: 40px 0 40px 0;
     }
     .teamarea-header-title {
         font-size: 40px;
-        line-height: 43px;    
+        line-height: 43px;
     }
     .single-team{
         text-align: center;
     }
     .team-title {
-        margin: 10px;    
+        margin: 10px;
     }
-    
+
     /* services page style start here  */
-    
-    .services-hero-area {    
-        height: 503px;    
+
+    .services-hero-area {
+        height: 503px;
     }
-    .services-proses-section { 
-        height: auto;   
-        padding-top: 40px;   
+    .services-proses-section {
+        height: auto;
+        padding-top: 40px;
     }
     .sproses-top-heading {
-        font-size: 40px;    
-        line-height: 43px;    
+        font-size: 40px;
+        line-height: 43px;
     }
     .proses-bottom-area-info h2 {
-        font-size: 40px;    
-        line-height: 43px;   
+        font-size: 40px;
+        line-height: 43px;
     }
     .proses-btn-area{
         text-align: center;
@@ -1240,28 +1233,28 @@ body{
         height: 293.09px;
     }
     .residential-header h2 {
-        font-size: 40px;    
+        font-size: 40px;
         line-height: 43px;
-       
+
     }
-    .single-res-heading {    
+    .single-res-heading {
         font-size: 26px;
         line-height: 30px;
-      
+
     }
     .commercial-header h2 {
-        font-size: 40px;    
-        line-height: 43px;  
+        font-size: 40px;
+        line-height: 43px;
         margin-top: 20px;
     }
      /* our Residential Services page area start here  */
      .about-hero-title {
         font-size: 40px;
-        line-height: 43px;    
+        line-height: 43px;
         margin-bottom: 20px;
     }
     .residential-slider-section {
-        padding: 40px 0 40px 0;   
+        padding: 40px 0 40px 0;
     }
     .about-hero-area {
         margin: auto;
@@ -1272,7 +1265,7 @@ body{
     }
     .about-hero-title {
         font-size: 40px;
-        line-height: 43px;   
+        line-height: 43px;
         text-align: left;
         width: 171px;
         margin: auto;
@@ -1284,26 +1277,26 @@ body{
     }
     .residential-heder h2 {
         font-size: 40px;
-        line-height: 43px;   
+        line-height: 43px;
     }
-    .contact-btm-list li a {    
-        margin: 20px 20px 20px 0px; 
-        
+    .contact-btm-list li a {
+        margin: 20px 20px 20px 0px;
+
     }
-    .section-contact-area {  
-        padding: 40px 0px;   
+    .section-contact-area {
+        padding: 40px 0px;
     }
     .accordion-lg .accordion-button {
-        font-size: 22px;    
+        font-size: 22px;
     }
     /* feature page style start here  */
-    .featcured-tab h4 {   
+    .featcured-tab h4 {
         display: none;
     }
-    .featcured-tab {    
+    .featcured-tab {
         width: 100%;
     }
-    .featured-items-heading::after {    
+    .featured-items-heading::after {
         bottom: -18%;
     }
     .featured-items img {
@@ -1318,10 +1311,10 @@ body{
         margin: 0 auto;
         margin-bottom: 20px;
     }
-    .featured-hero-btn {    
-        z-index: 1;   
-        right: 24%;    
-        
+    .featured-hero-btn {
+        z-index: 1;
+        right: 24%;
+
     }
     .featured-hero-info {
         text-align: center;
@@ -1339,11 +1332,11 @@ body{
         font-family: "Roboto Condensed", sans-serif;
         color: #FFFFFF;
     }
-    .contact-hero-area {   
-        height: 287px;    
+    .contact-hero-area {
+        height: 287px;
     }
     .section-contact-info img {
         height: 191.61px;
     }
-    
+
     }
