@@ -8,6 +8,7 @@ paths:
   data: _data
   layouts: _layouts
   includes: _includes
+  pages: _pages
 collections_config:
   posts:
     path: _posts
