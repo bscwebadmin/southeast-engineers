@@ -1,8 +1,8 @@
 <!-- our se contact section start here  -->
 <div class="section-contact-area pt-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12">
+    <div class="container-fluid px-lg-10 px-6">
+      <div class="row px-lg-10 px-6 justify-content-center">
+        <div class="col-lg-5 col-md-6 col-sm-12">
           <div class="section-contact-info">
             <h2 class="editable">Contact Us</h2>
             <ul class="contact-top-list editable">
@@ -12,10 +12,10 @@
               <li><a href="#">Civil Engineering</a></li>
               <li><a href="#">Aquatics Engineering</a></li>
             </ul>
-            {% if page.name == "contact" %}
-            <img src="/assets/images/contact_01.webp" class="editable" alt="contact">
+            {% if page.contact_image %}
+            <img src="{{page.contact_image}}" class="object-cover" alt="contact">
             {% else %}
-            <img src="/assets/images/contact_01.webp" class="editable" alt="contact">
+            <img src="/assets/images/contact_01.webp" class="editable " alt="contact">
             {% endif %}
             <ul class="contact-btm-list">
               <li><a href="#">BATON ROUGE</a></li>
@@ -24,7 +24,7 @@
           </div>
         </div>
         <!-- contact info area end here  -->
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-5 col-md-6 col-sm-12">
           <div class="section-contact-form">
             <p class="form-req mb-1 pe-2">*REQUIRED</p>
             <div class="card bg-transparent shadow-none">

@@ -1,0 +1,28 @@
+site_logo_url: /assets/images/logo.png
+site_name:  SEEngineers - Southeast Engineers
+email: info@seengineers.com
+Locations:
+  - Location: Baton Rouge
+    address: 4880 Bluebonnet Blvd
+    address2: Suite A
+    city-state-zip: Baton Rouge, LA 70809
+    phone: 225-295-1880
+  - location:
+    address: 345 Doucet Road
+    address2: #102
+    city-state-zip: Lafayette, Louisiana 70503
+    phone: 337-988-7768
+social:
+ - name: Facebook
+   link: https://www.facebook.com/southeastengineers/
+   icon: instagram
+ - name: Twitter
+   link: https://twitter.com/Southeast_Engin
+   icon: twitter
+ - name: LinkedIn
+   link: https://www.linkedin.com/company/27094374/
+   icon: linkedin
+ga_id:
+head_code: ''
+body_code: ''
+footer_code: ''
