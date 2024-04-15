@@ -5,9 +5,72 @@ title: "Featured Projects - Southeast Engineers"
 description: >
   With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services.
 pages_header_image: "/assets/images/feature_04.webp"
+portfolio:
+  - name: Campion
+    image: assets/images/portfolios/01.jpg
+    location: Lafayette, LA
+    service: Aquatics Engineering
+  - name: Highland Road Splash Pad
+    image: assets/images/portfolios/02.jpg
+    location: Baton Rouge, LA
+    service: Aquatics Engineering
+  - name: Himel Residence
+    image: assets/images/portfolios/03.jpg
+    location: New Orleans, LA
+    service: Aquatics Engineering
+  - name: Lakeshore
+    image: assets/images/portfolios/04.jpg
+    location: Slidell, LA
+    service: Structural Engineering
 permalink: /featured
 ---
+<section class="featured-service-section">
+  <!-- Card Grid -->
+  <div class="container content-space-b-2 content-space-b-lg-3">
+    <div class="col-md-5">
+      <!-- Select -->
+      <div class="tom-select-custom mb-5 d-flex align-items-center border-bottom border-white w-100">
+        <small class="text-primary">Service</small>
+        <select class="js-select form-select custom-select text-white bg-transparent" id="js-filter-dropdown" autocomplete="off"
+              data-hs-tom-select-options='{
+                "placeholder": "Select Service",
+                "hideSearch": true
+              }'>
+         <option value="all" selected>All Services</option>
+          <option value="Aquatics Engineering">Aquatics Engineering</option>
+          <option value="Civil Engineering">Civil Engineering</option>
+          <option value="Structural Engineering">Structural Engineering</option>
+          <option value="Delegated Systems Design">Delegated Systems Design</option>
+          <option value="Drainage Modeling">Drainage Modeling</option>
+          <option value="Municipal Infrastructure">Municipal Infrastructure</option>
+        </select>
+      </div>
+      <!-- End Select -->
+    </div>
 
+    <div class="js-shuffle row row-cols-1 row-cols-sm-2 row-cols-md-3">
+      {% for item in page.portfolio %}
+      <div class="js-shuffle-item col mb-5" data-groups='["{{item.service | truncateword: 1}}"]'>
+        <!-- Card -->
+          <img class="card-img-top port-img object-cover" src="{{item.image}}" alt="{{item.name}} - {{item.service}}">
+          <div class="card-body mt-4">
+            <div class="w-100 border-bottom border-primary mb-2">
+              <h3 class="fw-semibold text-white">{{item.name}}</h3>
+            </div>
+            <h4 class="fw-normal text-white">{{item.location}}</h4>
+            <em class="card-subtitle text-white">{{item.service}}</em>
+          </div>
+        <!-- End Card -->
+      </div>
+      <!-- End Col -->
+      {% endfor %}
+
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Card Grid -->
+</section>
+{% comment %}
 <section class="featured-service-section">
     <div class="container">
       <div class="featured-service-header">
@@ -783,6 +846,7 @@ permalink: /featured
       </div>
     </div>
   </section>
+{% endcomment %}
   <!-- our coustomar sayes area  -->
   <div class="about-btn-area">
     <div class="container">
@@ -796,8 +860,8 @@ permalink: /featured
         </div>
         <div class="col-lg-9 col-md-8 col-sm-12">
           <div class="section-coustomer-about-right">
-            <p>RCI has worked with Southeast Engineers on multiple projects over the past 4 years. In every instance Southeast Engineers has turned over practical, well thought out designs in a very acceptable time frame within cost effective price points. They have a professional and timely staff that understands the aquatic design world extremely well.</p>
-            <a href="#">Rotolo Consultants, Inc.</a>
+            <p>The Team at Southeast Engineers has been outstanding in providing the engineering needs that we need. The turnaround for their work is second to none! Our business relies tremendously in their expertise.</p>
+            <span>Tupac de la Cruz, Roofing Solutions</span>
           </div>
         </div>
       </div>
