@@ -92,7 +92,7 @@ permalink: /services
 <div class="services-proses-section">
   {% assign section_one = page.what_we_do_section %}
   <div class="container-fluid px-lg-10 px-6">
-    <div class="services-proses-top">
+    <div class="services-proses-top px-lg-10 px-6">
       <div class="row">
         <div class="col-lg-4">
           {% if section_one.title %}
@@ -115,8 +115,8 @@ permalink: /services
     <!-- services proses bottom  area start here  -->
     <div class="services-proses-bottom-area">
       {% assign section_two = page.our_progress_section %}
-      <div class="row">
-        <div class="col-lg-7">
+      <div class="row px-lg-10 px-6 justify-content-around">
+        <div class="col-lg-7 col-md-6 col-sm-12">
           <div class="proses-bottom-area-info">
             {% if section_two.title %}
              <h2>{{ section_two.title }}</h2>
@@ -130,9 +130,9 @@ permalink: /services
           </div>
         </div>
         {% if section_two.image %}
-        <div class="col-lg-5">
+        <div class="col-lg-5 col-md-6 d-sm-none d-md-block pb-sm-0 pb-5">
           <div class="bottom-img-area">
-            <img src="{{ section_two.image }}" alt="contact" />
+            <img src="{{ section_two.image }}" alt="contact" class="img-fluid object-cover" />
           </div>
         </div>
         {% endif %}

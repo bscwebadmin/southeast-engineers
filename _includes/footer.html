@@ -5,62 +5,54 @@
     <footer class="bg-primary py-4">
         <section class="container-fluid">
             <div class="px-5">
-            <div class="row px-5">
-                        <div class="col-lg-2">
-                            <!-- Logo -->
-                            <a class="navbar-brand" href="/" aria-label="Space">
-                                <img class="" src="/assets/Images/SEE-Wodmark-REV.png" alt="SEE-Wodmark-REV">
-                            </a>
-                            <!-- End Logo -->
-                        </div>
-                        <div class="col-lg-2">
-                            <div>
-                              <a class="section-footer-list" href="#">Residential | Commercial</a>
-                            </div>
-                            <div>
-                              <a class="section-footer-list" href="#">Sitemap | Privacy Policy</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-1 me-3">
-                            <div>
-                                <span class="fw-semibold me-2 text-white text-nowrap">BATON ROUGE</span>
-                            </div>
-                            <div>
-                                   <span class="fw-semibold me-2 text-white">LAFAYETTE</span>
-
-                            </div>
-
-                                </div>
-                        <div class="col-lg-1">
+            <div class="row row-col-3 px-5 justify-content-lg-evenly justify-content-center text-center">
+            <div class="col-12 col-md-4 d-md-flex d-block mb-3 mb-md-0">
+                    <div class="col-lg-6">
+                        <!-- Logo -->
+                            <img class="" src="/assets/Images/SEE-Wodmark-REV.png" alt="SEE Logo">
+                        <!-- End Logo -->
+                    </div>
+                    <div class="col-lg-6 d-none d-md-block">
                         <div>
-                          <a class="section-footer-list" href="#">225-295-1880</a>
+                          <a class="section-footer-list" href="#">Residential | Commercial</a>
                         </div>
                         <div>
-
-                               <a class="section-footer-list" href="#">337-988-7768</a>
-                        </div>
-
-                            </div>
-                        <div class="col-lg-4">
-                            <div>
-                            <a class="text-white" href="#">4880 Bluebonnet Blvd, Suite A, Baton Rouge, LA
-                                        70809</a>
-                            </div>
-                            <div>
-                                <a class="text-white" href="#">345 Doucet Road #102, Lafayette, Louisiana
-                                        70503</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-1">
-                            <ul class="d-flex">
-                                <li class="mx-3"><a class="btn btn-soft-light btn-xs btn-icon" href="#"><i
-                                            class="bi-facebook"></i></a></li>
-                                <li class="mx-3"><a class="btn btn-soft-light btn-xs btn-icon" href="#"><i
-                                            class="fa-brands fa-x-twitter"></i></a></li>
-                                <li class="mx-3"><a class="btn btn-soft-light btn-xs btn-icon" href="#"><i
-                                            class="bi-linkedin"></i></a></li>
-                            </ul>
+                          <a class="section-footer-list" href="#">Sitemap | Privacy Policy</a>
                         </div>
                     </div>
+            </div>
+            <div class="col-12 col-md-6  d-md-flex d-block mb-3 mb-md-0 justify-content-between mx-auto">
+
+                    <div class="col-lg-6 mb-3 mb-md-0">
+                    <div>
+                      <span class="fw-semibold me-2 text-white text-nowrap">BATON ROUGE</span><a class="section-footer-list" href="#">225-295-1880</a>
+                    </div>
+                    <div>
+
+                           <span class="fw-semibold me-2 text-white">LAFAYETTE</span><a class="section-footer-list" href="#">337-988-7768</a>
+                    </div>
+
+                        </div>
+                    <div class="col-lg-6">
+                        <div>
+                        <a class="text-white" href="#">4880 Bluebonnet Blvd, Suite A, Baton Rouge, LA
+                                    70809</a>
+                        </div>
+                        <div>
+                            <a class="text-white" href="#">345 Doucet Road #102, Lafayette, Louisiana
+                                    70503</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-12 col-md-2 d-md-flex d-block">
+                    <div class="col-lg-12">
+                        <ul class="d-flex justify-content-lg-end justify-content-center">
+                            {% for social in site.data.general_settings.social %}
+                            <li class="mx-3"><a class="btn btn-soft-light btn-xs btn-icon" href="{{social.link}}"><i class="bi-{{social.icon}}"></i></a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+            </div>
+                </div>
         </section>
     </footer>
