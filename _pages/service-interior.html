@@ -40,9 +40,8 @@ permalink: /service-interior
         <div class="swiper-slide">
           <div class="row">
             {% for slider_data in slider_item.slider_item %}
-
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 p-2">
-              <img class="res-single-img" src="{{ slider_data.img_url }}" alt="074A0614">
+              <img class="res-single-img" src="{{ slider_data.img_url }}" alt="">
             </div>
             {% endfor %}
 
@@ -67,27 +66,49 @@ permalink: /service-interior
     <div class="row residential-tab">
       <div class="ul-product-area">
         <div class="col-lg-12">
-          <div class="ul-product-area">
-            <div class="ul-product-list">
-                <ul class="nav nav-tabs ul-product-navlist " id="myTab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="Foundation-tab" data-bs-toggle="tab" data-bs-target="#Foundation" type="button" role="tab" aria-controls="Foundation" aria-selected="true">Foundation Engineering</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="Structural-tab" data-bs-toggle="tab" data-bs-target="#Structural" type="button" role="tab" aria-controls="Structural" aria-selected="false" tabindex="-1">Structural Engineering</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="Residential-tab" data-bs-toggle="tab" data-bs-target="#Residential" type="button" role="tab" aria-controls="Residential" aria-selected="false" tabindex="-1">Residential Civil Engineering</button>
-                  </li>
-                   <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="Floodplain-tab" data-bs-toggle="tab" data-bs-target="#Floodplain" type="button" role="tab" aria-controls="Floodplain" aria-selected="false" tabindex="-1">Floodplain Analysis</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="Subdivision-tab" data-bs-toggle="tab" data-bs-target="#Subdivision" type="button" role="tab" aria-controls="Subdivision" aria-selected="false" tabindex="-1">Subdivision Development</button>
-                  </li>
-                </ul>
-              </div>
+          <!-- Navbar Vertical -->
+          <div class="navbar navbar-vertical navbar-expand-md">
+            <!-- Navbar Toggle -->
+            <div class="d-grid flex-grow-1">
+              <button type="button" class="navbar-toggler border-0 shadow-0 rounded-0 border-bottom" data-bs-toggle="collapse" data-bs-target="#navbarTogglerNavMenu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarTogglerNavMenu">
+                <span class="d-flex justify-content-between align-items-center">
+                  <span>Residential Services</span>
+
+                  <span class="navbar-toggler-default">
+                    <i class="bi-chevron-down"></i>
+                  </span>
+
+                  <span class="navbar-toggler-toggled">
+                    <i class="bi-x"></i>
+                  </span>
+                </span>
+              </button>
+            </div>
+            <!-- End Navbar Toggle -->
+
+            <div id="navbarTogglerNavMenu" class="collapse navbar-collapse">
+              <!-- Navbar -->
+              <ul class="navbar-nav p-md-0 p-2" id="myTab" role="tablist">
+               <li class="nav-item me-4" role="presentation">
+                 <a class="active fw-bold text-gray fs-4" id="Foundation-tab" data-bs-toggle="tab" data-bs-target="#Foundation" role="tab" aria-controls="Foundation" aria-selected="true">Foundation Engineering</a>
+               </li>
+               <li class="nav-item me-4" role="presentation">
+                 <a class="fw-bold text-gray fs-4" href="#" id="Structural-tab" data-bs-toggle="tab" data-bs-target="#Structural" role="tab" aria-controls="Structural" aria-selected="false" tabindex="-1">Structural Engineering</a>
+               </li>
+               <li class="nav-item me-4" role="presentation">
+                 <a class="fw-bold text-gray fs-4" href="#" id="Residential-tab" data-bs-toggle="tab" data-bs-target="#Residential" role="tab" aria-controls="Residential" aria-selected="false" tabindex="-1">Residential Civil Engineering</a>
+               </li>
+                <li class="nav-item me-4" role="presentation">
+                 <a class="fw-bold text-gray fs-4" href="#" id="Floodplain-tab" data-bs-toggle="tab" data-bs-target="#Floodplain" role="tab" aria-controls="Floodplain" aria-selected="false" tabindex="-1">Floodplain Analysis</a>
+               </li>
+               <li class="nav-item me-4" role="presentation">
+                 <a class="fw-bold text-gray fs-4" href="#" id="Subdivision-tab" data-bs-toggle="tab" data-bs-target="#Subdivision" role="tab" aria-controls="Subdivision" aria-selected="false" tabindex="-1">Subdivision Development</a>
+               </li>
+              </ul>
+              <!-- End Navbar -->
+            </div>
           </div>
+
           <!-- single tab start here   -->
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade active show" id="Foundation" role="tabpanel" aria-labelledby="Foundation-tab">

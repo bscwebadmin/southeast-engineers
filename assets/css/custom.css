@@ -4,10 +4,7 @@
    .hs-has-header-right-text {
     display: none;
 }
-.navbar-brand-logo {
-    margin: 0px;
-    margin-top: 30px;
-}
+
 .navbar-light .navbar-toggler {
     border: none;
     color: black;
@@ -330,7 +327,7 @@
 .contact-hero-title {
     font-size: 40px;
     line-height: 43px;
-    font-weight: 400;
+    font-weight: 300;
     font-family: "Roboto Condensed", sans-serif;
     color: #FFFFFF;
 }
@@ -356,4 +353,7 @@
     margin: 0;
     padding: 0;
     color: #fff;
+}
+.address,.robo-condensed{
+   font-family: 'Roboto Condensed';
 }

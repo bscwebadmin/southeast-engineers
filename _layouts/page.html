@@ -10,21 +10,17 @@
 <!-- ========== MAIN CONTENT ========== -->
 <main id="content" role="main">
 <!-- Hero -->
-<!-- about Main hero area -->
-<section class="{% if page.header_style_two %} services-hero-area {% else %} see-about-hero-area {% endif %}" style="background-image:url({{ page.pages_header_image }})">
-   <div class="container-fluid">
-       <div class="row">
-           <div class="col-12 p-0">
-               <div class="{% if page.header_style_two %} services-main-hero {% else %} about-main-hero {% endif %}">
-                   <div class="about-hero-area">
-                       <h2 class="about-hero-title">{{ page.page_title }}</h2>
-                       <a class="about-hero-btn" href="#">CONTACT US</a>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
-</section>
+<!-- CTA -->
+<div class="bg-img-center gradient-y-overlay-primary" style="background-image: url({{ page.pages_header_image }});">
+  <div class="container content-space-2 content-space-t-lg-6">
+    <div class="w-100 ms-lg-auto me-auto text-lg-end text-start">
+      <div class="mt-4">
+        <h2 class="h1 text-white display-4 fw-normal">{{ page.page_title }}</h2>
+      </div>
+      <a class="btn btn-primary btn-transition rounded-pill" href="contact">CONTACT US</a>
+    </div>
+  </div>
+</div>
 <!-- End about Main hero area -->
 <section>
 {{ content }}

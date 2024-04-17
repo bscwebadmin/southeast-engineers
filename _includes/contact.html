@@ -1,10 +1,10 @@
 <!-- our se contact section start here  -->
-<div class="section-contact-area pt-3">
-    <div class="container-fluid px-lg-10 px-6">
+<div class="section-contact-area pt-lg-8 pt-5">
+    <div class="container-fluid px-lg-10 px-0">
       <div class="row px-lg-10 px-6 justify-content-center">
         <div class="col-lg-5 col-md-6 col-sm-12">
           <div class="section-contact-info">
-            <h2 class="editable">Contact Us</h2>
+            <h2 class="editable mb-3">Contact Us</h2>
             <ul class="contact-top-list editable">
               <li><a href="#">Residential and Commercial Engineering</a></li>
               <li class="contact-extra"><a href="#"></a></li>
@@ -17,17 +17,14 @@
             {% else %}
             <img src="/assets/images/contact_01.webp" class="editable " alt="contact">
             {% endif %}
-            <ul class="contact-btm-list">
-              <li><a href="#">BATON ROUGE</a></li>
-              <li><a href="#">LAFAYETTE</a></li>
-            </ul>
+
           </div>
         </div>
         <!-- contact info area end here  -->
         <div class="col-lg-5 col-md-6 col-sm-12">
           <div class="section-contact-form">
-            <p class="form-req mb-1 pe-2">*REQUIRED</p>
-            <div class="card bg-transparent shadow-none">
+            <p class="text-gray robo-condensed mt-4 mb-0 pe-2 fw-normal text-end">*REQUIRED</p>
+            <div class="pt-4">
               <div class="card-body">
                 <!-- Heading -->
                 <form>
@@ -65,9 +62,13 @@
                       <!-- Form -->
                       <div class="mb-3">
                         <select name="hireUsFormNameBudget" id="hireUsFormBudget" class="form-select form-select-lg" aria-label="Tell us about your budget">
-                          <option selected="">RESIDENTIAL OR COMMERCIAL</option>
-                          <option value="1">RESIDENTIAL</option>
-                          <option value="2">COMMERCIAL</option>
+                          <option selected="">Select Service</option>
+                          <option value="foundation">Foundation Engineering</option>
+                           <option value="structural"> Structural Engineering</option>
+                          <option value="residential">  Residential Civil Engineering</option>
+                           <option value="floodplain"> Floodplain Analysis</option>
+                           <option value="subdivision"> Subdivision Development</option>
+
                         </select>
                       </div>
                       <!-- End Form -->
@@ -77,10 +78,9 @@
                       <!-- Form -->
                       <div class="mb-3">
                         <select name="hireUsFormNameBudget" id="hireUsFormBudget" class="form-select form-select-lg" aria-label="Tell us about your budget">
-                          <option selected="">WHICH LOCATION?</option>
-                          <option value="1">USA</option>
-                          <option value="2">UK</option>
-                          <option value="3">CANADA</option>
+                          <option selected="">Select Location</option>
+                          <option value="Baton Rouge">Baton Rouge</option>
+                          <option value="Lafayette">Lafayette</option>
                         </select>
                       </div>
                       <!-- End Form -->
@@ -91,8 +91,10 @@
                       <div class="mb-3">
                         <select name="hireUsFormNameBudget" id="hireUsFormBudget" class="form-select form-select-lg" aria-label="Tell us about your budget">
                           <option selected="">HOW DID YOU HEAR ABOUT US?</option>
-                          <option value="1">Find job</option>
-                          <option value="2">Find Website</option>
+                          <option value="Online/Google">Online/Google</option>
+                          <option value="social">  Social Media</option>
+                           <option value="referral"> Family/Friend Referral</option>
+                           <option value="Other"> Other </option>
                         </select>
                       </div>
                       <!-- End Form -->

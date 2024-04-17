@@ -25,6 +25,7 @@ portfolio:
     service: Structural Engineering
 permalink: /featured
 ---
+
 <section class="featured-service-section">
   <!-- Card Grid -->
   <div class="container content-space-b-2 content-space-b-lg-3">
@@ -53,12 +54,14 @@ permalink: /featured
       {% for item in page.portfolio %}
       <div class="js-shuffle-item col mb-5" data-groups='["{{item.service | truncateword: 1}}"]'>
         <!-- Card -->
+        <a class="media-viewer" href="{{item.image}}" data-fslightbox="gallery">
           <img class="card-img-top port-img object-cover" src="{{item.image}}" alt="{{item.name}} - {{item.service}}">
+        </a>
           <div class="card-body mt-4">
             <div class="w-100 border-bottom border-primary mb-2">
-              <h3 class="fw-semibold text-white">{{item.name}}</h3>
+              <h3 class="fw-semibold text-white robo-condensed"">{{item.name}}</h3>
             </div>
-            <h4 class="fw-normal text-white">{{item.location}}</h4>
+            <h4 class="fw-normal text-white robo-condensed">{{item.location}}</h4>
             <em class="card-subtitle text-white">{{item.service}}</em>
           </div>
         <!-- End Card -->

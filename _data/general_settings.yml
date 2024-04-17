@@ -1,8 +1,8 @@
 site_logo_url: /assets/images/logo.png
 site_name:  SEEngineers - Southeast Engineers
 email: info@seengineers.com
-Locations:
-  - Location: Baton Rouge
+locations:
+  - location: Baton Rouge
     address: 4880 Bluebonnet Blvd
     address2: Suite A
     city-state-zip: Baton Rouge, LA 70809

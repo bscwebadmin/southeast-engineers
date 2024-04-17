@@ -50,7 +50,12 @@
 			watchSlidesProgress: true,
 			history: false,
 			slidesPerView: 3,
+			effect: "fade",
 			spaceBetween: 15,
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: false,
+			  },
 			on: {
 				beforeInit: (swiper) => {
 					const css = `.swiper-slide-thumb-active .swiper-thumb-progress .swiper-thumb-progress-path {

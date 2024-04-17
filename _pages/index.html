@@ -57,7 +57,8 @@ permalink: /
                               <div class="d-flex align-items-end h-100">
                                 <ul class="w-75">
                                   {% for hero_list in hero.hero_links %}
-                                  <li class="{% if forloop.first %}border-bottom border-white{% endif %} py-1 "><a class="text-white fw-semibold" href="{{ hero_list.url }}">{{ hero_list.text }}</a></li>
+                                  <li class="{% if forloop.first %}border-bottom border-white fw-semibold{% endif %} py-1">
+                                    <a class="text-white " href="{{ hero_list.url }}">{{ hero_list.text }}</a></li>
                                   {% endfor %}
                                 </ul>
                               </div>
@@ -105,16 +106,16 @@ permalink: /
   </div>
 </div>
   <!-- our about section start here  -->
-  <div class="section-about-section">
+  <div class="section-about-section mb-4 mb-md-0">
     <div class="seabout-area">
       <div class="container-fluid px-lg-10 px-6">
-        <div class="row px-lg-10 px-6">
+        <div class="row px-lg-10 px-0">
           <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="section-about-left-info">
               <div class="section-about-info">
                 <h2>About Southeast Engineers</h2>
                 <p>Southeast Engineers is a distinguished engineering firm specializing in Civil, Structural, and Aquatics Engineering. With licenses covering the Southeast United States region, the company stands as a reputable authority in delivering comprehensive engineering solutions. The team at Southeast Engineers combines expertise and innovation to address the unique challenges of each project, ensuring the highest standards of quality and safety. From civil infrastructure projects to intricate structural designs and aquatic engineering solutions, Southeast Engineers is committed to excellence, serving clients with professionalism and a commitment to sustainable and resilient engineering practices.</p>
-                <a class="about-info-btn" href="#">LEARN MORE</a>
+                <a class="" href="about">LEARN MORE</a>
               </div>
             </div>
           </div>
@@ -133,7 +134,7 @@ permalink: /
                       </a>
                     </div>
                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
-                      <div class="accordion-body">
+                      <div class="accordion-body editable">
                         <p>Structural Engineering
                           Civil Engineering
                           Aquatics Engineering
@@ -153,12 +154,14 @@ permalink: /
                       </a>
                     </div>
                     <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ" >
-                      <div class="accordion-body">
+                      <div class="accordion-body editable">
                         <p>Structural Engineering
                           Civil Engineering
                           Aquatics Engineering
                           Delegated Systems Design
-                          Municipal Infrastructure</p>
+                          Municipal Infrastructure
+                          Drainage Modeling
+                        </p>
                           <a class="about-info-btn accordion-btn" href="#">LEARN MORE</a>
                       </div>
                     </div>

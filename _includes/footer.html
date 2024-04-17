@@ -21,26 +21,24 @@
                         </div>
                     </div>
             </div>
-            <div class="col-12 col-md-6  d-md-flex d-block mb-3 mb-md-0 justify-content-between mx-auto">
+            <div class="col-12 col-md-6  d-md-flex d-block mb-3 mb-md-0 justify-content-between mx-auto address">
 
                     <div class="col-lg-6 mb-3 mb-md-0">
                     <div>
-                      <span class="fw-semibold me-2 text-white text-nowrap">BATON ROUGE</span><a class="section-footer-list" href="#">225-295-1880</a>
+                      <span class="fw-semibold me-2 text-white text-nowrap text-uppercase">{{site.data.general_settings.locations[0].city-state-zip | truncatewords: 2 | remove: ",..."}}</span><a class="section-footer-list fw-light" href="tel:{{site.data.general_settings.locations[0].phone}}">{{site.data.general_settings.locations[0].phone}}</a>
                     </div>
                     <div>
 
-                           <span class="fw-semibold me-2 text-white">LAFAYETTE</span><a class="section-footer-list" href="#">337-988-7768</a>
+                           <span class="fw-semibold me-2 text-white text-uppercase">{{site.data.general_settings.locations[1].city-state-zip | truncatewords: 1 | remove: ",..."}}</span><a class="section-footer-list fw-light" href="tel:{{site.data.general_settings.locations[1].phone}}">{{site.data.general_settings.locations[1].phone}}</a>
                     </div>
 
                         </div>
                     <div class="col-lg-6">
                         <div>
-                        <a class="text-white" href="#">4880 Bluebonnet Blvd, Suite A, Baton Rouge, LA
-                                    70809</a>
+                        <a class="text-white" href="https://maps.app.goo.gl/U9Utw9wxQDvzkptN8" target="_blank">{{site.data.general_settings.locations[0].address}}{{site.data.general_settings.locations[0].address2}}{{site.data.general_settings.locations[0].city-state-zip}}</a>
                         </div>
                         <div>
-                            <a class="text-white" href="#">345 Doucet Road #102, Lafayette, Louisiana
-                                    70503</a>
+                            <a class="text-white" href="https://maps.app.goo.gl/Rybkne1Ab9ian3yx6" target="_blank">{{site.data.general_settings.locations[1].address}}{{site.data.general_settings.locations[1].address2}}{{site.data.general_settings.locations[1].city-state-zip}}</a>
                         </div>
                     </div>
             </div>
