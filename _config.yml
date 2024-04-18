@@ -11,6 +11,10 @@ lang: en
 author: Southeast Engineers
 permalink: /:title
 defaults:
+- scope:
+    path: /assets/vendor/aos/demo/async.html
+  value:
+    sitemap: false
   -scope:
   path: ""
   values:
@@ -46,6 +50,8 @@ defaults:
 collections:
   services:
      output: true
+     custom_permalink_placeholders: ["type"]
+     permalink: /services/:title
 -scope:
    type: pages
    path: _pages/index.html
@@ -56,6 +62,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll_custom_permalink
 
 # Exclude from processing.
 # The following items will not be processed, by default.

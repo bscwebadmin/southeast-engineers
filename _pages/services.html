@@ -102,8 +102,8 @@ permalink: /services
         <div class="col-lg-8">
           <div class="tags-top-list">
             <ul class="tags-top-menu-list">
-              {% for list in section_one.services %}
-               <li><a href="{{ list.link }}" class="tags-top-nav-link">{{ list.name }}</a></li>
+              {% for list in site.services %}
+               <li><a href="{{ list.url }}" class="tags-top-nav-link">{{ list.page_title }}</a></li>
               {% endfor %}
             </ul>
           </div>
