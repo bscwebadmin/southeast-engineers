@@ -5,6 +5,8 @@ title: "Structural Engineering - Southeast Engineers"
 description: >
   With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services.
 type: commercial
+image: /assets/Images/Services/Commercial/01.jpg
+short_description: Cost-Effective | Structurally Sound Designs
 pages_header_image: "/assets/images/residential/hero_area.jpg"
 contact_image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
 header_style_two: true

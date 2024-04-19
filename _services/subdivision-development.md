@@ -5,7 +5,9 @@ title: "Subdivision Development - Southeast Engineers"
 description: >
   With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services.
 type: residential
-pages_header_image: "/assets/images/residential/hero_area.jpg"
+image: /assets/images/Services/Residential/05.jpg
+short_description: Mauris et bibendum ipsum, sed elementum leo
+pages_header_image: "/assets/images/Services/Residential/05.jpg"
 contact_image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
 header_style_two: true
 slider_section:
