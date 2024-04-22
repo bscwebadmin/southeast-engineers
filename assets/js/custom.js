@@ -88,7 +88,19 @@
 			}
 		});
 
-
+ (function() {
+			// INITIALIZATION OF SWIPER
+			// =======================================================
+		var effectFade = new Swiper('.js-swiper-effect-fade', {
+		  spaceBetween: 30,
+		  effect: 'fade',
+		  loop: true,
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+		});
+		  })()
 		// INITIALIZATION OF COUNTDOWN
 		// =======================================================
 		const oneYearFromNow = new Date()
@@ -115,46 +127,50 @@
 
 		// INITIALIZATION OF SHUFFLE
 		// =======================================================
-		class ShufflePorfolio {
-		  constructor(element) {
-			this.element = element;
-			this.shuffle = new Shuffle(element, {
-			  itemSelector: '.js-shuffle-item',
-			  speed: 500
-			});
+		// Assuming 'initialized' means the element exists in the DOM
+		if (document.querySelector('.js-shuffle')) {
+		  class ShufflePorfolio {
+			constructor(element) {
+			  this.element = element;
+			  this.shuffle = new Shuffle(element, {
+				itemSelector: '.js-shuffle-item',
+				speed: 500
+			  });
 
-			this.addFilterButtons();
-			this.addDropdownFilter(); // Call to new method for dropdown
-		  }
-
-		  addFilterButtons() {
-			// Existing method for buttons...
-		  }
-
-		  // New method for handling dropdown changes
-		  addDropdownFilter() {
-			const dropdown = document.getElementById('js-filter-dropdown');
-			if (!dropdown) {
-			  return;
+			  this.addFilterButtons();
+			  this.addDropdownFilter(); // Call to new method for dropdown
 			}
 
-			dropdown.addEventListener('change', (event) => {
-			  const filterGroup = event.target.value;
-			  this.shuffle.filter(filterGroup === 'all' ? Shuffle.ALL_ITEMS : filterGroup);
-			});
+			addFilterButtons() {
+			  // Existing method for buttons...
+			}
+
+			// New method for handling dropdown changes
+			addDropdownFilter() {
+			  const dropdown = document.getElementById('js-filter-dropdown');
+			  if (!dropdown) {
+				return;
+			  }
+
+			  dropdown.addEventListener('change', (event) => {
+				const filterGroup = event.target.value;
+				this.shuffle.filter(filterGroup === 'all' ? Shuffle.ALL_ITEMS : filterGroup);
+			  });
+			}
+
+			_handleFilterClick(evt) {
+			  // Existing method for click handling...
+			}
+
+			_removeActiveClassFromChildren(parent) {
+			  // Existing method...
+			}
 		  }
 
-		  _handleFilterClick(evt) {
-			// Existing method for click handling...
-		  }
-
-		  _removeActiveClassFromChildren(parent) {
-			// Existing method...
-		  }
+		  new ShufflePorfolio(document.querySelector('.js-shuffle'));
+		  HSCore.components.HSTomSelect.init('.js-select');
 		}
 
-		new ShufflePorfolio(document.querySelector('.js-shuffle'));
-		HSCore.components.HSTomSelect.init('.js-select');
 
 
 	})()
