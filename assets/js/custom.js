@@ -94,6 +94,10 @@
 		var effectFade = new Swiper('.js-swiper-effect-fade', {
 		  spaceBetween: 30,
 		  effect: 'fade',
+		  autoplay: {
+			  delay: 3500,
+			  disableOnInteraction: false,
+			},
 		  loop: true,
 		  navigation: {
 			nextEl: '.swiper-button-next',
