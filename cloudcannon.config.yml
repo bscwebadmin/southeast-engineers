@@ -54,6 +54,8 @@ _inputs:
     type: html
     options:
       code: true
+  layout:
+    hidden: true
   body_code:
     label: Body Code
     type: html
