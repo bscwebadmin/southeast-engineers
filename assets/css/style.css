@@ -1004,6 +1004,12 @@ body{
     right: 0;
 }
 /* mobile layout:320px*/
+@media only screen and (max-width:1080px){
+  .seabout-help-section {
+    height: auto !important
+  }
+}
+/* mobile layout:320px*/
 @media only screen and (max-width:576px){
 
     .navbar-light .navbar-toggler {

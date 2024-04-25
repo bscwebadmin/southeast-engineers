@@ -7,7 +7,7 @@ paths:
   uploads: uploads
   dam_uploads: '/burning stick/south-eastern-engineers/images/'
   static: ''
-  dam_static: ''
+  dam_static: '/burning stick/south-eastern-engineers/images/'
   collections: ''
   data: _data
   layouts: _layouts

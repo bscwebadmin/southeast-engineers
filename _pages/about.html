@@ -79,7 +79,7 @@ permalink: /about
         <div class="help-area-info">
           <h2>{{ page.who_we_help.title }}</h2>
           <p>{{ page.who_we_help.description }}</p>
-          <ul class="ps-0 ms-0 d-block d-md-flex">
+          <ul class="ps-0 ms-0 d-block d-md-flex list-unstyled">
             {% for link in page.who_we_help.links %}
             <li><a class="section-help-list me-4" href="{{ link.url }}">{{ link.text }}</a></li>
             {% endfor %}
@@ -96,11 +96,11 @@ permalink: /about
 </div>
 <!-- Our Team Area -->
 <div class="about-team-area">
-  <div class="container">
-    <div class="team-area-header mb-5">
+  <div class="container-fluid">
+    <div class="team-area-header mb-5 px-lg-10">
       <h2 class="teamarea-header-title pb-2">{{ page.our_team.title }}</h2>
     </div>
-    <div class="row">
+    <div class="row px-lg-10">
       {% for member in page.our_team.members %}
       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 p-3">
         <div class="single-team">
@@ -108,8 +108,12 @@ permalink: /about
             <img src="{{ member.image }}" alt="{{ member.name }}">
           </div>
           <div class="team-person-info">
-            <h4 class="team-title">{{ member.name }}</h4>
-            <p class="about-team-para">{{ member.position }}</p>
+            <div class="col-lg-8">
+              <h4 class="team-title">{{ member.name }}</h4>
+            </div>
+            <div class="col-md-10">
+              <p class="about-team-para">{{ member.position }}</p>
+            </div>
           </div>
         </div>
       </div>
