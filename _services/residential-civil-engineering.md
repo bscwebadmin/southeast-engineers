@@ -130,7 +130,7 @@ slider_section:
 					  </div>
 					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -149,7 +149,7 @@ slider_section:
 					  </div>
 					  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -167,7 +167,7 @@ slider_section:
 					  </h2>
 					  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -208,7 +208,7 @@ slider_section:
 					  </div>
 					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -227,7 +227,7 @@ slider_section:
 					  </div>
 					  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -245,7 +245,7 @@ slider_section:
 					  </h2>
 					  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -286,7 +286,7 @@ slider_section:
 					  </div>
 					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -305,7 +305,7 @@ slider_section:
 					  </div>
 					  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -323,7 +323,7 @@ slider_section:
 					  </h2>
 					  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -364,7 +364,7 @@ slider_section:
 					  </div>
 					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -383,7 +383,7 @@ slider_section:
 					  </div>
 					  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -401,7 +401,7 @@ slider_section:
 					  </h2>
 					  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -442,7 +442,7 @@ slider_section:
 					  </div>
 					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -461,7 +461,7 @@ slider_section:
 					  </div>
 					  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>
@@ -479,7 +479,7 @@ slider_section:
 					  </h2>
 					  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-						  <ul>
+						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
 							<li>– Concrete Drilled Shafts and Auger Cast Piles</li>
 							<li>– Precast Concrete Piless</li>

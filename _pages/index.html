@@ -6,231 +6,229 @@ hero_section:
   - image: "/assets/images/Home/wildwood.jpg"
     text: "Structural Engineering Civil Engineering Aquatics Engineering"
     button_text: "CONTACT US"
-    button_url: "#"
+    button_url: "/contact"
     links:
       - text: "Wildwood Pool"
-        url: "#"
+        url: "/featured"
       - text: "Aquatics Engineering"
-        url: "#"
+        url: "/featured"
   - image: "/assets/images/Home/backpacker.jpg"
     text: "Structural Engineering Civil Engineering"
     button_text: "CONTACT US"
-    button_url: "#"
+    button_url: "/contact"
     links:
       - text: "The Backpacker"
-        url: "#"
+        url: "/featured"
       - text: "Aquatics Engineering"
-        url: "#"
+        url: "/featured"
   - image: "assets/images/Home/HeavensEye-5.jpg"
     text: "Civil Engineering"
     button_text: "CONTACT US"
-    button_url: "#"
+    button_url: "/contact"
     links:
       - text: "LA-1077 & LA-1085 Roundabout"
-        url: "#"
+        url: "/featured"
       - text: "Civil Engineering"
-        url: "#"
+        url: "/featured"
   - image: "assets/images/Home/074A0612.jpg"
     text: "Residence"
     button_text: "CONTACT US"
-    button_url: "#"
+    button_url: "/contact"
     links:
       - text: "Lake Toxaway, North Carolina"
-        url: "#"
+        url: "/featured"
       - text: "Residence"
-        url: "#"
+        url: "/featured"
   - image: "assets/images/Home/036A5103.jpg"
     text: "Commercial Structural Engineering"
     button_text: "CONTACT US"
-    button_url: "#"
+    button_url: "/contact"
     links:
       - text: "The Coterie"
-        url: "#"
+        url: "/featured"
       - text: "Commercial Structural Engineering"
-        url: "#"
+        url: "/featured"
 featured_projects:
   - title: "Wildwood"
     location: "Lubbock, TX"
     image: "/assets/images/feature_01.webp"
-    url: "#"
+    url: "/featured"
   - title: "The Chimes"
     location: "Lafayette, LA"
     image: "/assets/images/feature_02.webp"
-    url: "#"
+    url: "/featured"
   - title: "Tangi Pines"
     location: "Tangipahoa, LA"
     image: "/assets/images/feature_03.webp"
-    url: "#"
+    url: "/featured"
 permalink: /
 ---
 <!-- Hero -->
-
-    <div class="js-swiper-effect-fade swiper">
-    <div class="swiper-wrapper">
-      {% for item in page.hero_section %}
-      <div class="swiper-slide">
-    <div class=" section-hero-section" style="background-image:url({{item.image}})">
-          <div class="container-fluid">
-            <div class="row">
-                        <div class="container homeslider">
-                          <div class="row px-md-8 py-md-5 py-1 justify-content-evenly">
-                            <div class="col-lg-4 col-md-12 col-sm-12 p-0">
-                              <div class="section-hero-hover-text">
-                                <h3 class="section-hero-text">{{ item.text }}</h3>
-                                <a class="btn btn-wide btn-white rounded-pill mt-2 px-4" href="{{ item.button_url }}">{{ item.button_text }}</a>
-                              </div>
-                            </div>
-                            <div class="col-lg-4 col-md-12 col-sm-12 p-0 d-md-none d-lg-none d-xl-block pt-sm-4">
-                              <div class="d-flex align-items-end h-100">
-                                <ul class="w-75 ps-sm-0">
-                                  {% for hero_list in item.links %}
-                                  <li class="{% if forloop.first %}border-bottom border-white fw-semibold{% endif %} py-1">
-                                    <a class="text-white " href="{{ hero_list.url }}">{{ hero_list.text }}</a></li>
-                                  {% endfor %}
-                                </ul>
-                              </div>
-                            </div>
-                            <div class="col-md-2 col-12 d-flex align-items-end mt-5">
-                               <div class="swiper-button-next me-md-auto ms-auto" style="position: relative;top: 0;"></div>
-                             </div>
-                          </div>
-                        </div>
-            </div>
-          </div>
-          <!-- End Container -->
-    </div>
-    <!-- End Swiper Main Slider -->
-      </div>
-      {% endfor %}
-    </div>
-    </div>
-
-
-  <!-- Featured Projects Section -->
-<div class="section-project-section py-5">
-  <div class="container-fluid px-lg-10 px-6">
-    <div class="row px-lg-10 px-md-6">
-    <h2 class="section-project-heading text-start editable">Featured Projects</h2>
-      {% for project in page.featured_projects %}
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="section-single-project">
-            <div class="section-single-project-img">
-              <img src="{{ project.image }}" class="object-cover" alt="{{ project.title }}">
-            </div>
-            <div class="section-single-project-info">
-              <h3 class="section-singlep-info-heading">{{ project.title }}</h3>
-              <h4 class="fw-normal fs-2">{{ project.location }}</h4>
-              <a href="{{ project.url }}">VIEW PROJECTS</a>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-  <!-- our about section start here  -->
-  <div class="section-about-section mb-4 mb-md-0">
-    <div class="seabout-area">
-      <div class="container-fluid px-lg-10 px-6">
-        <div class="row px-lg-10 px-0">
-          <div class="col-lg-6 col-md-12 col-sm-12">
-            <div class="section-about-left-info">
-              <div class="section-about-info">
-                <h2 class="editable">About Southeast Engineers</h2>
-                <p class="editable">Southeast Engineers is a distinguished engineering firm specializing in Civil, Structural, and Aquatics Engineering. With licenses covering the Southeast United States region, the company stands as a reputable authority in delivering comprehensive engineering solutions. The team at Southeast Engineers combines expertise and innovation to address the unique challenges of each project, ensuring the highest standards of quality and safety. From civil infrastructure projects to intricate structural designs and aquatic engineering solutions, Southeast Engineers is committed to excellence, serving clients with professionalism and a commitment to sustainable and resilient engineering practices.</p>
-                <a class="" href="about">LEARN MORE</a>
-              </div>
-            </div>
-          </div>
-          <!-- abour left info end here  -->
-          <!-- se about right info  -->
-          <div class=" col-lg-6 col-md-12 col-sm-12">
-            <div class="seabout-left-info">
-              <div class="section-about-linfo">
-                <h2 class="editable">Professional Services</h2>
-                <div class="accordion accordion-flush accordion-lg" id="accordionFAQ">
-                  <!-- Accordion Item -->
-                  <div class="accordion-item">
-                    <div class="accordion-header" id="headingBasicsOne">
-                      <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        Residential
-                      </a>
-                    </div>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
-                      <div class="accordion-body editable">
-                        <p>Structural Engineering
-                          Civil Engineering
-                          Aquatics Engineering
-                          Delegated Systems Design
-                          Municipal Infrastructure</p>
-                          <a class="about-info-btn accordion-btn" href="#">LEARN MORE</a>
-                      </div>
-                    </div>
+<div class="js-swiper-effect-fade swiper">
+  <div class="swiper-wrapper">
+    {% for item in page.hero_section %}
+    <div class="swiper-slide">
+      <div class=" section-hero-section" style="background-image:url({{item.image}})">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="container homeslider">
+              <div class="row px-md-8 py-md-5 py-1 justify-content-evenly">
+                <div class="col-lg-4 col-md-12 col-sm-12 p-0">
+                  <div class="section-hero-hover-text">
+                    <h3 class="section-hero-text">{{ item.text }}</h3>
+                    <a class="btn btn-wide btn-white rounded-pill mt-2 px-4" title="{{ item.text }}" href="{{ item.button_url }}">{{ item.button_text }}</a>
                   </div>
-                  <!-- End Accordion Item -->
-
-                  <!-- Accordion Item -->
-                  <div class="accordion-item">
-                    <div class="accordion-header" id="headingBasicsTwo">
-                      <a class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                        Commercial
-                      </a>
-                    </div>
-                    <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ" >
-                      <div class="accordion-body editable">
-                        <p>Structural Engineering
-                          Civil Engineering
-                          Aquatics Engineering
-                          Delegated Systems Design
-                          Municipal Infrastructure
-                          Drainage Modeling
-                        </p>
-                          <a class="about-info-btn accordion-btn" href="#">LEARN MORE</a>
-                      </div>
-                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 p-0 d-md-none d-lg-none d-xl-block pt-sm-4">
+                  <div class="d-flex align-items-end h-100">
+                    <ul class="w-75 ps-sm-0 list-unstyled">
+                      {% for hero_list in item.links %}
+                      <li class="{% if forloop.first %}border-bottom border-white fw-semibold{% endif %} py-1">
+                        <a class="text-white " href="{{ hero_list.url }}">{{ hero_list.text }}</a>
+                      </li>
+                      {% endfor %}
+                    </ul>
                   </div>
-                  <!-- End Accordion Item -->
+                </div>
+                <div class="col-md-2 col-12 d-flex align-items-end mt-5">
+                  <div class="swiper-button-next me-md-auto ms-auto" style="position: relative;top: 0;"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- End Container -->
       </div>
-      <div class="section-about-image-area">
-        <div class="container-fluid">
-          <div class="row">
-            <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
-              <div class="section-about-left-img">
-                <img src="/assets/images/service_01.webp" class="editable" alt="">
-              </div>
-            </div>
-            <div class="col-xl-6  col-lg-6 col-md-6 col-sm-12 ">
-              <div class="section-about-right-img">
-                <img src="/assets/images/service_02.webp" class="editable" alt="">
-              </div>
-            </div>
+      <!-- End Swiper Main Slider -->
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- Featured Projects Section -->
+<div class="section-project-section py-5">
+  <div class="container-fluid px-lg-10 px-6">
+    <div class="row px-lg-10 px-md-6">
+      <h2 class="section-project-heading text-start editable">Featured Projects</h2>
+      {% for project in page.featured_projects %}
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="section-single-project">
+          <div class="section-single-project-img">
+            <img src="{{ project.image }}" class="object-cover" alt="{{ project.title }}">
+          </div>
+          <div class="section-single-project-info">
+            <h3 class="section-singlep-info-heading">{{ project.title }}</h3>
+            <h4 class="fw-normal fs-2">{{ project.location }}</h4>
+            <a href="{{ project.url }}">VIEW PROJECTS</a>
           </div>
         </div>
       </div>
-      <div class="about-btn-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-5 col-sm-12">
-              <div class="section-coustomer-about-left">
-                <h4>What Our
-                  Customers
-                  Say</h4>
-              </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- our about section start here  -->
+<div class="section-about-section mb-4 mb-md-0">
+  <div class="seabout-area">
+    <div class="container-fluid px-lg-10 px-6">
+      <div class="row px-lg-10 px-0">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <div class="section-about-left-info">
+            <div class="section-about-info">
+              <h2 class="editable">About Southeast Engineers</h2>
+              <p class="editable">Southeast Engineers is a distinguished engineering firm specializing in Civil, Structural, and Aquatics Engineering. With licenses covering the Southeast United States region, the company stands as a reputable authority in delivering comprehensive engineering solutions. The team at Southeast Engineers combines expertise and innovation to address the unique challenges of each project, ensuring the highest standards of quality and safety. From civil infrastructure projects to intricate structural designs and aquatic engineering solutions, Southeast Engineers is committed to excellence, serving clients with professionalism and a commitment to sustainable and resilient engineering practices.</p>
+              <a class="" href="/about">LEARN MORE</a>
             </div>
-            <div class="col-lg-9 col-md-7 col-sm-12">
-              <div class="section-coustomer-about-right">
-                <p class="editable">RCI has worked with Southeast Engineers on multiple projects over the past 4 years. In every instance Southeast Engineers has turned over practical, well thought out designs in a very acceptable time frame within cost effective price points. They have a professional and timely staff that understands the aquatic design world extremely well.</p>
-               <span>Rotolo Consultants, Inc.</span>
+          </div>
+        </div>
+        <!-- about left info end here  -->
+        <!-- se about right info  -->
+        <div class=" col-lg-6 col-md-12 col-sm-12">
+          <div class="seabout-left-info">
+            <div class="section-about-linfo">
+              <h2 class="editable">Professional Services</h2>
+              <div class="accordion accordion-flush accordion-lg" id="accordionFAQ">
+                <!-- Accordion Item -->
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingBasicsOne">
+                    <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      Residential
+                    </a>
+                  </div>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ">
+                    <div class="accordion-body editable">
+                      <p>Structural Engineering
+                        Civil Engineering
+                        Aquatics Engineering
+                        Delegated Systems Design
+                        Municipal Infrastructure</p>
+                      <a class="about-info-btn accordion-btn" href="/services">LEARN MORE</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Accordion Item -->
+
+                <!-- Accordion Item -->
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingBasicsTwo">
+                    <a class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                      Commercial
+                    </a>
+                  </div>
+                  <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
+                    <div class="accordion-body editable">
+                      <p>Structural Engineering
+                        Civil Engineering
+                        Aquatics Engineering
+                        Delegated Systems Design
+                        Municipal Infrastructure
+                        Drainage Modeling
+                      </p>
+                      <a class="about-info-btn accordion-btn" href="/services">LEARN MORE</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Accordion Item -->
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="section-about-image-area">
+      <div class="container-fluid">
+        <div class="row">
+          <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
+            <div class="section-about-left-img">
+              <img src="/assets/images/service_01.webp" class="editable" alt="">
+            </div>
+          </div>
+          <div class="col-xl-6  col-lg-6 col-md-6 col-sm-12 ">
+            <div class="section-about-right-img">
+              <img src="/assets/images/service_02.webp" class="editable" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-btn-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-5 col-sm-12">
+            <div class="section-coustomer-about-left">
+              <h4>What Our
+                Customers
+                Say</h4>
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-7 col-sm-12">
+            <div class="section-coustomer-about-right">
+              <p class="editable">RCI has worked with Southeast Engineers on multiple projects over the past 4 years. In every instance Southeast Engineers has turned over practical, well thought out designs in a very acceptable time frame within cost effective price points. They have a professional and timely staff that understands the aquatic design world extremely well.</p>
+              <span>Rotolo Consultants, Inc.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- our about section end here  -->
+</div>
+<!-- our about section end here  -->

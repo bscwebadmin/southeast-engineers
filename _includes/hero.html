@@ -4,7 +4,7 @@
     <div class="hero-content">
       <h2>{{ include.hero_text }}</h2>
       <a href="{{ include.hero_button_url }}" class="btn">{{ include.hero_button_text }}</a>
-      <ul>
+      <ul class="list-unstyled">
         {% for link in include.hero_links %}
           <li><a href="{{ link.url }}">{{ link.text }}</a></li>
         {% endfor %}
