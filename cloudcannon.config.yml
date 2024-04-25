@@ -5,9 +5,9 @@ pages:
   filter: strict
 paths:
   uploads: uploads
-  dam_uploads: '/burning stick/south-eastern-engineers/images/'
+  dam_uploads: '/burning%20stick/south-eastern-engineers/images/'
   static: ''
-  dam_static: '/burning stick/south-eastern-engineers/images/'
+  dam_static: '/burning%20stick/south-eastern-engineers/images/'
   collections: ''
   data: _data
   layouts: _layouts
