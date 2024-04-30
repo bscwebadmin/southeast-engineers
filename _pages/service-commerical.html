@@ -46,6 +46,21 @@ services:
       - name: Waterpark Aquatic Attractions
         description: >-
           For pre-designed waterpark attractions, Southeast Engineers steps in to coordinate supplemental equipment needs, such as recirculation systems and sanitizers, often not provided by manufacturers. Navigating the complex and time-consuming processes of construction management and Health Department approval, we collaborate seamlessly with various consultants and ride manufacturers. Our services extend to the development of accurate construction documents for bidding purposes, ensuring a streamlined and successful project delivery.
+  - name: Civil Engineering
+    image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
+    description: At Southeast Engineers, our commitment to excellence shines through in our meticulously engineered designs for Commercial Aquatic Venues. Over the years, we've consistently upheld a high standard, guiding projects from conception to completion. The construction of commercial aquatic facilities demands precision in developing construction drawings, equipment submittals, and obtaining approvals from the governing Health Department within the specific project region. Leveraging the latest technology and adhering to applicable codes, our firm has successfully excelled in the planning, design, and construction administration of diverse
+  - name: Commercial Structural Engineering
+    image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
+    description: At Southeast Engineers, our commitment to excellence shines through in our meticulously engineered designs for Commercial Aquatic Venues. Over the years, we've consistently upheld a high standard, guiding projects from conception to completion. The construction of commercial aquatic facilities demands precision in developing construction drawings, equipment submittals, and obtaining approvals from the governing Health Department within the specific project region. Leveraging the latest technology and adhering to applicable codes, our firm has successfully excelled in the planning, design, and construction administration of diverse
+  - name: Delegated Systems Design
+    image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
+    description: At Southeast Engineers, our commitment to excellence shines through in our meticulously engineered designs for Commercial Aquatic Venues. Over the years, we've consistently upheld a high standard, guiding projects from conception to completion. The construction of commercial aquatic facilities demands precision in developing construction drawings, equipment submittals, and obtaining approvals from the governing Health Department within the specific project region. Leveraging the latest technology and adhering to applicable codes, our firm has successfully excelled in the planning, design, and construction administration of diverse
+  - name: Drainage Modeling
+    image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
+    description: At Southeast Engineers, our commitment to excellence shines through in our meticulously engineered designs for Commercial Aquatic Venues. Over the years, we've consistently upheld a high standard, guiding projects from conception to completion. The construction of commercial aquatic facilities demands precision in developing construction drawings, equipment submittals, and obtaining approvals from the governing Health Department within the specific project region. Leveraging the latest technology and adhering to applicable codes, our firm has successfully excelled in the planning, design, and construction administration of diverse
+  - name: Municipal Infrastructure
+    image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
+    description: At Southeast Engineers, our commitment to excellence shines through in our meticulously engineered designs for Commercial Aquatic Venues. Over the years, we've consistently upheld a high standard, guiding projects from conception to completion. The construction of commercial aquatic facilities demands precision in developing construction drawings, equipment submittals, and obtaining approvals from the governing Health Department within the specific project region. Leveraging the latest technology and adhering to applicable codes, our firm has successfully excelled in the planning, design, and construction administration of diverse
 
 permalink: /service-commerical
 ---
@@ -135,24 +150,10 @@ document.addEventListener("DOMContentLoaded", function() {
               <ul class="navbar-nav p-md-0 p-2" id="myTab" role="tablist">
                 {% for item in page.services %}
                <li class="nav-item me-4" role="presentation">
-                 <a class="active fw-bold text-gray fs-4" id="{{item.name | truncatewords: 1 | remove: "..."}}-tab" data-bs-toggle="tab" data-bs-target="#{{item.name | truncatewords: 1 | remove: "..."}}" role="tab" aria-controls="{{item.name | truncatewords: 1 | remove: "..."}}" aria-selected="true">{{item.name}}</a>
+                 <a class="{% if forloop.first %}active{% endif %} fw-bold text-gray fs-4" id="{{item.name | truncatewords: 1 | remove: "..."}}-tab" data-bs-toggle="tab" data-bs-target="#{{item.name | truncatewords: 1 | remove: "..."}}" role="tab" aria-controls="{{item.name | truncatewords: 1 | remove: "..."}}" aria-selected="true">{{item.name}}</a>
                </li>
                {% endfor %}
-               <li class="nav-item me-4" role="presentation">
-                 <a class="fw-bold text-gray fs-4" href="#" id="Civil-tab" data-bs-toggle="tab" data-bs-target="#Civil" role="tab" aria-controls="Civil" aria-selected="false" tabindex="-1">Civil Engineering</a>
-               </li>
-               <li class="nav-item me-4" role="presentation">
-                 <a class="fw-bold text-gray fs-4" href="#" id="Commercial-tab" data-bs-toggle="tab" data-bs-target="#Commercial" role="tab" aria-controls="Structural" aria-selected="false" tabindex="-1">Commercial Structural Engineering</a>
-               </li>
-                <li class="nav-item me-4" role="presentation">
-                 <a class="fw-bold text-gray fs-4" href="#" id="Delegated-tab" data-bs-toggle="tab" data-bs-target="#Delegated" role="tab" aria-controls="Delegated" aria-selected="false" tabindex="-1">Delegated Systems Design</a>
-               </li>
-               <li class="nav-item me-4" role="presentation">
-                 <a class="fw-bold text-gray fs-4" href="#" id="Drainage-tab" data-bs-toggle="tab" data-bs-target="#Drainage" role="tab" aria-controls="Drainage" aria-selected="false" tabindex="-1">Drainage Modeling</a>
-               </li>
-               <li class="nav-item me-4" role="presentation">
-                  <a class="fw-bold text-gray fs-4" href="#" id="Municipal-tab" data-bs-toggle="tab" data-bs-target="#Municipal" role="tab" aria-controls="Municipal" aria-selected="false" tabindex="-1">Municipal Infrastructure</a>
-                </li>
+
               </ul>
               <!-- End Navbar -->
             </div>
@@ -165,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function() {
               <div class="col-lg-7 col-md-7 col-sm-12">
                 <div class="single-tab-info">
                   <h2>{{item.name}}</h2>
-                  <p>{{item.description}} </p>
+                  <p class="mb-5">{{item.description}} </p>
                   {% if item.service_detail %}
                   <div class="accordion accordion-flush accordion-lg" id="accordionFAQ">
                     {% for service in item.service_detail %}
@@ -201,396 +202,7 @@ document.addEventListener("DOMContentLoaded", function() {
           </div>
            <!-- single tab end here  -->
            {% endfor %}
-           <div class="tab-pane fade " id="Civil" role="tabpanel" aria-labelledby="Civil-tab">
-            <div class="row">
-              <div class="col-lg-7">
-                <div class="single-tab-info">
-                  <h2>Structural Engineering</h2>
-                  <p>The complexities of modern residential construction, variability of soils based on site selection, and the demand for higher finished floor elevations due to local ordinances has necessitated engineered solutions for much of the residential construction market.  Southeast Engineers has extensive experience in the design of foundations for highly complex custom homes, and large tract home developments.  We have demonstrated our expertise in the design of over 1,000 successful projects in the Southeast United States, including (but not limited to) the following foundation systems:</p>
 
-                  <div class="accordion accordion-flush accordion-lg" id="accordionFAQ">
-                    <!-- Accordion Item -->
-                    <div class="accordion-item">
-                      <div class="accordion-header" id="headingBasicsOne">
-                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                          Shallow Foundation Design
-                        </a>
-                      </div>
-                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Accordion Item -->
-                    <!-- Accordion Item -->
-                    <div class="accordion-item">
-                      <div class="accordion-header" id="headingBasicsTwo">
-                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Deep Foundation Design
-                        </a>
-                      </div>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Accordion Item -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingBasicsThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Elevated Foundation Framing
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Accordion Item -->
-                  </div>
-              </div>
-                <!-- single col end  -->
-              <div class="col-lg-5">
-                <div class="intro-tab-img-area">
-                  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res">
-                    <a class="about-hero-btn intro-tab-btn" href="#">CONTACT US</a>
-                </div>
-              </div>
-              <!-- single col end  -->
-            </div>
-          </div>
-           <!-- single tab end here -->
-           <div class="tab-pane fade " id="Commercial" role="tabpanel" aria-labelledby="Commercial-tab">
-            <div class="row">
-              <div class="col-lg-7">
-                <div class="single-tab-info">
-                  <h2>Residential Civil Engineering</h2>
-                  <p>The complexities of modern residential construction, variability of soils based on site selection, and the demand for higher finished floor elevations due to local ordinances has necessitated engineered solutions for much of the residential construction market.  Southeast Engineers has extensive experience in the design of foundations for highly complex custom homes, and large tract home developments.  We have demonstrated our expertise in the design of over 1,000 successful projects in the Southeast United States, including (but not limited to) the following foundation systems:</p>
-
-                  <div class="accordion accordion-flush accordion-lg" id="accordionFAQ">
-                    <!-- Accordion Item -->
-                    <div class="accordion-item">
-                      <div class="accordion-header" id="headingBasicsOne">
-                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                          Shallow Foundation Design
-                        </a>
-                      </div>
-                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Accordion Item -->
-                    <!-- Accordion Item -->
-                    <div class="accordion-item">
-                      <div class="accordion-header" id="headingBasicsTwo">
-                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Deep Foundation Design
-                        </a>
-                      </div>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Accordion Item -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingBasicsThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Elevated Foundation Framing
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Accordion Item -->
-                  </div>
-              </div>
-                <!-- single col end  -->
-              <div class="col-lg-5">
-                <div class="intro-tab-img-area">
-                  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res">
-                    <a class="about-hero-btn intro-tab-btn" href="#">CONTACT US</a>
-                </div>
-              </div>
-              <!-- single col end  -->
-            </div>
-          </div>
-          <!-- single tab end here -->
-          <div class="tab-pane fade " id="Delegated" role="tabpanel" aria-labelledby="Delegated-tab">
-            <div class="row">
-              <div class="col-lg-7">
-                <div class="single-tab-info">
-                  <h2>Floodplain Analysis</h2>
-                  <p>The complexities of modern residential construction, variability of soils based on site selection, and the demand for higher finished floor elevations due to local ordinances has necessitated engineered solutions for much of the residential construction market.  Southeast Engineers has extensive experience in the design of foundations for highly complex custom homes, and large tract home developments.  We have demonstrated our expertise in the design of over 1,000 successful projects in the Southeast United States, including (but not limited to) the following foundation systems:</p>
-
-                  <div class="accordion accordion-flush accordion-lg" id="accordionFAQ">
-                    <!-- Accordion Item -->
-                    <div class="accordion-item">
-                      <div class="accordion-header" id="headingBasicsOne">
-                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                          Shallow Foundation Design
-                        </a>
-                      </div>
-                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Accordion Item -->
-                    <!-- Accordion Item -->
-                    <div class="accordion-item">
-                      <div class="accordion-header" id="headingBasicsTwo">
-                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Deep Foundation Design
-                        </a>
-                      </div>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Accordion Item -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingBasicsThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Elevated Foundation Framing
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Accordion Item -->
-                  </div>
-              </div>
-                <!-- single col end  -->
-              <div class="col-lg-5">
-                <div class="intro-tab-img-area">
-                  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res">
-                    <a class="about-hero-btn intro-tab-btn" href="#">CONTACT US</a>
-                </div>
-              </div>
-              <!-- single col end  -->
-            </div>
-          </div>
-          <!-- single tab end here -->
-          <div class="tab-pane fade " id="Drainage" role="tabpanel" aria-labelledby="Drainage-tab">
-            <div class="row">
-              <div class="col-lg-7">
-                <div class="single-tab-info">
-                  <h2>Subdivision Development</h2>
-                  <p>The complexities of modern residential construction, variability of soils based on site selection, and the demand for higher finished floor elevations due to local ordinances has necessitated engineered solutions for much of the residential construction market.  Southeast Engineers has extensive experience in the design of foundations for highly complex custom homes, and large tract home developments.  We have demonstrated our expertise in the design of over 1,000 successful projects in the Southeast United States, including (but not limited to) the following foundation systems:</p>
-
-                  <div class="accordion accordion-flush accordion-lg" id="accordionFAQ">
-                    <!-- Accordion Item -->
-                    <div class="accordion-item">
-                      <div class="accordion-header" id="headingBasicsOne">
-                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                          Shallow Foundation Design
-                        </a>
-                      </div>
-                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Accordion Item -->
-                    <!-- Accordion Item -->
-                    <div class="accordion-item">
-                      <div class="accordion-header" id="headingBasicsTwo">
-                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Deep Foundation Design
-                        </a>
-                      </div>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Accordion Item -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingBasicsThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Elevated Foundation Framing
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Accordion Item -->
-                  </div>
-              </div>
-                <!-- single col end  -->
-              <div class="col-lg-5">
-                <div class="intro-tab-img-area">
-                  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res">
-                    <a class="about-hero-btn intro-tab-btn" href="#">CONTACT US</a>
-                </div>
-              </div>
-              <!-- single col end  -->
-            </div>
-          </div>
-          <!-- single tab end here -->
-          <div class="tab-pane fade " id="Municipal" role="tabpanel" aria-labelledby="Municipal-tab">
-            <div class="row">
-              <div class="col-lg-7">
-                <div class="single-tab-info">
-                  <h2>Subdivision Development</h2>
-                  <p>The complexities of modern residential construction, variability of soils based on site selection, and the demand for higher finished floor elevations due to local ordinances has necessitated engineered solutions for much of the residential construction market.  Southeast Engineers has extensive experience in the design of foundations for highly complex custom homes, and large tract home developments.  We have demonstrated our expertise in the design of over 1,000 successful projects in the Southeast United States, including (but not limited to) the following foundation systems:</p>
-
-                  <div class="accordion accordion-flush accordion-lg" id="accordionFAQ">
-                    <!-- Accordion Item -->
-                    <div class="accordion-item">
-                      <div class="accordion-header" id="headingBasicsOne">
-                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                          Shallow Foundation Design
-                        </a>
-                      </div>
-                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Accordion Item -->
-                    <!-- Accordion Item -->
-                    <div class="accordion-item">
-                      <div class="accordion-header" id="headingBasicsTwo">
-                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Deep Foundation Design
-                        </a>
-                      </div>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Accordion Item -->
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingBasicsThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Elevated Foundation Framing
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <ul class="list-unstyled">
-                            <li>– Timber Piles</li>
-                            <li>– Concrete Drilled Shafts and Auger Cast Piles</li>
-                            <li>– Precast Concrete Piless</li>
-                            <li>– Helical Pile Foundation Systems  </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Accordion Item -->
-                  </div>
-              </div>
-                <!-- single col end  -->
-              <div class="col-lg-5">
-                <div class="intro-tab-img-area">
-                  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res">
-                    <a class="about-hero-btn intro-tab-btn" href="#">CONTACT US</a>
-                </div>
-              </div>
-              <!-- single col end  -->
-            </div>
-          </div>
-          <!-- single tab end here -->
         </div>
       </div>
     </div>
