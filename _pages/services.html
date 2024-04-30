@@ -17,9 +17,9 @@ permalink: /services
         </div>
         <div class="col-lg-8">
           <div class="tags-top-list">
-            <ul class="tags-top-menu-list">
+            <ul class="tags-top-menu-list mb-0 list-unstyled">
               {% for list in site.services %}
-               <li><a href="{{ list.url }}" class="tags-top-nav-link">{{ list.page_title }}</a></li>
+               <li><a href="/service-interior#{{list.page_title}}" class="tags-top-nav-link">{{ list.page_title }}</a></li>
               {% endfor %}
             </ul>
           </div>
@@ -68,7 +68,7 @@ permalink: /services
             <div class="single-res-info">
                <h2 class="single-res-heading"> {{ item.page_title }} </h2>
                <p>{{ item.short_description }}</p>
-              <a class="about-info-btn single-res-btn" href="{{item.url}}">LEARN MORE</a>
+              <a class="about-info-btn single-res-btn" href="/service-residential?tab={{ item.page_title | truncatewords: 1 | remove: "..." }}&section=servicetab">LEARN MORE</a>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ permalink: /services
             <div class="single-res-info">
                <h2 class="single-res-heading"> {{ item.page_title }} </h2>
                <p>{{ item.short_description }}</p>
-              <a class="about-info-btn single-com-btn" href="{{ item.url }}">LEARN MORE</a>
+              <a class="about-info-btn single-res-btn" href="/service-commerical?tab={{ item.page_title | truncatewords: 1 | remove: "..." }}&section=servicetab">LEARN MORE</a>
             </div>
           </div>
         </div>
