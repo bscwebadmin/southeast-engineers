@@ -262,12 +262,12 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.accordion-body p {
+/* .accordion-body p {
    width: 50%;
    font-size: 1.125rem;
    line-height: 1.875rem;
    white-space: pre-line;
-}
+} */
 .section-about-info{
     margin-bottom: 3.75rem;
 }
