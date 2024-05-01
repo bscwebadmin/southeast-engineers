@@ -49,7 +49,7 @@ defaults:
         embed: true
 collections:
   services:
-     output: true
+     output: false
      custom_permalink_placeholders: ["type"]
      permalink: /services/:title
 -scope:
