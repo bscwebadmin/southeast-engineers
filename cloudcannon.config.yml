@@ -13,7 +13,7 @@ paths:
   layouts: _layouts
   includes: _includes
   pages: _pages
-  pages: _services
+  # pages: _services
 collections_config:
   posts:
     path: _posts

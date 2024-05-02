@@ -83,7 +83,7 @@ permalink: /
                   <div class="d-flex align-items-end h-100">
                     <ul class="w-75 ps-sm-0 list-unstyled">
                       {% for hero_list in item.links %}
-                      <li class="{% if forloop.first %}border-bottom border-white fw-semibold{% endif %} py-1">
+                      <li class="{% if forloop.first %}border-bottom border-white fw-semibold fs-2{% endif %} py-1 ">
                         <a class="text-white " href="{{ hero_list.url }}">{{ hero_list.text }}</a>
                       </li>
                       {% endfor %}
@@ -155,13 +155,13 @@ permalink: /
                     </a>
                   </div>
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body editable">
-                      <p>Structural Engineering
-                        Civil Engineering
-                        Aquatics Engineering
-                        Delegated Systems Design
-                        Municipal Infrastructure</p>
-                      <a class="about-info-btn accordion-btn" href="/services">LEARN MORE</a>
+                    <div class="accordion-body d-block editable">
+                      {% for item in site.services %}
+                      {% if item.type == 'residential' %}
+                        <p class="{% if forloop.last %}{% else %}mb-2{% endif %}">{{ item.page_title }}</p>
+                      {% endif %}
+                       {% endfor %}
+                      <a class="about-info-btn accordion-btn" href="/service-residential">LEARN MORE</a>
                     </div>
                   </div>
                 </div>
@@ -170,20 +170,18 @@ permalink: /
                 <!-- Accordion Item -->
                 <div class="accordion-item">
                   <div class="accordion-header" id="headingBasicsTwo">
-                    <a class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                       Commercial
                     </a>
                   </div>
-                  <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body editable">
-                      <p>Structural Engineering
-                        Civil Engineering
-                        Aquatics Engineering
-                        Delegated Systems Design
-                        Municipal Infrastructure
-                        Drainage Modeling
-                      </p>
-                      <a class="about-info-btn accordion-btn" href="/services">LEARN MORE</a>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
+                    <div class="accordion-body d-block editable">
+                      {% for item in site.services %}
+                      {% if item.type == 'commercial' %}
+                        <p class="{% if forloop.last %}{% else %}mb-2{% endif %}">{{ item.page_title }}</p>
+                      {% endif %}
+                       {% endfor %}
+                      <a class="about-info-btn accordion-btn" href="/service-commercial">LEARN MORE</a>
                     </div>
                   </div>
                 </div>

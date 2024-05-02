@@ -36,6 +36,14 @@ background-color: #0c4553d4;
 .navbar-light .navbar-nav .nav-link {
     margin-top: 5px;
 }
+.single-res-btn:hover{
+   color: #5A7DA9
+}
+}
+
+.ff-rc{
+   font-family: Roboto Condensed;
+}
 .px-5 {
     padding-right: 0rem !important;
     padding-left: 0rem !important;
@@ -117,6 +125,7 @@ background-color: #0c4553d4;
 }
 .accordion-body p {
     text-align: left;
+    font-size: 18px;
 }
 .section-about-left-img img {
     margin: 0px;

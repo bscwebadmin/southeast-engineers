@@ -296,7 +296,6 @@ body{
     font-size: 1.125rem;
     font-weight: 400;
     font-family: "Roboto Condensed", sans-serif;
-    text-decoration: underline;
     color: #5C8F87;
     line-height: 1.125rem;
 }
@@ -822,7 +821,7 @@ body{
     font-weight: 400;
     font-family: "Roboto Condensed", sans-serif;
 }
-.single-tab-info p{
+.single-tab-info p ,ul,li{
     font-size: 1.125rem;
     line-height: 1.875rem;
     font-family: "Roboto", sans-serif;

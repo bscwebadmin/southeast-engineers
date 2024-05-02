@@ -6,11 +6,12 @@
           <div class="section-contact-info">
             <h2 class="editable mb-3">Contact Us</h2>
             <ul class="contact-top-list editable">
-              <li><a href="#">Residential and Commercial Engineering</a></li>
-              <li class="contact-extra"><a href="#"></a></li>
-              <li><a href="#">Structural Engineering</a></li>
-              <li><a href="#">Civil Engineering</a></li>
-              <li><a href="#">Aquatics Engineering</a></li>
+              <li><a href="/services">Residential and Commercial Engineering</a></li>
+            </ul>
+            <ul class="contact-top-list editable">
+              <li><a href="/service-commercial?tab=Commercial&section=servicetab">Structural Engineering</a></li>
+              <li><a href="/service-commercial?tab=Civil&section=servicetab">Civil Engineering</a></li>
+              <li><a href="/service-commercial?tab=Aquatics&section=servicetab">Aquatics Engineering</a></li>
             </ul>
             {% if page.contact_image %}
             <img src="{{page.contact_image}}" class="object-cover" alt="contact">
@@ -63,13 +64,10 @@
                       <div class="mb-3">
                         <select name="hireUsFormNameBudget" id="hireUsFormBudget" class="form-select form-select-lg" aria-label="Tell us about your budget">
                           <option selected="">Select Service</option>
-                          <option value="foundation">Foundation Engineering</option>
-                           <option value="structural"> Structural Engineering</option>
-                          <option value="residential">  Residential Civil Engineering</option>
-                           <option value="floodplain"> Floodplain Analysis</option>
-                           <option value="subdivision"> Subdivision Development</option>
-
-                        </select>
+                          {% for list in site.services %}
+                          <option value="{{ list.page_title }}">{{ list.page_title }}</option>
+                          {% endfor %}
+                       </select>
                       </div>
                       <!-- End Form -->
                     </div>

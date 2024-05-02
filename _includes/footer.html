@@ -14,7 +14,7 @@
                     </div>
                     <div class="col-lg-6 d-none d-md-block">
                         <div>
-                          <a class="section-footer-list" href="/services">Residential</a> <span class="text-white"> |</span>  <a class="section-footer-list" href="/services">Commercial</a>
+                          <a class="section-footer-list" href="/service-residential">Residential</a> <span class="text-white"> |</span>  <a class="section-footer-list" href="/service-commercial">Commercial</a>
                         </div>
                         <div>
                           <a class="section-footer-list" href="/sitemap.xml">Sitemap</a> <span class="text-white"> |</span>   <a class="section-footer-list" href="/privacy-policy">Privacy Policy</a>
@@ -35,16 +35,16 @@
                         </div>
                     <div class="col-lg-6">
                         <div>
-                        <a class="text-white" href="https://maps.app.goo.gl/U9Utw9wxQDvzkptN8" target="_blank">{{site.data.general_settings.locations[0].address}}{{site.data.general_settings.locations[0].address2}}{{site.data.general_settings.locations[0].city-state-zip}}</a>
+                        <a class="text-white" href="https://maps.app.goo.gl/U9Utw9wxQDvzkptN8" target="_blank">{{site.data.general_settings.locations[0].address}} {{site.data.general_settings.locations[0].address2}} {{site.data.general_settings.locations[0].city-state-zip}}</a>
                         </div>
                         <div>
-                            <a class="text-white" href="https://maps.app.goo.gl/Rybkne1Ab9ian3yx6" target="_blank">{{site.data.general_settings.locations[1].address}}{{site.data.general_settings.locations[1].address2}}{{site.data.general_settings.locations[1].city-state-zip}}</a>
+                            <a class="text-white" href="https://maps.app.goo.gl/Rybkne1Ab9ian3yx6" target="_blank">{{site.data.general_settings.locations[1].address}} {{site.data.general_settings.locations[1].address2}} {{site.data.general_settings.locations[1].city-state-zip}}</a>
                         </div>
                     </div>
             </div>
             <div class="col-12 col-md-2 d-md-flex d-block">
                     <div class="col-lg-12">
-                        <ul class="d-flex justify-content-lg-end justify-content-center">
+                        <ul class="d-flex justify-content-lg-end justify-content-center list-unstyled">
                             {% for social in site.data.general_settings.social %}
                             <li class="mx-3"><a class="btn btn-soft-light btn-xs btn-icon" href="{{social.link}}"><i class="bi-{{social.icon}}"></i></a></li>
                             {% endfor %}
