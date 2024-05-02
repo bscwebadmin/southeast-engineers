@@ -214,10 +214,10 @@ document.addEventListener("DOMContentLoaded", function() {
             <!-- End Navbar Toggle -->
             <div id="navbarTogglerNavMenu" class="collapse navbar-collapse">
               <!-- Navbar -->
-              <ul class="navbar-nav p-md-0 p-2" id="myTab" role="tablist">
+              <ul class="nav p-md-0 p-2 justify-content-start" id="myTab" role="tablist">
                 {% for item in page.services %}
-               <li class="nav-item me-4" role="presentation">
-                 <a class="{% if forloop.first %}active{% endif %} fw-bold text-gray fs-4" id="{{item.name | truncatewords: 1 | remove: "..."}}-tab" data-bs-toggle="tab" data-bs-target="#{{item.name | truncatewords: 1 | remove: "..."}}" role="tab" aria-controls="{{item.name | truncatewords: 1 | remove: "..."}}" aria-selected="true">{{item.name}}</a>
+               <li class="nav-item mx-2" role="presentation">
+                 <a class="{% if forloop.first %}active{% endif %} nav-link fw-bold text-gray fs-5" id="{{item.name | truncatewords: 1 | remove: "..."}}-tab" data-bs-toggle="tab" data-bs-target="#{{item.name | truncatewords: 1 | remove: "..."}}" role="tab" aria-controls="{{item.name | truncatewords: 1 | remove: "..."}}" aria-selected="true">{{item.name}}</a>
                </li>
                {% endfor %}
               </ul>
