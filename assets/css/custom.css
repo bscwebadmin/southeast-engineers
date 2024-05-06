@@ -1,6 +1,6 @@
 .gradient-x-overlay-lg-dark::before{
    background-image: linear-gradient(to right, rgba(12, 69, 83, .9) 0, rgba(12, 69, 83, .9) 100%);
-    height: 50% !important;
+    height: 40% !important;
 }
 [class*=gradient-x-overlay-]::before, [class*=gradient-y-overlay-]::before, [class*=gradient-y-three-overlay-]::before{
    position: absolute;
