@@ -110,8 +110,7 @@ body{
     font-size: 3.75rem;
     font-family: "Roboto Condensed", sans-serif;
     color: #FFFFFF;
-    width: 535px;
-    line-height: 70px;
+    line-height: 1.25em;
     font-weight: 400;
 }
 .swiperslide-hover-info{

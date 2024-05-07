@@ -74,14 +74,14 @@ permalink: /
         <div class="container-fluid">
           <div class="row">
             <div class="container homeslider">
-              <div class="row px-md-8 py-1 justify-content-evenly content-space-t-lg-3 content-space-b-2 mx-auto">
-                <div class="col-lg-4 col-md-12 col-sm-12 p-0">
-                  <div class="">
+              <div class="row px-md-8 py-1 justify-content-evenly d-flex align-items-lg-end  content-space-t-lg-3 content-space-b-lg-2 content-space-t-2 mx-auto">
+                <div class="col-lg-4 col-md-10 col-sm-12 p-0">
+                  <div class="text-lg-start text-md-start text-center">
                     <h3 class="section-hero-text">{{ item.text }}</h3>
                     <a class="btn btn-wide btn-white rounded-pill mt-2 px-4" title="{{ item.text }}" href="{{ item.button_url }}">{{ item.button_text }}</a>
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12 p-0 d-md-none d-lg-none d-xl-block pt-sm-4">
+                <div class="col-lg-4 col-md-4 col-10 p-0 d-md-none d-lg-none d-xl-block pt-sm-4 slider-bottom">
                   <div class="d-flex align-items-end h-100 mt-2 mt-lg-0">
                     <ul class="w-75 ps-sm-0 list-unstyled">
                       {% for hero_list in item.links %}
@@ -92,9 +92,10 @@ permalink: /
                     </ul>
                   </div>
                 </div>
-                <div class="col-md-2 col-12 d-flex align-items-end mt-lg-5">
+                <div class="col-lg-2 col-md-2 col-2 d-flex align-items-end mt-lg-5 slider-bottom-right">
                   <div class="swiper-button-next me-md-auto ms-auto" style="position: relative;top: 0;"></div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -157,13 +158,13 @@ permalink: /
                     </a>
                   </div>
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body d-block editable">
+                    <div class="accordion-body d-block text-start">
                       {% for item in site.services %}
                       {% if item.type == 'residential' %}
-                        <p class="{% if forloop.last %}{% else %}mb-2{% endif %}">{{ item.page_title }}</p>
+                        <a href="/service-{{item.type}}#{{item.page_title | truncatewords: 1 | remove: "..."}}"><p class="{% if forloop.last %}{% else %}mb-2{% endif %}">{{ item.page_title }}</p></a>
                       {% endif %}
                        {% endfor %}
-                      <a class="about-info-btn accordion-btn" href="/service-residential">LEARN MORE</a>
+                      <a class="mt-3" href="/service-residential">LEARN MORE</a>
                     </div>
                   </div>
                 </div>
@@ -177,13 +178,13 @@ permalink: /
                     </a>
                   </div>
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body d-block editable">
+                    <div class="accordion-body d-block text-start">
                       {% for item in site.services %}
                       {% if item.type == 'commercial' %}
-                        <p class="{% if forloop.last %}{% else %}mb-2{% endif %}">{{ item.page_title }}</p>
+                       <a href="/service-{{item.type}}#{{item.page_title | truncatewords: 1 | remove: "..."}}"> <p class="{% if forloop.last %}{% else %}mb-2{% endif %}">{{ item.page_title }}</p></a>
                       {% endif %}
                        {% endfor %}
-                      <a class="about-info-btn accordion-btn" href="/service-commercial">LEARN MORE</a>
+                      <a class="mt-3" href="/service-commercial">LEARN MORE</a>
                     </div>
                   </div>
                 </div>

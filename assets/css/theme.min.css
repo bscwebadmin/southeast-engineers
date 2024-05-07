@@ -4254,7 +4254,8 @@ fieldset:disabled .btn {
    font-size: var(--bs-nav-link-font-size);
    font-weight: var(--bs-nav-link-font-weight);
    color: var(--bs-nav-link-color);
-   transition: color .15s easection-in-out, background-color .15s easection-in-out, border-color .15s easection-in-out
+   transition: color .15s easection-in-out, background-color .15s easection-in-out, border-color .15s easection-in-out;
+   cursor: pointer;
 }
 
 @media (prefers-reduced-motion:reduce) {
