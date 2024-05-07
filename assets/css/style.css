@@ -1038,8 +1038,7 @@ body{
 
     }
     .section-hero-text {
-        font-size: 29px;
-        line-height: 36px;
+        font-size: 2.25rem;
         width: 100%;
     }
     .section-hero-hover-text {
