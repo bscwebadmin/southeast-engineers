@@ -168,7 +168,6 @@ body{
 }
 .section-contact-form input::placeholder,.section-contact-form textarea::placeholder {
     color: #666666;
-    text-transform: uppercase;
 }
 .section-contact-form .form-req {
     color: #666666;
