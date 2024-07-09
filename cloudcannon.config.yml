@@ -6,7 +6,7 @@ pages:
 paths:
   uploads: uploads
   dam_uploads: ''
-  static: 'assets/images'
+  static: ''
   dam_static: ''
   collections: ''
   data: _data
