@@ -1,35 +1,57 @@
 ---
 layout: page
-page_title: Featured Projects
-title: Featured Projects - Southeast Engineers
+page_title: "Featured Projects"
+title: "Featured Projects - Southeast Engineers"
 description: >
-  With a combined 70 plus years of experience, Southeast Engineers has become a
-  market leader in a wide range of engineering services.
-pages_header_image: /assets/images/feature_04.webp
+  With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services.
+pages_header_image: "/assets/images/feature_04.webp"
 contact_image: assets/images/1-Featured-Contact-Heaven's-Eye-4.jpg
 portfolio:
   - name: Campion Pool and Lazy River
-    image: /assets/images/portfolios/01.jpg
+    images:
+      - assets/images/portfolios/01.jpg
     location: Lafayette, LA
     service: Aquatics Engineering
   - name: Highland Road Splash Pad
-    image: /assets/images/portfolios/02.jpg
+    images:
+      - assets/images/portfolios/02.jpg
     location: Baton Rouge, LA
+    service: Aquatics Engineering
+  - name: Lakeshore
+    images:
+      - assets/images/portfolios/10.jpg
+    location: Slidel, LA
+    service: Aquatics Engineering
+  - name: NFL Therapy Pool
+    images:
+      - assets/images/portfolios/11.jpg
+    service: Aquatics Engineering
+  - name: Rukus Pool
+    location: Austin, TX
+    images:
+      - assets/images/portfolios/12.jpg
+    service: Aquatics Engineering
+  - name: The District
+    location: Baton Rouge, LA
+    image: assets/images/portfolios/13.jpg
+    service: Aquatics Engineering
+  - name: Wildwood
+    location: Baton Rouge, LA
+    image: assets/images/portfolios/14.jpg
+    service: Aquatics Engineering
+  - name: Wildwood
+    location: Lubbock, TX
+    image: assets/images/portfolios/15.jpg
     service: Aquatics Engineering
   - name: Himel Residence
     image: /assets/images/portfolios/03.jpg
     location: New Orleans, LA
     service: Residential Structural Engineering
-  - name: Lakeshore
-    image: /assets/images/portfolios/04.jpg
-    location: Slidell, LA
-    service: Structural Engineering
-  - name: Test
-    image: >-
-      https://res.cloudinary.com/dhrcud0tp/Burning
-      Stick/south-eastern-engineers/images/gcgcvqnauumzhprklskc.png
-    location: Test Location
-    service: _services/aquatics-engineering.md
+
+<!--  - name: Lakeshore-->
+<!--    image: assets/images/portfolios/04.jpg-->
+<!--    location: Slidell, LA-->
+<!--    service: Structural Engineering-->
 permalink: /featured
 ---
 <section class="featured-service-section">
@@ -39,7 +61,8 @@ permalink: /featured
       <!-- Select -->
       <div class="tom-select-custom mb-5 d-flex align-items-center border-bottom border-white w-100">
         <small class="text-primary">Service</small>
-        <select class="js-select form-select custom-select text-white bg-transparent" id="js-filter-dropdown" autocomplete="off" data-hs-tom-select-options='{
+        <select class="js-select form-select custom-select text-white bg-transparent" id="js-filter-dropdown" autocomplete="off"
+              data-hs-tom-select-options='{
                 "placeholder": "Select Service",
                 "hideSearch": true
               }'>
@@ -49,31 +72,36 @@ permalink: /featured
           <option value="Structural Engineering">Structural Engineering</option>
           <option value="Delegated Systems Design">Delegated Systems Design</option>
           <option value="Residential Structural Engineering">Residential Structural Engineering</option>
-          <option value="Drainage Modeling">Drainage Modeling</option>
+<!--          <option value="Drainage Modeling">Drainage Modeling</option>-->
           <option value="Municipal Infrastructure">Municipal Infrastructure</option>
         </select>
       </div>
       <!-- End Select -->
     </div>
 
-    <div class="js-shuffle row row-cols-1 row-cols-sm-2 row-cols-md-3">
-      {% for item in page.portfolio %}
-      <div class="js-shuffle-item col mb-5" data-groups='["{{item.service | truncateword: 1}}"]'>
-        <!-- Card -->
-        <a class="media-viewer" href="{{item.image}}" data-fslightbox="gallery">
-          <img class="card-img-top object-cover port-img" src="{{item.image}}" alt="{{item.name}} - {{item.service}}" />
+        <div class="js-shuffle row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          {% for item in page.portfolio %}
+  <div class="js-shuffle-item col mb-5" data-groups='["{{item.service | truncateword: 1}}"]'>
+    {% for image in item.images %}
+      <!-- Check if the loop index is 1 (Liquid uses 1-based index, not 0-based), which is the first image -->
+      {% if forloop.index == 1 %}
+        <a class="media-viewer" href="{{ image }}" data-fslightbox="gallery{{ forloop.parentloop.index }}">
+          <img class="card-img-top object-cover port-img" src="{{ image }}" alt="{{ item.name }} - {{ item.service }}">
         </a>
-          <div class="card-body mt-4">
-            <div class="w-100 border-bottom border-primary mb-2">
-              <h3 class="fw-semibold text-white robo-condensed" ">{{item.name}}</h3>
-            </div>
-            <h4 class="fw-normal text-white robo-condensed">{{item.location}}</h4>
-            <em class="card-subtitle text-white">{{item.service}}</em>
-          </div>
-        <!-- End Card -->
+      {% else %}
+        <!-- For the other images, do not display, but keep it in DOM for the lightbox -->
+        <a style="display: none;" href="{{ image }}" data-fslightbox="gallery{{ forloop.parentloop.index }}"></a>
+      {% endif %}
+    {% endfor %}
+    <div class="card-body mt-4">
+      <div class="w-100 border-bottom border-primary mb-2">
+        <h3 class="fw-semibold text-white robo-condensed">{{ item.name }}</h3>
       </div>
-      <!-- End Col -->
-      {% endfor %}
+      <h4 class="fw-normal text-white robo-condensed">{{ item.location }}</h4>
+      <em class="card-subtitle text-white">{{ item.service }}</em>
+    </div>
+  </div>
+{% endfor %}
 
     </div>
     <!-- End Row -->
