@@ -1,20 +1,22 @@
 ---
 layout: page
-page_title: "Featured Projects"
-title: "Featured Projects - Southeast Engineers"
+page_title: Featured Projects
+title: Featured Projects - Southeast Engineers
 description: >
-  With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services.
-pages_header_image: "/assets/images/feature_04.webp"
+  With a combined 70 plus years of experience, Southeast Engineers has become a
+  market leader in a wide range of engineering services.
+pages_header_image: /assets/images/feature_04.webp
 contact_image: assets/images/1-Featured-Contact-Heaven's-Eye-4.jpg
 portfolio:
   - name: Campion Pool and Lazy River
     images:
-      - assets/images/portfolios/01.jpg
+      - /assets/images/portfolios/01.jpg
+      - /assets/images/portfolios/02/jpg
     location: Lafayette, LA
     service: Aquatics Engineering
   - name: Highland Road Splash Pad
     images:
-      - assets/images/portfolios/02.jpg
+      - /assets/images/portfolios/02.jpg
     location: Baton Rouge, LA
     service: Aquatics Engineering
   - name: Lakeshore
@@ -47,7 +49,6 @@ portfolio:
     image: /assets/images/portfolios/03.jpg
     location: New Orleans, LA
     service: Residential Structural Engineering
-
 <!--  - name: Lakeshore-->
 <!--    image: assets/images/portfolios/04.jpg-->
 <!--    location: Slidell, LA-->
@@ -61,8 +62,7 @@ permalink: /featured
       <!-- Select -->
       <div class="tom-select-custom mb-5 d-flex align-items-center border-bottom border-white w-100">
         <small class="text-primary">Service</small>
-        <select class="js-select form-select custom-select text-white bg-transparent" id="js-filter-dropdown" autocomplete="off"
-              data-hs-tom-select-options='{
+        <select class="js-select form-select custom-select text-white bg-transparent" id="js-filter-dropdown" autocomplete="off" data-hs-tom-select-options='{
                 "placeholder": "Select Service",
                 "hideSearch": true
               }'>
@@ -86,7 +86,7 @@ permalink: /featured
       <!-- Check if the loop index is 1 (Liquid uses 1-based index, not 0-based), which is the first image -->
       {% if forloop.index == 1 %}
         <a class="media-viewer" href="{{ image }}" data-fslightbox="gallery{{ forloop.parentloop.index }}">
-          <img class="card-img-top object-cover port-img" src="{{ image }}" alt="{{ item.name }} - {{ item.service }}">
+          <img class="card-img-top object-cover port-img" src="{{ image }}" alt="{{ item.name }} - {{ item.service }}" />
         </a>
       {% else %}
         <!-- For the other images, do not display, but keep it in DOM for the lightbox -->
