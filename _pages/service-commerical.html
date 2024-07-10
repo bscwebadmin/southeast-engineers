@@ -236,7 +236,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if (tabId) {
     // Activate the tab
-    const tabTriggerEl = document.querySelector(`#${tabId}-tab`);
+    // const tabTriggerEl = document.querySelector(`#${tabId}-tab`);
+    const formattedTabId = tabId.replace(/\s+/g, '-').toLowerCase().replace(/[^0-9a-z-]/gi, '');
+    const tabTriggerEl = document.querySelector(`#${formattedTabId}-tab`);
     if (tabTriggerEl) {
       new bootstrap.Tab(tabTriggerEl).show();
     }
