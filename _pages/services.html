@@ -22,7 +22,7 @@ permalink: /services
           <div class="tags-top-list">
             <ul class="tags-top-menu-list mb-0 list-unstyled">
               {% for list in site.services %}
-               <li><a href="/service-{{list.type}}?tab={{list.page_title | truncatewords: 1 | remove: "..."}}&section={{list.page_title | truncatewords: 1 | remove: "..."}} " class="tags-top-nav-link">{{ list.page_title }}</a></li>
+               <li><a href="/service-{{list.type}}?tab={{list.page_title | truncatewords: 1 | remove: "..."}}&section={{list.page_title | truncatewords: 1 | remove: "..."}}" class="{% if list.page_title == "Drainage Modeling" %} d-none {% else %} tags-top-nav-link {% endif %}">{{ list.page_title }}</a></li>
               {% endfor %}
             </ul>
           </div>
