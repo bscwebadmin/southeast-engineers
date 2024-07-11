@@ -6,7 +6,7 @@ description: >
   With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services.
 type: residential
 image: /assets/images/Services/Residential/04.jpg
-short_description: Mauris et bibendum ipsum, sed elementum leo
+short_description: Development of floodplain management strategies, zoning regulations, and flood control measures to mitigate risks and protect communities from flood damage.
 pages_header_image: "/assets/images/Services/Residential/04.jpg"
 contact_image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
 header_style_two: true

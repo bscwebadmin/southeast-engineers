@@ -6,7 +6,7 @@ description: >
   With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services.
 type: residential
 image: /assets/images/Services/Residential/01.jpg
-short_description: Cost-Effective | Structurally Sound Designs
+short_description: Designing and analyzing structural foundations by assessing subsurface conditions to ensure foundations can safely support the structure over time.
 pages_header_image: "/assets/images/Services/Residential/01.jpg"
 contact_image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
 header_style_two: true

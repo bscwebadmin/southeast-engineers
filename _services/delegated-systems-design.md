@@ -6,7 +6,7 @@ description: >
   With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services.
 type: commercial
 image: /assets/Images/Services/Commercial/04.jpg
-short_description: Contractor Support for Delegated System Design
+short_description: Outsourcing aspects to specialized firms that focus on specific systems to ensure compliance with regulatory requirements and project specifications.
 pages_header_image: "/assets/Images/Services/Commercial/04.jpg"
 contact_image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
 header_style_two: true
