@@ -62,7 +62,7 @@
                     <div class="col-lg-6">
                       <!-- Form -->
                       <div class="mb-3">
-                        <select name="Budget" id="Budget" class="form-select form-select-lg" aria-label="Tell us about your budget">
+                        <select name="Service" id="Service" class="form-select form-select-lg">
                           <option selected="">Select Service</option>
                           {% for list in site.services %}
                           <option value="{{ list.page_title }}">{{ list.page_title }}</option>
@@ -87,7 +87,7 @@
                     <div class="col-12">
                       <!-- Form -->
                       <div class="mb-3">
-                        <select name="Referal" id="Referal" class="form-select form-select-lg" aria-label="How did you hear about us?">
+                        <select name="Referral" id="Referral" class="form-select form-select-lg" aria-label="How did you hear about us?">
                           <option selected="">How did you hear about us?</option>
                           <option value="Online/Google">Online/Google</option>
                           <option value="social">  Social Media</option>
