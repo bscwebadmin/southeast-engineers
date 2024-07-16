@@ -28,13 +28,13 @@
             <div class="pt-4">
               <div class="card-body">
                 <!-- Heading -->
-                <form>
+                <form action="https://formspree.io/f/xwpepwrv" method="POST">
                   <div class="row gx-3">
                     <div class="col-12">
 
                       <!-- Form -->
                       <div class="mb-3">
-                        <input type="text" class="form-control form-control-lg" name="hireUsFormNameFirstName" id="hireUsFormFirstName" placeholder="First name" aria-label="First name">
+                        <input type="text" class="form-control form-control-lg" name="First Name" id="First Name" placeholder="First name" aria-label="First name">
                       </div>
                       <!-- End Form -->
                     </div>
@@ -43,7 +43,7 @@
                     <div class="col-12">
                       <!-- Form -->
                       <div class="mb-3">
-                        <input type="text" class="form-control form-control-lg" name="hireUsFormNameLastName" id="hireUsFormLasttName" placeholder="Last name" aria-label="Last name">
+                        <input type="text" class="form-control form-control-lg" name="Last Name" id="Last Name" placeholder="Last name" aria-label="Last name">
                       </div>
                       <!-- End Form -->
                     </div>
@@ -52,7 +52,7 @@
                   <div class="col-12">
                     <!-- Form -->
                     <div class="mb-3">
-                      <input type="text" class="form-control form-control-lg" name="hireUsFormNamePhone" id="hireUsFormPhone" placeholder="Phone*" aria-label="+x(xxx)xxx-xx-xx">
+                      <input type="text" class="form-control form-control-lg" name="Phone" id="Phone" placeholder="Phone*" aria-label="+x(xxx)xxx-xx-xx">
                     </div>
                     <!-- End Form -->
                   </div>
@@ -62,7 +62,7 @@
                     <div class="col-lg-6">
                       <!-- Form -->
                       <div class="mb-3">
-                        <select name="hireUsFormNameBudget" id="hireUsFormBudget" class="form-select form-select-lg" aria-label="Tell us about your budget">
+                        <select name="Budget" id="Budget" class="form-select form-select-lg" aria-label="Tell us about your budget">
                           <option selected="">Select Service</option>
                           {% for list in site.services %}
                           <option value="{{ list.page_title }}">{{ list.page_title }}</option>
@@ -75,7 +75,7 @@
                     <div class="col-lg-6">
                       <!-- Form -->
                       <div class="mb-3">
-                        <select name="hireUsFormNameBudget" id="hireUsFormBudget" class="form-select form-select-lg" aria-label="Tell us about your budget">
+                        <select name="Location" id="Location" class="form-select form-select-lg" aria-label="Location">
                           <option selected="">Select Location</option>
                           <option value="Baton Rouge">Baton Rouge</option>
                           <option value="Lafayette">Lafayette</option>
@@ -87,7 +87,7 @@
                     <div class="col-12">
                       <!-- Form -->
                       <div class="mb-3">
-                        <select name="hireUsFormNameBudget" id="hireUsFormBudget" class="form-select form-select-lg" aria-label="Tell us about your budget">
+                        <select name="Referal" id="Referal" class="form-select form-select-lg" aria-label="How did you hear about us?">
                           <option selected="">How did you hear about us?</option>
                           <option value="Online/Google">Online/Google</option>
                           <option value="social">  Social Media</option>
@@ -103,7 +103,7 @@
 
                   <!-- Form -->
                   <div class="mb-3">
-                    <textarea class="form-control form-control-lg" name="hireUsFormNameDetails" id="hireUsFormDetails" placeholder="Message*" aria-label="Tell us about your ..." rows="4"></textarea>
+                    <textarea class="form-control form-control-lg" name="Project Details" id="details" placeholder="Tell us about your project*" aria-label="Tell us about your project" rows="4"></textarea>
                   </div>
                   <!-- End Form -->
 
