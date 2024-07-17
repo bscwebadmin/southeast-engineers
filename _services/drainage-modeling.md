@@ -1,32 +1,50 @@
 ---
 layout: page
-page_title: "Drainage Modeling"
-title: "Drainage Modeling - Southeast Engineers"
+page_title: Hydrologic and Hydraulic Modeling
+title: Hydrologic and Hydraulic Modeling - Southeast Engineers
 description: >
-  With a combined 70 plus years of experience, Southeast Engineers has become a market leader in a wide range of engineering services.
+    With a combined 70 plus years of experience, Southeast Engineers has become
+    a market leader in a wide range of engineering services.
 type: commercial
 image: /assets/Images/Services/Commercial/05.jpg
-short_description: Analyzing rainfall, runoff, and drainage infrastructure interactions to produce more effective flood management, erosion control, and water quality protection systems.
-pages_header_image: "/assets/Images/Services/Commercial/05.jpg"
+short_description: >-
+    Southeast Engineers specializes in drainage solutions for commercial
+    properties. Our expertise covers drainage modeling and analysis, system
+    design, flood mitigation, and impact analysis to ensure projects meet
+    regulations and are safeguarded against water damage.
+pages_header_image: /assets/Images/Services/Commercial/05.jpg
 contact_image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
 header_style_two: true
 slider_section:
-  title: "Our Residential Work"
-  list:
-    - slider_item:
-        - img_url: "/assets/images/Residential/slider/01.jpg"
-        - img_url: "/assets/images/Residential/slider/02.png"
-        - img_url: "/assets/images/Residential/slider/03.png"
-    - slider_item:
-        - img_url: "/assets/images/Residential/slider/03.png"
-        - img_url: "/assets/images/Residential/slider/02.png"
-        - img_url: "/assets/images/Residential/slider/01.jpg"
-    - slider_item:
-        - img_url: "/assets/images/Residential/slider/02.png"
-        - img_url: "/assets/images/Residential/slider/03.png"
-        - img_url: "/assets/images/Residential/slider/01.jpg"
+    title: Our Residential Work
+    list:
+        -
+            slider_item:
+                -
+                    img_url: /assets/images/Residential/slider/01.jpg
+                -
+                    img_url: /assets/images/Residential/slider/02.png
+                -
+                    img_url: /assets/images/Residential/slider/03.png
+        -
+            slider_item:
+                -
+                    img_url: /assets/images/Residential/slider/03.png
+                -
+                    img_url: /assets/images/Residential/slider/02.png
+                -
+                    img_url: /assets/images/Residential/slider/01.jpg
+        -
+            slider_item:
+                -
+                    img_url: /assets/images/Residential/slider/02.png
+                -
+                    img_url: /assets/images/Residential/slider/03.png
+                -
+                    img_url: /assets/images/Residential/slider/01.jpg
 ---
 <!-- our Residential  section start here  -->
+
 <div class="residential-slider-section">
   {% assign slider = page.slider_section %}
   <div class="container">
@@ -62,7 +80,10 @@ slider_section:
   </div>
 </div>
 
+
+
 <!-- residental faundetion area start here  -->
+
 <div class="residential-tab-area">
   <div class="container">
 	<div class="row residential-tab">
@@ -128,7 +149,7 @@ slider_section:
 						  Shallow Foundation Design
 						</a>
 					  </div>
-					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
+					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ">
 						<div class="accordion-body">
 						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
@@ -183,7 +204,7 @@ slider_section:
 				<!-- single col end  -->
 			  <div class="col-lg-5 col-md-5 col-sm-12">
 				<div class="intro-tab-img-area">
-				  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res">
+				  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res" />
 					<a class="about-hero-btn intro-tab-btn" href="#">CONTACT US</a>
 				</div>
 			  </div>
@@ -206,7 +227,7 @@ slider_section:
 						  Shallow Foundation Design
 						</a>
 					  </div>
-					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
+					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ">
 						<div class="accordion-body">
 						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
@@ -261,7 +282,7 @@ slider_section:
 				<!-- single col end  -->
 			  <div class="col-lg-5">
 				<div class="intro-tab-img-area">
-				  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res">
+				  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res" />
 					<a class="about-hero-btn intro-tab-btn" href="#">CONTACT US</a>
 				</div>
 			  </div>
@@ -284,7 +305,7 @@ slider_section:
 						  Shallow Foundation Design
 						</a>
 					  </div>
-					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
+					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ">
 						<div class="accordion-body">
 						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
@@ -339,7 +360,7 @@ slider_section:
 				<!-- single col end  -->
 			  <div class="col-lg-5">
 				<div class="intro-tab-img-area">
-				  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res">
+				  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res" />
 					<a class="about-hero-btn intro-tab-btn" href="#">CONTACT US</a>
 				</div>
 			  </div>
@@ -362,7 +383,7 @@ slider_section:
 						  Shallow Foundation Design
 						</a>
 					  </div>
-					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
+					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ">
 						<div class="accordion-body">
 						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
@@ -417,7 +438,7 @@ slider_section:
 				<!-- single col end  -->
 			  <div class="col-lg-5">
 				<div class="intro-tab-img-area">
-				  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res">
+				  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res" />
 					<a class="about-hero-btn intro-tab-btn" href="#">CONTACT US</a>
 				</div>
 			  </div>
@@ -440,7 +461,7 @@ slider_section:
 						  Shallow Foundation Design
 						</a>
 					  </div>
-					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ" >
+					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQ">
 						<div class="accordion-body">
 						  <ul class="list-unstyled">
 							<li>– Timber Piles</li>
@@ -495,7 +516,7 @@ slider_section:
 				<!-- single col end  -->
 			  <div class="col-lg-5">
 				<div class="intro-tab-img-area">
-				  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res">
+				  <img src="/assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg" alt="res" />
 					<a class="about-hero-btn intro-tab-btn" href="#">CONTACT US</a>
 				</div>
 			  </div>
@@ -507,4 +528,5 @@ slider_section:
 	  </div>
 	</div>
   </div>
+</div>
 </div>
