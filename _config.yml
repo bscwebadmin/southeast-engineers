@@ -2,7 +2,6 @@ url: https://seengineers.com
 include:
   - _pages
   - _data
-  - _services
   - _portfolio
 name: Southeast Engineers
 favicon: assets/img/favicon.ico
