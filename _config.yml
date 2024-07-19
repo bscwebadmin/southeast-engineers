@@ -1,4 +1,3 @@
-baseurl: https://seengineers.com
 url: https://seengineers.com
 include:
   - _pages
@@ -9,7 +8,7 @@ name: Southeast Engineers
 favicon: assets/img/favicon.ico
 lang: en
 author: Southeast Engineers
-permalink: /:title
+permalink: https://seengineers.com/:title
 defaults:
 - scope:
     path: /assets/vendor/aos/demo/async.html
