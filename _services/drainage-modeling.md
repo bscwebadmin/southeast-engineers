@@ -14,7 +14,9 @@ short_description: >-
     properties. Our expertise covers drainage modeling and analysis, system
     design, flood mitigation, and impact analysis to ensure projects meet
     regulations and are safeguarded against water damage.
-pages_header_image: /assets/Images/Services/Commercial/05.jpg
+pages_header_image: >-
+    https://res.cloudinary.com/dhrcud0tp/Burning
+    Stick/south-eastern-engineers/images/ias9zpkpbb4fnfvaheyh.jpg
 contact_image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
 header_style_two: true
 slider_section:
