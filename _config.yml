@@ -8,7 +8,7 @@ name: Southeast Engineers
 favicon: assets/img/favicon.ico
 lang: en
 author: Southeast Engineers
-permalink: https://seengineers.com/:title
+permalink: "/:title/"
 defaults:
 - scope:
     path: /assets/vendor/aos/demo/async.html
