@@ -10,9 +10,9 @@ author: Southeast Engineers
 permalink: "/:title/"
 defaults:
 - scope:
-    path: /assets/vendor/aos/demo/async.html
+    path: https://seengineers.com/service-commercial?tab=Aquatics&section=Aquatics
   value:
-    sitemap: false
+    sitemap: true
   -scope:
   path: ""
   values:
@@ -59,7 +59,6 @@ locale: en_us
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
   - jekyll_custom_permalink
 
 # Exclude from processing.
