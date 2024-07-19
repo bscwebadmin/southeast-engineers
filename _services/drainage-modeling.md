@@ -6,7 +6,9 @@ description: >
     With a combined 70 plus years of experience, Southeast Engineers has become
     a market leader in a wide range of engineering services.
 type: commercial
-image: /assets/Images/Services/Commercial/05.jpg
+image: >-
+    https://res.cloudinary.com/dhrcud0tp/Burning
+    Stick/south-eastern-engineers/images/r61od9mztcydy69tdxke.jpg
 short_description: >-
     Southeast Engineers specializes in drainage solutions for commercial
     properties. Our expertise covers drainage modeling and analysis, system
