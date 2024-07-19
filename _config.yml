@@ -1,5 +1,5 @@
-baseurl: /
-url: https://seengineers.com/
+baseurl: https://seengineers.com
+url: https://seengineers.com
 include:
   - _pages
   - _data
