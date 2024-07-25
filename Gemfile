@@ -18,7 +18,6 @@ group :jekyll_plugins do
   gem 'jekyll_custom_permalink'
   gem 'jekyll-seo-tag'
   gem 'jekyll-archives'
-  gem 'google-protobuf', '~> 4.27', '>= 4.27.2'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
