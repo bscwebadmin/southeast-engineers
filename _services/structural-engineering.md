@@ -7,7 +7,7 @@ description: >
 type: residential
 image: /assets/Images/Services/Commercial/01.jpg
 short_description: Designing and developing structures like bridges, dams, and buildings to ensure they are stable and capable of withstanding various loads and environmental conditions. 
-pages_header_image: "/assets/images/residential/hero_area.jpg"
+pages_header_image: "/assets/images/residential/new_photo_SE.png"
 contact_image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
 header_style_two: true
 slider_section:
