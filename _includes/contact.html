@@ -18,7 +18,6 @@
             {% else %}
             <img src="/assets/images/contact_01.webp" class="editable object-cover" alt="contact">
             {% endif %}
-
           </div>
         </div>
         <!-- contact info area end here  -->
@@ -28,22 +27,20 @@
             <div class="pt-4">
               <div class="card-body">
                 <!-- Heading -->
-                <form action="https://formspree.io/f/xwpepwrv" method="POST">
+                <form id="contactform" action="https://formspree.io/f/xwpepwrv" method="POST">
                   <div class="row gx-3">
                     <div class="col-12">
-
                       <!-- Form -->
                       <div class="mb-3">
-                        <input type="text" class="form-control form-control-lg" name="First Name" id="First Name" placeholder="First name" aria-label="First name">
+                        <input type="text" class="form-control form-control-lg" name="First Name" id="First Name" placeholder="First name" aria-label="First name" required>
                       </div>
                       <!-- End Form -->
                     </div>
                     <!-- End Col -->
-
                     <div class="col-12">
                       <!-- Form -->
                       <div class="mb-3">
-                        <input type="text" class="form-control form-control-lg" name="Last Name" id="Last Name" placeholder="Last name" aria-label="Last name">
+                        <input type="text" class="form-control form-control-lg" name="Last Name" id="Last Name" placeholder="Last name" aria-label="Last name" required>
                       </div>
                       <!-- End Form -->
                     </div>
@@ -52,17 +49,16 @@
                   <div class="col-12">
                     <!-- Form -->
                     <div class="mb-3">
-                      <input type="text" class="form-control form-control-lg" name="Phone" id="Phone" placeholder="Phone*" aria-label="+x(xxx)xxx-xx-xx">
+                      <input type="text" class="form-control form-control-lg" name="Phone" id="Phone" placeholder="Phone*" aria-label="+x(xxx)xxx-xx-xx" required>
                     </div>
                     <!-- End Form -->
                   </div>
                   <!-- End Row -->
-
                   <div class="row gx-3">
                     <div class="col-lg-6">
                       <!-- Form -->
                       <div class="mb-3">
-                        <select name="Service" id="Service" class="form-select form-select-lg">
+                        <select name="Service" id="Service" class="form-select form-select-lg" required>
                           <option selected="">Select Service</option>
                           {% for list in site.services %}
                           <option value="{{ list.page_title }}">{{ list.page_title }}</option>
@@ -75,7 +71,7 @@
                     <div class="col-lg-6">
                       <!-- Form -->
                       <div class="mb-3">
-                        <select name="Location" id="Location" class="form-select form-select-lg" aria-label="Location">
+                        <select name="Location" id="Location" class="form-select form-select-lg" aria-label="Location" required>
                           <option selected="">Select Location</option>
                           <option value="Baton Rouge">Baton Rouge</option>
                           <option value="Lafayette">Lafayette</option>
@@ -87,7 +83,7 @@
                     <div class="col-12">
                       <!-- Form -->
                       <div class="mb-3">
-                        <select name="Referral" id="Referral" class="form-select form-select-lg" aria-label="How did you hear about us?">
+                        <select name="Referral" id="Referral" class="form-select form-select-lg" aria-label="How did you hear about us?" required>
                           <option selected="">How did you hear about us?</option>
                           <option value="Online/Google">Online/Google</option>
                           <option value="social">  Social Media</option>
@@ -100,15 +96,15 @@
                     <!-- End Col -->
                   </div>
                   <!-- End Row -->
-
                   <!-- Form -->
                   <div class="mb-3">
-                    <textarea class="form-control form-control-lg" name="Project Details" id="details" placeholder="Tell us about your project*" aria-label="Tell us about your project" rows="4"></textarea>
+                    <textarea class="form-control form-control-lg" name="Project Details" id="details" placeholder="Tell us about your project*" aria-label="Tell us about your project" rows="4" required></textarea>
                   </div>
                   <!-- End Form -->
 
                   <div class="d-grid justify-content-end">
-                    <button type="submit" class="section-contact-btn">SUBMIT</button>
+                    <button class="g-recaptcha section-contact-btn" data-sitekey="6Ldh1CAqAAAAAJQEOViYwx2DGn-PLy6QqRshyicq"
+                    data-callback='onSubmit' data-action='submit' type="submit">SUBMIT</button>
                   </div>
 
                 </form>
