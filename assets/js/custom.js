@@ -179,6 +179,3 @@
 
 	})()
 
- function onSubmit() {
-		document.getElementById("contactform").submit()
-	}

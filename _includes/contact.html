@@ -14,9 +14,9 @@
               <li><a href="/service-commercial?tab=Aquatics&section=servicetab">Aquatics Engineering</a></li>
             </ul>
             {% if page.contact_image %}
-            <img src="{{page.contact_image}}" class="object-cover" alt="contact">
+              <img src="{{page.contact_image}}" class="object-cover" alt="contact">
             {% else %}
-            <img src="/assets/images/contact_01.webp" class="editable object-cover" alt="contact">
+            <img src="/assets/images/contact_01.webp" class="object-cover" alt="contact">
             {% endif %}
           </div>
         </div>
@@ -83,7 +83,7 @@
                     <div class="col-12">
                       <!-- Form -->
                       <div class="mb-3">
-                        <select name="Referral" id="Referral" class="form-select form-select-lg" aria-label="How did you hear about us?" required>
+                        <select name="Referral" id="Referral" class="form-select form-select-lg" aria-label="How did you hear about us?" required/>
                           <option selected="">How did you hear about us?</option>
                           <option value="Online/Google">Online/Google</option>
                           <option value="social">  Social Media</option>
@@ -103,10 +103,14 @@
                   <!-- End Form -->
 
                   <div class="d-grid justify-content-end">
-                    <button class="g-recaptcha section-contact-btn" data-sitekey="6Ldh1CAqAAAAAJQEOViYwx2DGn-PLy6QqRshyicq"
-                    data-callback='onSubmit' data-action='submit' type="submit">SUBMIT</button>
+                    <button type="submit" class="g-recaptcha section-contact-btn" data-sitekey="6Ldh1CAqAAAAAJQEOViYwx2DGn-PLy6QqRshyicq"
+                    data-callback='onSubmit' data-action='submit' >SUBMIT</button>
                   </div>
-
+                  <script>
+                      function onSubmit() {
+                          document.getElementById("contactform").submit()
+                      }
+                  </script>
                 </form>
                 <!-- End Form -->
               </div>
