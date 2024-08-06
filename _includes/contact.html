@@ -27,7 +27,15 @@
             <div class="pt-4">
               <div class="card-body">
                 <!-- Heading -->
-                <form id="myForm" action="https://formspree.io/f/xwpepwrv" method="POST">
+                <form id="contactform" action="https://formspree.io/f/xwpepwrv" method="POST">
+                  <script>
+                      grecaptcha.ready(function () {
+                        grecaptcha.execute('6Ldh1CAqAAAAAJQEOViYwx2DGn-PLy6QqRshyicq', {action: 'submit'}).then(function (token) {
+                          console.info("got token: " + token);
+                          document.getElementById('g-recaptcha-response').value = token;
+                        });
+                      });
+                  </script>
                   <div class="row gx-3">
                     <div class="col-12">
                       <!-- Form -->
@@ -103,9 +111,14 @@
                   <!-- End Form -->
 
                   <div class="d-grid justify-content-end">
-                    <button type="submit" class="g-recaptcha section-contact-btn" data-sitekey="6Ldh1CAqAAAAAJQEOViYwx2DGn-PLy6QqRshyicq"
-                    data-callback='onSubmit' data-action='submit' >SUBMIT</button>
+                    <input id="g-recaptcha-response" name="g-recaptcha-response" type="hidden">
+                    <input type="submit" class="section-contact-btn" value="submit">
                   </div>
+<!--                  <script>-->
+<!--                      function onSubmit() {-->
+<!--                          document.getElementById("contactform").submit()-->
+<!--                      }-->
+<!--                  </script>-->
                 </form>
                 <!-- End Form -->
               </div>
