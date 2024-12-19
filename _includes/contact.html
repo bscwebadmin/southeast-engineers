@@ -30,7 +30,7 @@
                 <form id="contactform" action="https://formspree.io/f/xwpepwrv" method="POST">
                   <script>
                       grecaptcha.ready(function () {
-                        grecaptcha.execute('6Ldh1CAqAAAAAJQEOViYwx2DGn-PLy6QqRshyicq', {action: 'submit'}).then(function (token) {
+                        grecaptcha.execute('6LcErSEqAAAAAGJ0jHfNgyqUBx2EtJx_LXxZNpIz', {action: 'submit'}).then(function (token) {
                           console.info("got token: " + token);
                           document.getElementById('g-recaptcha-response').value = token;
                         });
@@ -40,7 +40,7 @@
                     <div class="col-12">
                       <!-- Form -->
                       <div class="mb-3">
-                        <input type="text" class="form-control form-control-lg" name="First Name" id="First Name" placeholder="First name" required>
+                        <input type="text" class="form-control form-control-lg" name="First Name" id="First Name" placeholder="First name" aria-label="First name" required>
                       </div>
                       <!-- End Form -->
                     </div>
@@ -48,7 +48,7 @@
                     <div class="col-12">
                       <!-- Form -->
                       <div class="mb-3">
-                        <input type="text" class="form-control form-control-lg" name="Last Name" id="Last Name" placeholder="Last name" required>
+                        <input type="text" class="form-control form-control-lg" name="Last Name" id="Last Name" placeholder="Last name" aria-label="Last name" required>
                       </div>
                       <!-- End Form -->
                     </div>
@@ -57,7 +57,7 @@
                   <div class="col-12">
                     <!-- Form -->
                     <div class="mb-3">
-                      <input type="text" class="form-control form-control-lg" name="Phone" id="Phone" placeholder="Phone*" required>
+                      <input type="text" class="form-control form-control-lg" name="Phone" id="Phone" placeholder="Phone*" aria-label="+x(xxx)xxx-xx-xx" required>
                     </div>
                     <!-- End Form -->
                   </div>
@@ -79,7 +79,7 @@
                     <div class="col-lg-6">
                       <!-- Form -->
                       <div class="mb-3">
-                        <select name="Location" id="Location" class="form-select form-select-lg" required>
+                        <select name="Location" id="Location" class="form-select form-select-lg" aria-label="Location" required>
                           <option selected="">Select Location</option>
                           <option value="Baton Rouge">Baton Rouge</option>
                           <option value="Lafayette">Lafayette</option>
@@ -106,7 +106,7 @@
                   <!-- End Row -->
                   <!-- Form -->
                   <div class="mb-3">
-                    <textarea class="form-control form-control-lg" name="Project Details" id="details" placeholder="Tell us about your project*" rows="4" required></textarea>
+                    <textarea class="form-control form-control-lg" name="Project Details" id="details" placeholder="Tell us about your project*" aria-label="Tell us about your project" rows="4" required></textarea>
                   </div>
                   <!-- End Form -->
 
