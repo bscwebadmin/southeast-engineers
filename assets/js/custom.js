@@ -179,3 +179,5 @@
 
 	})()
 
+ const myModal = new bootstrap.Modal(document.getElementById('ExcitingNewsModal'));
+	 myModal.show();

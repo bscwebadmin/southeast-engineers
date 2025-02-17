@@ -235,17 +235,16 @@ permalink: "/"
     </div>
   </div>
 </div>
-<!-- Button trigger modal -->
-<button id="modalTrigger" type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target=".exciting-news-modal">Extra large modal</button>
+
 
 <!-- Modal -->
-<div class="modal fade exciting-news-modal" tabindex="-1" role="dialog" aria-labelledby="ExcitingNewsModal" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+<div class="modal fade exciting-news-modal" id="ExcitingNewsModal" tabindex="-1" role="dialog" aria-labelledby="ExcitingNewsModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl " role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-dark">
         <h5 class="modal-title h4 py-3" id="myExtraLargeModalLabel">
         </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-closection-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body modal-bg">
         <div class="row">
@@ -261,16 +260,12 @@ permalink: "/"
           </div>
         </div>
       </div>
-      <div class="modal-footer justify-content-center justify-content-lg-end">
-        <a type="button" class="btn btn-primary col-lg-2 col-8" href="{{ page.modal.url }}">Learn More</a>
+      <div class="modal-footer justify-content-center justify-content-lg-end bg-success">
+        <a type="button" class="btn btn-primary col-lg-2 col-8 btn-transition" href="{{ page.modal.url }}">Learn More</a>
       </div>
     </div>
   </div>
 </div>
 <!-- End Modal -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('modalTrigger').click();
-  })
-</script>
+
 <!-- our about section end here  -->
