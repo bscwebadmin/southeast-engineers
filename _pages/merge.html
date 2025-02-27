@@ -1,0 +1,67 @@
+---
+layout: page
+page_title: About Us
+title: About - Southeast Engineers
+description: >-
+  With a combined 70 plus years of experience, Southeast Engineers has become a
+  market leader in a wide range of engineering services.
+pages_header_image: /assets/images/about.webp
+contact_image: /assets/images/Residential/2-Residential-Contact-pxl5906-3000px_orig.jpg
+who_we_help:
+  title: Who We Help
+  description: >-
+    Southeast Engineers is proud to serve the commercial and residential
+    communities in delivery of engineered plans and specifications to feasibly
+    accomplish client objectives. With our knowledge of industry standards and
+    codes, Southeast Engineers produces efficient, cost effective designs for
+    construction. Additionally, Southeast Engineers assists clients in
+    diagnosing building related defects and provides recommendations to
+    remediate problem conditions.
+  image: /assets/images/about_02.webp
+  links:
+    - text: Aquatics Engineering
+      url: /service-commercial?tab=Aquatics&section=servicetab
+    - text: Civil Engineering
+      url: /service-commercial?tab=Civil&section=servicetab
+    - text: Structural Engineering
+      url: /service-commercial?tab=Commercial&section=servicetab
+permalink: /merge
+---
+<!-- About Help Area -->
+<div class="seabout-help-section py-5">
+  <div class="container-fluid px-lg-10 px-0">
+    <div class="row px-lg-10 px-6 justify-content-around">
+      <div class="col-lg-7 col-md-7 col-sm-12 mb-5 mt-4">
+        <div class="help-area-info">
+          <h2>{{ page.who_we_help.title }}</h2>
+          <p>{{ page.who_we_help.description }}</p>
+          <ul class="ps-0 ms-0 d-block d-md-flex list-unstyled">
+            {% for link in page.who_we_help.links %}
+            <li><a class="section-help-list me-4" href="{{ link.url }}">{{ link.text }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="help-area-img-area mt-5">
+          <img src="{{ page.who_we_help.image }}" alt="{{ page.who_we_help.title }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Our Team Area -->
+<div class="about-team-area">
+  <div class="container-fluid">
+    <div class="team-area-header mb-5 px-lg-10">
+      <h2 class="teamarea-header-title pb-2">IPSUM LOREM</h2>
+    </div>
+    <div class="row px-lg-10">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat.
+
+      <br><br> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet turpis nisl. Nam at dui at quam fringilla condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+
+      <br><br> Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum. Aliquam erat volutpat. Curabitur convallis. Donec ut sem nec leo lobortis facilisis. Integer justo nisl, pharetra vel vulputate ac, vulputate ut eros. Maecenas eros diam, vestibulum ut libero at, tincidunt placerat augue. Cras accumsan libero vitae dui cursus ultricies. Curabitur commodo hendrerit neque, in fringilla elit semper vitae. Morbi nec dolor purus. Integer pulvinar, sapien quis finibus tincidunt, augue erat pretium nibh, eget tristique eros lectus a justo. Proin in ligula non nisi dignissim egestas.
+    </div>
+  </div>
+</div>
