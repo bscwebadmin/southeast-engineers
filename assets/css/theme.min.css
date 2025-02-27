@@ -14,7 +14,7 @@
    --bs-red: #ed4c78;
    --bs-orange: #fd7e14;
    --bs-yellow: #f5ca99;
-   --bs-green: #198754;
+   --bs-green: #003948;
    --bs-teal: #00c9a7;
    --bs-cyan: #09a5be;
    --bs-black: #000;
@@ -37,15 +37,15 @@
    --bs-warning: #f5ca99;
    --bs-danger: #ed4c78;
    --bs-light: #f7faff;
-   --bs-dark: #1e312e;
+   --bs-dark: #001115;
    --bs-primary-rgb: 92, 143, 135;
    --bs-secondary-rgb: 113, 134, 157;
-   --bs-success-rgb: 0, 201, 167;
+   --bs-success-rgb: 0, 57, 72;
    --bs-info-rgb: 9, 165, 190;
    --bs-warning-rgb: 245, 202, 153;
    --bs-danger-rgb: 237, 76, 120;
    --bs-light-rgb: 247, 250, 255;
-   --bs-dark-rgb: 33, 50, 91;
+   --bs-dark-rgb: 0, 17, 21;
    --bs-gray-rgb: 153, 153, 153, 1;
    --bs-white-rgb: 255, 255, 255;
    --bs-black-rgb: 0, 0, 0;
@@ -19037,7 +19037,7 @@ fieldset:disabled .btn {
 .btn-check:focus+.btn-primary,
 .btn-primary:focus,
 .btn-primary:hover {
-   box-shadow: 0 4px 11px rgba(55, 125, 255, .35)
+   box-shadow: 0 4px 11px rgba(0, 61, 77, .55)
 }
 
 .btn-check:focus+.btn-secondary,

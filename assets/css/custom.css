@@ -409,3 +409,15 @@ background-image: linear-gradient(to top, rgba(0, 60, 75, .7) 0, rgba(0, 12, 15,
 .address,.robo-condensed{
    font-family: 'Roboto Condensed';
 }
+.modal-bg {
+    background-image: linear-gradient(#001115,#003948);
+}
+.modal-text {
+    color: #fff;
+    line-height: 1.875rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+.modal-text-mobile {
+    text-align: ;
+}
