@@ -1001,9 +1001,9 @@ body{
     right: 0;
 }
 /* mobile layout:320px*/
-@media only screen and (max-width:1080px){
+@media only screen and (max-width:1840px){
   .seabout-help-section {
-    height: auto !important
+    height: 100% !important
   }
 }
 /* mobile layout:320px*/
