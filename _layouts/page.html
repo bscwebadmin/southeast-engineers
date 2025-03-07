@@ -11,24 +11,31 @@
 <main id="content" role="main">
 <!-- Hero -->
 <!-- CTA -->
-<div class="bg-img-center gradient-y-overlay-primary" style="background-image: url({{ page.pages_header_image }});">
-  <div class="container content-space-t-4 pb-3 content-space-t-lg-6">
+  {% if page.page_title=="ENGINEERING THE FUTURE, TOGETHER" %}
+<div class="bg-img-center gradient-y-overlay-primary d-flex align-items-center justify-content-center vh-50 vh-lg-50" style="background-image: url({{ page.pages_header_image }});">
+  <div class="container content-space-t-2 content-space-t-lg-0 mb-5 mb-lg-0">
     <div class="w-100 ms-lg-auto ms-auto text-lg-end text-center px-6 px-md-0 content-space-t-lg-2">
       <div class="mt-4">
-        {% if page.page_title=="ENGINEERING THE FUTURE, TOGETHER" %}
         <h3 class="section-hero-text d-flex justify-content-center">{{ page.page_title }}</h3>
       </div>
       <div class="d-flex justify-content-center">
         <a class="btn btn-primary btn-transition rounded-pill" href="/contact">CONTACT US</a>
       </div>
-      {% else %}
-      <h3 class="section-hero-text">{{ page.page_title }}</h3>
-      </div>
-      <a class="btn btn-primary btn-transition rounded-pill" href="/contact">CONTACT US</a>
-      {% endif %}
     </div>
   </div>
 </div>
+  {% else %}
+  <div class="bg-img-center gradient-y-overlay-primary" style="background-image: url({{ page.pages_header_image }});">
+    <div class="container content-space-t-4 pb-3 content-space-t-lg-6">
+      <div class="w-100 ms-lg-auto ms-auto text-lg-end text-center px-6 px-md-0 content-space-t-lg-2">
+        <div class="mt-4">
+          <h3 class="section-hero-text">{{ page.page_title }}</h3>
+        </div>
+        <a class="btn btn-primary btn-transition rounded-pill" href="/contact">CONTACT US</a>
+      </div>
+    </div>
+ </div>
+  {% endif %}
 <!-- End about Main hero area -->
 <section>
 {{ content }}
