@@ -239,29 +239,7 @@ services:
       confidence.
 permalink: /service-surveying
 ---
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const params = new URLSearchParams(window.location.search);
-  const tabId = params.get('tab');
-  const sectionId = params.get('section');
 
-  if (tabId) {
-    // Activate the tab
-    const tabTriggerEl = document.querySelector(`#${tabId}-tab`);
-    if (tabTriggerEl) {
-      new bootstrap.Tab(tabTriggerEl).show();
-    }
-  }
-
-  if (sectionId) {
-    // Scroll to the section
-    const sectionEl = document.getElementById(sectionId);
-    if (sectionEl) {
-      sectionEl.scrollIntoView();
-    }
-  }
-});
-</script>
 <!-- our Residential  section start here  -->
 <div class="residential-slider-section">
   {% assign slider = page.slider_section %}
@@ -302,94 +280,97 @@ document.addEventListener("DOMContentLoaded", function() {
     <!-- End Swiper -->
   </div>
 </div>
+
 <!-- residential foundation area start here  -->
 <div class="residential-tab-area">
   <div class="container" id="servicetab">
     <div class="row residential-tab">
       <div class="ul-product-area">
         <div class="col-lg-12">
-          <!-- Navbar Vertical -->
-          <div class="navbar navbar-vertical navbar-expand-md">
-            <!-- Navbar Toggle -->
-            <div class="d-grid flex-grow-1">
-              <button type="button" class="navbar-toggler border-0 shadow-0 rounded-0 border-bottom" data-bs-toggle="collapse" data-bs-target="#navbarTogglerNavMenu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarTogglerNavMenu">
-                <span class="d-flex justify-content-between align-items-center">
-                  <span class="editable">Residential Services</span>
-
-                  <span class="navbar-toggler-default">
-                    <i class="bi-chevron-down"></i>
-                  </span>
-                  <span class="navbar-toggler-toggled">
-                    <i class="bi-x"></i>
-                  </span>
-                </span>
-              </button>
-            </div>
-            <!-- End Navbar Toggle -->
-            <div id="navbarTogglerNavMenu" class="collapse navbar-collapse">
-              <!-- Navbar -->
-              <ul class="nav p-md-0 p-2 justify-content-start" id="myTab" role="tablist">
-                {% for item in page.services %}
-               <li class="nav-item mx-2" role="presentation">
-                 <a class="{% if forloop.first %}active{% endif %} nav-link fw-bold text-gray fs-5" id="{{item.name | truncatewords: 1 | remove: "..."}}-tab" data-bs-toggle="tab" data-bs-target="#{{item.name | truncatewords: 1 | remove: "..."}}" role="tab" aria-controls="{{item.name | truncatewords: 1 | remove: "..."}}" aria-selected="true">{{item.name}}</a>
-               </li>
-               {% endfor %}
-              </ul>
-              <!-- End Navbar -->
-            </div>
+          <!-- Select -->
+          <div class="tom-select-custom">
+            <select id="serviceSelect" class="js-select form-select" autocomplete="off"
+                  data-hs-tom-select-options='{
+                    "placeholder": "Select a survey type...",
+                    "hideSearch": true
+                  }'>
+              <option value="">Select a survey type</option>
+              {% for item in page.services %}
+              <option value="{{ item.name | truncatewords: 1 | remove: "..." }}">{{ item.name }}</option>
+              {% endfor %}
+            </select>
           </div>
-          <!-- single tab start here   -->
-        <div class="tab-content" id="myTabContent">
-          {% for item in page.services %}
-          <div class="tab-pane fade {% if forloop.first %}active show{% endif %}" id="{{item.name | truncatewords: 1 | remove: "..."}}" role="tabpanel" aria-labelledby="{{item.name | truncatewords: 1 | remove: "..."}}-tab">
-            <div class="row">
-              <div class="col-lg-7 col-md-7 col-sm-12">
-                <div class="single-tab-info">
-                  <h2>{{item.name}}</h2>
-                  <p class="mb-5">{{item.description}}</p>
-                  {% if item.description2 %}<p>{{item.description2}}</p>{% endif %}
-                  {% if item.service_detail %}
-                  <div class="accordion accordion-flush accordion-lg" id="accordionFAQ{{item.name |  truncatewords: 1 | remove: "..."}}">
-                    {% for service in item.service_detail %}
-                    <!-- Accordion Item -->
-                    <div class="accordion-item">
-                      <div class="accordion-header" id="{{item.name |  truncatewords: 1 | remove: "..."}}{{forloop.index}}">
-                        <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse{{item.name |  truncatewords: 1 | remove: "..."}}{{forloop.index}}" aria-expanded="false" aria-controls="collapse{{item.name |  truncatewords: 1 | remove: "..."}}{{forloop.index}}">
-                          {{service.name}}
-                        </a>
-                      </div>
-                      <div id="collapse{{item.name |  truncatewords: 1 | remove: "..."}}{{forloop.index}}" class="accordion-collapse collapse" aria-labelledby="{{item.name |  truncatewords: 1 | remove: "..."}}{{forloop.index}}" data-bs-parent="#accordionFAQ{{item.name |  truncatewords: 1 | remove: "..."}}">
-                        <div class="accordion-body d-block text-start">
-                          {{service.description}}
+          <!-- End Select -->
+          <!-- single tab start here -->
+          <div class="tab-content" id="serviceContent">
+            {% for item in page.services %}
+            <div class="tab-pane fade {% if forloop.first %}active show{% endif %}" id="{{ item.name | truncatewords: 1 | remove: "..." }}" role="tabpanel">
+              <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-12">
+                  <div class="single-tab-info">
+                    <h2>{{ item.name }}</h2>
+                    <p class="mb-5">{{ item.description }}</p>
+                    {% if item.description2 %}<p>{{ item.description2 }}</p>{% endif %}
+                    {% if item.service_detail %}
+                    <div class="accordion accordion-flush accordion-lg" id="accordionFAQ{{ item.name | truncatewords: 1 | remove: "..." }}">
+                      {% for service in item.service_detail %}
+                      <div class="accordion-item">
+                        <div class="accordion-header" id="{{ item.name | truncatewords: 1 | remove: "..." }}{{ forloop.index }}">
+                          <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ item.name | truncatewords: 1 | remove: "..." }}{{ forloop.index }}" aria-expanded="false" aria-controls="collapse{{ item.name | truncatewords: 1 | remove: "..." }}{{ forloop.index }}">
+                            {{ service.name }}
+                          </a>
+                        </div>
+                        <div id="collapse{{ item.name | truncatewords: 1 | remove: "..." }}{{ forloop.index }}" class="accordion-collapse collapse" aria-labelledby="{{ item.name | truncatewords: 1 | remove: "..." }}{{ forloop.index }}" data-bs-parent="#accordionFAQ{{ item.name | truncatewords: 1 | remove: "..." }}">
+                          <div class="accordion-body d-block text-start">
+                            {{ service.description }}
+                          </div>
                         </div>
                       </div>
+                      {% endfor %}
                     </div>
-                    <!-- End Accordion Item -->
-                    {% endfor %}
+                    {% endif %}
                   </div>
-                  <!-- End Accordion Item -->
-                  {% endif %}
-                  </div>
-              </div>
-                <!-- single col end  -->
-              <div class="col-lg-5 col-md-5 col-sm-12">
-                <div class="intro-tab-img-area">
-                  <img src="{{item.image}}" alt="{{item.name}}" />
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-12">
+                  <div class="intro-tab-img-area">
+                    <img src="{{ item.image }}" alt="{{ item.name }}" />
                     <a class="about-hero-btn intro-tab-btn" href="/contact">CONTACT US</a>
+                  </div>
                 </div>
               </div>
-              <!-- single col end  -->
             </div>
+            {% endfor %}
           </div>
-           <!-- single tab end here  -->
-           {% endfor %}
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const serviceSelect = document.getElementById("serviceSelect");
+    const serviceContent = document.getElementById("serviceContent");
 
+    if (!serviceSelect || !serviceContent) return; // Ensure elements exist before proceeding
 
+    const serviceTabs = Array.from(serviceContent.children);
+    const defaultTabId = serviceTabs.length > 0 ? serviceTabs[0].id : "";
 
-</div>
+    serviceSelect.addEventListener("change", function () {
+      let selectedValue = this.value.trim();
+
+      if (selectedValue === "") {
+        selectedValue = defaultTabId; // Set default tab when no selection is made
+      }
+
+      serviceTabs.forEach(tab => {
+        if (tab.id === selectedValue) {
+          tab.classList.add("active", "show");
+        } else {
+          tab.classList.remove("active", "show");
+        }
+      });
+    });
+  });
+</script>
