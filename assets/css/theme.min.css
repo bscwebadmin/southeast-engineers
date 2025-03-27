@@ -2762,9 +2762,8 @@ textarea.form-control-lg {
 }
 
 .form-select:focus {
-   border-color: rgba(140, 152, 164, .25);
+   border-color: rgba(140, 152, 164, 0);
    outline: 0;
-   box-shadow: 0 0 1rem 0 rgba(140, 152, 164, .25)
 }
 
 .form-select[multiple],

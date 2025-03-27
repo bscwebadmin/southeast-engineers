@@ -286,20 +286,23 @@ permalink: /service-surveying
   <div class="container" id="servicetab">
     <div class="row residential-tab">
       <div class="ul-product-area">
-        <div class="col-lg-12">
+        <div class="col-lg-6 me-auto">
           <!-- Select -->
-          <div class="tom-select-custom">
-            <select id="serviceSelect" class="js-select form-select" autocomplete="off"
+          <div class="tom-select-custom mb-5 d-flex align-items-center border-bottom border-black">
+            <small class="text-primary">type</small>
+            <select id="serviceSelect" class="js-select form-select custom-select bg-transparent w-100 border-0" autocomplete="off"
                   data-hs-tom-select-options='{
                     "placeholder": "Select a survey type...",
                     "hideSearch": true
                   }'>
-              <option value="">Select a survey type</option>
+              <option value="">Select a Survey</option>
               {% for item in page.services %}
               <option value="{{ item.name | truncatewords: 1 | remove: "..." }}">{{ item.name }}</option>
               {% endfor %}
             </select>
           </div>
+        </div>
+        <div class="col-lg-12"
           <!-- End Select -->
           <!-- single tab start here -->
           <div class="tab-content" id="serviceContent">
