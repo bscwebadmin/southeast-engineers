@@ -29549,13 +29549,14 @@ a:hover .text-inherit {
 }
 
 .tom-select-custom .plugin-dropdown_input .dropdown-input-wrap .dropdown-input::placeholder {
-   color: #8c98a4;
-   opacity: 1
+   color: #001419;
+   opacity: 1;
+   letter-spacing: -1px;
 }
 
 .tom-select-custom .ts-custom-placeholder,
 .tom-select-custom .ts-selected-count {
-   color: #8c98a4 !important
+   color: #001419 !important
 }
 
 .tom-select-custom-with-tags .tom-select-custom .ts-wrapper.multi .ts-control.has-items.hs-select-single-multiple,

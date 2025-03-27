@@ -406,6 +406,15 @@ background-image: linear-gradient(to top, rgba(0, 60, 75, .7) 0, rgba(0, 12, 15,
     padding: 0;
     color: #fff;
 }
+.text-primary .ts-control{
+   font-weight: bold;
+    font-size: 2rem;
+    font-family: "Roboto Condensed", sans-serif;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+    color: #001419;
+}
 .address,.robo-condensed{
    font-family: 'Roboto Condensed';
 }

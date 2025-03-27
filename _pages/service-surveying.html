@@ -289,13 +289,13 @@ permalink: /service-surveying
         <div class="col-lg-6 me-auto">
           <!-- Select -->
           <div class="tom-select-custom mb-5 d-flex align-items-center border-bottom border-black">
-            <small class="text-primary">type</small>
-            <select id="serviceSelect" class="js-select form-select custom-select bg-transparent w-100 border-0" autocomplete="off"
+            <small class="text-primary">Types</small>
+            <select id="serviceSelect" class="js-select form-select custom-select bg-transparent text-primary w-100 border-0" autocomplete="off"
                   data-hs-tom-select-options='{
-                    "placeholder": "Select a survey type...",
+                    "placeholder": "Select a Survey Type",
                     "hideSearch": true
                   }'>
-              <option value="">Select a Survey</option>
+              <option value="">Select a Survey Type</option>
               {% for item in page.services %}
               <option value="{{ item.name | truncatewords: 1 | remove: "..." }}">{{ item.name }}</option>
               {% endfor %}

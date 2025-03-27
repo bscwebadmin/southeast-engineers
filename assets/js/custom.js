@@ -103,7 +103,9 @@
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		  },
+
 		});
+		HSCore.components.HSTomSelect.init('.js-select')
 		  })()
 		// INITIALIZATION OF COUNTDOWN
 		// =======================================================
