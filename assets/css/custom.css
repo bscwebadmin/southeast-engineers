@@ -427,6 +427,6 @@ background-image: linear-gradient(to top, rgba(0, 60, 75, .7) 0, rgba(0, 12, 15,
     font-size: 1.125rem;
     font-weight: 400;
 }
-.modal-text-mobile {
-    text-align: ;
+div#serviceSelect-ts-control {
+    line-height: 1;
 }
