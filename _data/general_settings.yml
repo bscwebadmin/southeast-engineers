@@ -8,9 +8,9 @@ locations:
     city-state-zip: Baton Rouge, LA 70809
     phone: 225-295-1880
   - location:
-    address: 345 Doucet Road
+    address: 108 Park W Dr
     address2:
-    city-state-zip: Lafayette, Louisiana 70503
+    city-state-zip: Scott, Louisiana 70583
     phone: 337-988-7768
 social:
   - name: Facebook
