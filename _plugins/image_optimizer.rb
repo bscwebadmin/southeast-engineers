@@ -1,157 +1,144 @@
-# _plugins/image_optimizer.rb
-# Caches content hashes of images and only reprocesses when new/changed.
-# Works even if MiniMagick isn't installed (will just copy unchanged/new files).
-# Configure in _config.yml under `image_optimizer:` (see notes at bottom).
+# _plugins/static_image_cache.rb
+# Skip copying static images unless they're new/changed.
+# Keeps URLs the same. No transforms. Fast builds.
+#
+# Config (_config.yml):
+# static_image_cache:
+#   folders: ["uploads", "assets/img"]   # where your source images live
+#   exts:    ["jpg","jpeg","png","gif","webp","svg"]
+#   cache_file: ".jekyll-cache/static_image_hashes.json"
+#   mirror_dir: ".jekyll-cache/static-images"   # a persistent mirror for cold builds
+#   assume_persisted_site: false                # if true and file unchanged, don't write at all
 
 require "digest"
 require "json"
-begin
-  require "mini_magick"
-rescue LoadError
-  # MiniMagick not available; plugin will fall back to copying files.
-end
+require "fileutils"
 
 module Jekyll
-  class OptimizedStaticFile < StaticFile
-    def destination(dest)
-      File.join(dest, @dir, @name)
-    end
-  end
-
-  class ImageOptimizer < Generator
-    safe true
-    priority :low
-
-    def generate(site)
-      @site = site
-      cfg   = site.config.fetch("image_optimizer", {})
-
-      source_dirs = Array(cfg.fetch("source_dirs", ["uploads", "assets/img"])).map(&:to_s)
-      dest_dir    = cfg.fetch("dest_dir", "assets/optimized").to_s
-      cache_file  = cfg.fetch("cache_file", ".jekyll-cache/image_optim_cache.json").to_s
-      quality     = cfg.fetch("quality", 82).to_i
-      max_width   = cfg.fetch("max_width", 2400).to_i
-      formats     = Array(cfg.fetch("formats", %w[jpg jpeg png webp])).map(&:downcase)
-
-      ensure_dir(File.dirname(cache_file))
-      cache = read_cache(cache_file)
-
-      src_paths = source_dirs.flat_map do |dir|
-        absolute = File.join(@site.source, dir)
-        next [] unless Dir.exist?(absolute)
-        Dir[File.join(absolute, "**", "*")].select do |p|
-          File.file?(p) && formats.include?(File.extname(p).delete(".").downcase)
-        end
-      end
-
-      updated_cache = cache.dup
-      processed = 0
-      skipped   = 0
-
-      src_paths.each do |src_abs|
-        rel_from_site = src_abs.sub(@site.source + File::SEPARATOR, "")
-        fingerprint   = sha256_file(src_abs)
-        cache_key     = rel_from_site
-
-        # Skip if unchanged (fingerprint exists and matches)
-        if cache[cache_key] == fingerprint
-          skipped += 1
-          next
-        end
-
-        # Determine output path (mirror structure under dest_dir)
-        out_rel_dir  = File.join(dest_dir, File.dirname(rel_from_site))
-        out_dir_abs  = File.join(@site.dest, out_rel_dir)
-        out_name     = File.basename(rel_from_site)
-        out_abs      = File.join(out_dir_abs, out_name)
-
-        ensure_dir(out_dir_abs)
-
-        # Process/Copy
-        if defined?(MiniMagick)
-          process_with_mini_magick(src_abs, out_abs, max_width, quality)
-        else
-          FileUtils.cp(src_abs, out_abs)
-        end
-
-        # Track as a generated file so Jekyll copies it
-        out_rel_for_static = File.join(out_rel_dir, out_name)
-        @site.static_files << OptimizedStaticFile.new(@site, @site.dest, out_rel_dir, out_name)
-
-        updated_cache[cache_key] = fingerprint
-        processed += 1
-      end
-
-      write_cache(cache_file, updated_cache)
-
-      Jekyll.logger.info "ImageOptimizer:", "processed=#{processed}, skipped=#{skipped}, total=#{src_paths.size}, cache=#{cache_file}"
+  module StaticImageCache
+    def self.cfg(site)
+      defaults = {
+        "folders" => ["uploads", "assets/img"],
+        "exts"    => %w[jpg jpeg png gif webp svg],
+        "cache_file" => ".jekyll-cache/static_image_hashes.json",
+        "mirror_dir" => ".jekyll-cache/static-images",
+        "assume_persisted_site" => false
+      }
+      defaults.merge(site.config.fetch("static_image_cache", {}))
     end
 
-    private
-
-    def ensure_dir(dir)
-      FileUtils.mkdir_p(dir) unless Dir.exist?(dir)
-    end
-
-    def sha256_file(path)
-      digest = Digest::SHA256.new
-      File.open(path, "rb") do |f|
-        buffer = ""
-        digest.update(buffer) while f.read(1024 * 1024, buffer)
-      end
-      digest.hexdigest
-    end
-
-    def read_cache(cache_file)
-      return {} unless File.exist?(cache_file)
-      JSON.parse(File.read(cache_file))
+    def self.load_cache(path)
+      return {} unless File.exist?(path)
+      JSON.parse(File.read(path))
     rescue
       {}
     end
 
-    def write_cache(cache_file, data)
-      ensure_dir(File.dirname(cache_file))
-      File.write(cache_file, JSON.pretty_generate(data))
+    def self.save_cache(path, data)
+      FileUtils.mkdir_p(File.dirname(path))
+      File.write(path, JSON.pretty_generate(data))
     rescue => e
-      Jekyll.logger.warn "ImageOptimizer:", "Could not write cache (#{cache_file}): #{e.message}"
+      Jekyll.logger.warn "StaticImageCache:", "could not write cache (#{path}): #{e.message}"
     end
 
-    def process_with_mini_magick(src_abs, out_abs, max_width, quality)
-      image = MiniMagick::Image.open(src_abs)
+    def self.sha256(path)
+      digest = Digest::SHA256.new
+      File.open(path, "rb") do |f|
+        buf = +""
+        digest.update(buf) while f.read(1024 * 1024, buf)
+      end
+      digest.hexdigest
+    end
 
-      # Resize down if needed (keep aspect)
-      if image.width > max_width
-        image.resize "#{max_width}x"
+    # A StaticFile that decides at write-time whether to copy, restore from mirror, or skip.
+    class CachedImageFile < StaticFile
+      def initialize(site, base, dir, name, options)
+        super(site, base, dir, name, nil)
+        @options = options
+        @site_rel = File.join(dir, name) # relative to site.source
       end
 
-      ext = File.extname(out_abs).downcase
-      case ext
-      when ".jpg", ".jpeg"
-        image.strip
-        image.quality quality.to_s
-        image.interlace "Plane"
-      when ".png"
-        # use pngquant-like settings via quality mapped to compression level
-        image.strip
-      when ".webp"
-        image.quality quality.to_s
-      end
+      def write(dest)
+        cfg          = StaticImageCache.cfg(@site)
+        cache_path   = cfg["cache_file"]
+        mirror_root  = File.join(@site.source, cfg["mirror_dir"])
+        dest_path    = destination(dest)  # where Jekyll would write
+        src_path     = path               # absolute source path
+        assume_site  = !!cfg["assume_persisted_site"]
 
-      image.write(out_abs)
+        FileUtils.mkdir_p(File.dirname(dest_path))
+
+        cache = StaticImageCache.load_cache(File.join(@site.source, cache_path))
+        current = StaticImageCache.sha256(src_path)
+        prev    = cache[@site_rel]
+
+        # If unchanged…
+        if prev == current
+          if assume_site
+            # Assume previous _site still has the file; do nothing.
+            return false
+          end
+
+          # Try to restore quickly from mirror if _site is cold.
+          mirror_path = File.join(mirror_root, @site_rel)
+          if File.exist?(mirror_path)
+            FileUtils.mkdir_p(File.dirname(dest_path))
+            FileUtils.cp(mirror_path, dest_path)
+            return true
+          end
+
+          # Fallback: minimal copy from source (first time after cache was wiped).
+          FileUtils.cp(src_path, dest_path)
+          # Also refresh mirror for next time.
+          FileUtils.mkdir_p(File.dirname(mirror_path))
+          FileUtils.cp(dest_path, mirror_path)
+          return true
+        end
+
+        # Changed or new: copy and update cache + mirror
+        FileUtils.cp(src_path, dest_path)
+        mirror_path = File.join(mirror_root, @site_rel)
+        FileUtils.mkdir_p(File.dirname(mirror_path))
+        FileUtils.cp(dest_path, mirror_path)
+
+        cache[@site_rel] = current
+        StaticImageCache.save_cache(File.join(@site.source, cache_path), cache)
+        true
+      rescue => e
+        Jekyll.logger.warn "StaticImageCache:", "failed on #{@site_rel}: #{e.message}"
+        # Let Jekyll try the default behavior if something went wrong
+        super
+      end
     end
   end
 
-  # Optional Liquid filter: returns optimized path when available, else original
-  module ImageOptimizerFilters
-    def optimized_image_url(input, dest_dir = "assets/optimized")
-      return input if input.nil? || input.empty?
-      # Build where the optimizer will write it (mirrors original path under dest_dir)
-      clean = input.sub(/^\//, "")
-      candidate = File.join("/", dest_dir, clean)
-      # At build-time we don't know _site contents from Liquid; return candidate by convention.
-      candidate
+  # Replace matching image StaticFiles with CachedImageFile
+  class StaticImageCacheInjector < Generator
+    safe true
+    priority :low
+
+    def generate(site)
+      cfg = StaticImageCache.cfg(site)
+      folders = Array(cfg["folders"]).map(&:to_s)
+      exts    = Array(cfg["exts"]).map { |e| e.to_s.downcase.delete(".") }
+
+      site.static_files.map! do |sf|
+        # Only intercept files under the chosen folders with matching extensions
+        # and that originate from site.source (not gems).
+        begin
+          rel_from_source = sf.path.sub(site.source + File::SEPARATOR, "")
+        rescue
+          next sf
+        end
+
+        next sf unless folders.any? { |root| rel_from_source.start_with?(root + "/") }
+        ext = File.extname(sf.path).downcase.delete(".")
+        next sf unless exts.include?(ext)
+
+        StaticImageCache::CachedImageFile.new(site, site.source, sf.dir, sf.name, cfg)
+      end
+
+      Jekyll.logger.info "StaticImageCache:", "watching #{folders.join(", ")} (#{exts.join(", ")})"
     end
   end
 end
-
-Liquid::Template.register_filter(Jekyll::ImageOptimizerFilters)
