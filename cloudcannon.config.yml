@@ -85,10 +85,6 @@ _inputs:
       image_size_attributes: true
     label: Footer Code
     cascade: true
-  images:
-    type: image
-    instance_value: UUID
-    cascade: false
 _select_data:
   jekyll-archives:
     layout: archive
