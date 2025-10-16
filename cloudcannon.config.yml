@@ -87,7 +87,8 @@ _inputs:
     cascade: true
   images:
     type: image
-    cascade: true
+    instance_value: UUID
+    cascade: false
 _select_data:
   jekyll-archives:
     layout: archive
