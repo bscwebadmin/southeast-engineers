@@ -1,24 +1,19 @@
-source:
-pages:
-  path: ''
-  output: true
-  filter: strict
+_schema: _schema
 paths:
   uploads: uploads
   dam_uploads: ''
-  static: 'assets/images'
+  static: assets/images
   dam_static: ''
   collections: ''
   data: _data
   layouts: _layouts
   includes: _includes
   pages: _pages
-  # pages: _services
 collections_config:
   posts:
     path: _posts
-    output: true
     icon: notes
+    output: true
     create:
       path: >-
         [relative_base_path]/{date|year}-{date|month}-{date|day}-{title|slugify}.[ext]
@@ -27,9 +22,9 @@ collections_config:
     disable_file_actions: false
   pages:
     path: _pages
+    icon: notes
     output: true
     filter: strict
-    icon: notes
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
@@ -48,26 +43,51 @@ _inputs:
     cascade: true
   img_url:
     type: image
+    cascade: true
   ga_id:
-    label: Google Analytics ID
     type: text
+    label: Google Analytics ID
+    cascade: true
   head_code:
+    type: html
+    options:
+      allow_resize: true
+      allow_custom_markup: false
+      remove_custom_markup: false
+      initial_height: 320
+      code: true
+      image_size_attributes: true
     label: Header Code
-    type: html
-    options:
-      code: true
+    cascade: true
   layout:
+    type: auto
     hidden: true
+    cascade: true
   body_code:
+    type: html
+    options:
+      allow_resize: true
+      allow_custom_markup: false
+      remove_custom_markup: false
+      initial_height: 320
+      code: true
+      image_size_attributes: true
     label: Body Code
-    type: html
-    options:
-      code: true
+    cascade: true
   footer_code:
-    label: Footer Code
     type: html
     options:
+      allow_resize: true
+      allow_custom_markup: false
+      remove_custom_markup: false
+      initial_height: 320
       code: true
+      image_size_attributes: true
+    label: Footer Code
+    cascade: true
+  images:
+    type: image
+    cascade: true
 _select_data:
   jekyll-archives:
     layout: archive
@@ -143,5 +163,8 @@ _editables:
     paths:
     resize_style: cover
     width:
-data_config: {}
 timezone: Etc/UTC
+pages:
+  path: ''
+  output: true
+  filter: strict
