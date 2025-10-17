@@ -627,7 +627,7 @@ portfolio:
           https://res.cloudinary.com/dhrcud0tp/Burning
           Stick/south-eastern-engineers/images/ieckhzidqwx9qkdrxfsg.jpg
     location: Baton Rouge
-    service: Commercial Structural Engineering
+    service: Residential Structural Engineering
   - name: Rolling Place Elementary
     images:
       - image: /assets/images/portfolios/rolling_place_elementary_01.jpg
@@ -684,59 +684,87 @@ portfolio:
 permalink: /featured
 ---
 <section class="featured-service-section">
-  <!-- Card Grid -->
   <div class="container content-space-b-2 content-space-b-lg-3">
-    <div class="col-md-5">
+    <div class="col-md-7">
+
+      {%- comment -%}
+        Build UNIQUE, ALPHABETICAL services list.
+        groups => [ { "name": "<service>", "items": [...] }, ... ]
+      {%- endcomment -%}
+      {% assign service_groups = page.portfolio | group_by: 'service' | sort: 'name' %}
+
       <!-- Select -->
       <div class="tom-select-custom mb-5 d-flex align-items-center border-bottom border-white w-100">
         <small class="text-primary">Service</small>
-        <select class="js-select form-select custom-select text-white bg-transparent" id="js-filter-dropdown" autocomplete="off" data-hs-tom-select-options='{
-                "placeholder": "Select Service",
-                "hideSearch": true
-              }'>
+       {% assign service_groups = page.portfolio | group_by: 'service' | sort: 'name' %}
+
+       <select class="js-select form-select custom-select text-white bg-transparent"
+               id="js-filter-dropdown"
+               autocomplete="off"
+               data-hs-tom-select-options='{"placeholder":"Select Service","hideSearch":true}'>
          <option value="all" selected>All Services</option>
-          <option value="Aquatics Engineering">Aquatics Engineering</option>
-          <option value="Commercial Civil Engineering">Civil Engineering</option>
-          <option value="Residential Structural Engineering">Structural Engineering</option>
-          <option value="Commercial Structural Engineering">Commercial Engineering</option>
-          <!--<option value="Delegated Systems Design">Delegated Systems Design</option>-->
-          <!--<option value="Residential Structural Engineering">Residential Engineering</option>-->
-<!--          <option value="Drainage Modeling">Drainage Modeling</option>-->
-          <!--<option value="Municipal Infrastructure">Municipal Infrastructure</option>-->
-        </select>
+         {% for g in service_groups %}
+           {% assign service_label = g.name %}
+           {% assign service_slug = service_label
+             | strip | downcase
+             | replace: '&','and'
+             | replace: '/','-'
+             | replace: '–',''
+             | replace: '—',''
+             | replace: ',', ''
+             | replace: '.', ''
+             | replace: '  ', ' '
+             | replace: ' ', '-' %}
+           <option value="{{ service_slug }}">{{ service_label }}</option>
+         {% endfor %}
+       </select>
       </div>
       <!-- End Select -->
     </div>
 
-        <div class="js-shuffle row row-cols-1 row-cols-sm-2 row-cols-md-3">
-          {% for item in page.portfolio %}
-  <div class="js-shuffle-item col mb-5" data-groups='["{{item.service | truncateword: 1}}"]'>
-    {% for i in item.images %}
-      <!-- Check if the loop index is 1 (Liquid uses 1-based index, not 0-based), which is the first image -->
-      {% if forloop.index == 1 %}
-        <a class="media-viewer" href="{{ i.image }}" data-fslightbox="gallery{{ forloop.parentloop.index }}">
-          <img class="card-img-top object-cover port-img" src="{{ i.image }}" alt="{{ item.name }} - {{ item.service }}" />
-        </a>
-      {% else %}
-        <!-- For the other images, do not display, but keep it in DOM for the lightbox -->
-        <a style="display: none;" href="{{ i.image }}" data-fslightbox="gallery{{ forloop.parentloop.index }}"></a>
-      {% endif %}
-    {% endfor %}
-    <div class="card-body mt-4">
-      <div class="w-100 border-bottom border-primary mb-2">
-        <h3 class="fw-semibold text-white robo-condensed">{{ item.name }}</h3>
-      </div>
-      <h4 class="fw-normal text-white robo-condensed">{{ item.location }}</h4>
-      <em class="card-subtitle text-white">{{ item.service }}</em>
-    </div>
-  </div>
-{% endfor %}
+ {% assign service_groups = page.portfolio | group_by: 'service' | sort: 'name' %}
 
-    </div>
+ <div class="js-shuffle row row-cols-1 row-cols-sm-2 row-cols-md-3">
+   {% for g in service_groups %}
+     {% assign items_sorted = g.items | sort: 'name' %}
+     {% assign service_slug = g.name
+       | strip | downcase
+       | replace: '&','and'
+       | replace: '/','-'
+       | replace: '–',''
+       | replace: '—',''
+       | replace: ',', ''
+       | replace: '.', ''
+       | replace: '  ', ' '
+       | replace: ' ', '-' %}
+
+     {% for item in items_sorted %}
+       <div class="js-shuffle-item col mb-5" data-groups='["{{ service_slug }}"]'>
+         {% for i in item.images %}
+           {% if forloop.index == 1 %}
+             <a class="media-viewer" href="{{ i.image }}" data-fslightbox="gallery{{ forloop.parentloop.index }}">
+               <img class="card-img-top object-cover port-img" src="{{ i.image }}" alt="{{ item.name }} - {{ g.name }}" />
+             </a>
+           {% else %}
+             <a style="display: none;" href="{{ i.image }}" data-fslightbox="gallery{{ forloop.parentloop.index }}"></a>
+           {% endif %}
+         {% endfor %}
+
+         <div class="card-body mt-4">
+           <div class="w-100 border-bottom border-primary mb-2">
+             <h3 class="fw-semibold text-white robo-condensed">{{ item.name }}</h3>
+           </div>
+           <h4 class="fw-normal text-white robo-condensed">{{ item.location }}</h4>
+           <em class="card-subtitle text-white">{{ g.name }}</em>
+         </div>
+       </div>
+     {% endfor %}
+   {% endfor %}
+ </div>
     <!-- End Row -->
   </div>
-  <!-- End Card Grid -->
 </section>
+
 {% comment %}
 <section class="featured-service-section">
     <div class="container">
